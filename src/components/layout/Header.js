@@ -30,9 +30,9 @@ const Header = () => {
                                 </li>
                                 
                                 
-                                <li class="nav-item">
+                                {/* <li class="nav-item">
                                     <Link class="nav-link" href="/socialcare">Shop</Link>
-                                </li>
+                                </li> */}
                                 
                                 <li class="nav-item">
                                     <Link class="nav-link" href="/vendors">Vendors</Link>
@@ -43,7 +43,7 @@ const Header = () => {
                                 </li>
                              
                             </ul>
-                            <i class="bi bi-cart-fill"></i>
+                            {/* <i class="bi bi-cart-fill"></i> */}
                             <i class="bi bi-person-fill"></i>
                            
                         </div>

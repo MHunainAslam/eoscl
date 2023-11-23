@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
 
-const MembershipBanner = () => {
+const MembershipBanner = ({ reverse }) => {
     return (
         <section className='MembershipBanner mt-5'>
             <div className="container py-5 ">
-                <div className="row py-5">
+                <div className={`row py-5 ${reverse ? 'flex-row-reverse' : ''}`}>
                     <div className="col-lg-5 col-md-6">
                         <p className="heading  text-white mb-1">
                             Unlock A World Of

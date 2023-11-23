@@ -16,10 +16,9 @@ export default function Home() {
       <About />
       <MemberShip />
       <Vendors />
-      <MembershipBanner />
+      <MembershipBanner reverse={false} />
       <Testimonial />
       <Contact />
-      <Footer/>
     </>
   )
 }

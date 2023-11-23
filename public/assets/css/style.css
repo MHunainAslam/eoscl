@@ -43,6 +43,13 @@ body {
   color: var(--dark);
   margin-inline: calc(8px + (15 - 8) * ((100vw - 320px) / (1920 - 320)));
 }
+.banner {
+  background: url("/assets/images/banner/Mask Group 2.png");
+  background-repeat: no-repeat;
+  min-height: 30vh;
+  background-position: bottom;
+  background-size: cover;
+}
 .home-banner {
   background: linear-gradient(225deg, #f5d2a3 0%, white 50%);
   min-height: 100vh;
@@ -340,7 +347,7 @@ body {
   text-align: center;
   object-fit: contain;
 }
-.footer-icon{
+.footer-icon {
   display: flex;
   margin-top: 25px;
 }
@@ -358,11 +365,73 @@ body {
   margin-right: 10px;
   transition: 0.3s;
 }
-.footer-icon a:hover{
+.footer-icon a:hover {
   background-color: var(--secondary);
   color: white;
   transition: 0.3s;
 }
-.footer-icon a i{
+.footer-icon a i {
   font-size: 20px;
+}
+.min-vh-30 {
+  min-height: 30vh;
+}
+.vendors-tab li:hover {
+  background-color: var(--primary);
+  color: white;
+}
+.vendors-tab li {
+  background-color: transparent;
+  border: 0 !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  color: black;
+  margin-right: 10px !important ;
+  text-align: center;
+  width: max-content;
+  margin-inline: auto !important;
+}
+.vendors-tab li.active {
+  background-color: var(--primary) !important;
+  border: 0;
+  border-radius: 0 !important;
+  color: white !important;
+}
+.right-slider {
+  color: var(--secondary);
+  font-size: 25px;
+  position: absolute;
+  right: -45px;
+  width: fit-content !important;
+  cursor: pointer;
+}
+.left-slider {
+  color: var(--secondary);
+  font-size: 25px;
+  position: absolute;
+  left: -45px;
+  width: fit-content !important;
+  cursor: pointer;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+.vendor-card .card-header {
+  background: transparent;
+  border: 0;
+  padding-right: 0;
+  padding-top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.vendor-card .card-header img {
+  color: transparent;
+  width: 154px;
+  height: auto;
+  object-fit: cover;
+}
+.vendor-card .card-header .discount {
+  background: var(--primary);
+  border-radius: 0 5px 0 0;
 }
