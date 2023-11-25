@@ -9,11 +9,11 @@ const Header = () => {
                 <div class="container-xl container-fluid">
                     <Link class="navbar-brand " href="#">
                         <Image src="/assets/images/logo/eoscl-logo.png" width={500} height={500} alt="" class="header-logo" /></Link>
-                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                    <button class="navbar-toggler offcanva-btn border-0" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
                         <i class="bi bi-list fs-1 text-black"></i>
                     </button>
-                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+                    <div class="offcanvas offcanvas-end offcanva-nav" tabindex="-1" id="offcanvasNavbar2"
                         aria-labelledby="offcanvasNavbar2Label">
                         <div class="offcanvas-header justify-content-end">
                             <button type="button" class="btn-close " data-bs-dismiss="offcanvas"
@@ -44,7 +44,9 @@ const Header = () => {
                              
                             </ul>
                             {/* <i class="bi bi-cart-fill"></i> */}
-                            <i class="bi bi-person-fill"></i>
+                           <div className='text-center pe-lg-0 pe-5'>
+                           <i class="bi bi-person-fill"></i>
+                           </div>
                            
                         </div>
                     </div>

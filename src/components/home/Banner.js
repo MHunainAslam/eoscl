@@ -7,7 +7,7 @@ const Banner = () => {
     return (
         <section className='home-banner'>
             <Header />
-            <div className="container  py-5">
+            <div className="container  min-vh-75 d-flex align-items-center">
                 <div className="row">
                     <div className="col-lg-6">
                         <p className="heading">Discover A Limitless

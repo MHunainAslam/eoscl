@@ -7,7 +7,7 @@ const Footer = () => {
         <>
             <section className='footer mt-5'>
                 <div className="container">
-                    <div className="row">
+                    <div className="row justify-content-center">
                         <div className="col-lg-4  mt-3 text-lg-start text-center ">
                             <Image src={'/assets/images/logo/eoscl-logo-white.png'} className='footer-logo' alt="" width={500} height={500}></Image>
                             <p className="para-m mt-3 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
@@ -18,19 +18,19 @@ const Footer = () => {
                             </p>
                             <ul className='p-0'>
                                 <li className='list-unstyled my-3'>
-                                    <Link href={'#'} className='link-hov text-black para'>Home</Link>
+                                    <Link href={'/'} className='link-hov text-black para'>Home</Link>
                                 </li>
                                 <li className='list-unstyled my-3'>
-                                    <Link href={'#'} className='link-hov text-black para'>About Us</Link>
+                                    <Link href={'/about'} className='link-hov text-black para'>About Us</Link>
                                 </li>
-                                <li className='list-unstyled my-3'>
+                                {/* <li className='list-unstyled my-3'>
                                     <Link href={'#'} className='link-hov text-black para'>Shop</Link>
+                                </li> */}
+                                <li className='list-unstyled my-3'>
+                                    <Link href={'/vendors'} className='link-hov text-black para'>Vendors</Link>
                                 </li>
                                 <li className='list-unstyled my-3'>
-                                    <Link href={'#'} className='link-hov text-black para'>Vendors</Link>
-                                </li>
-                                <li className='list-unstyled my-3'>
-                                    <Link href={'#'} className='link-hov text-black para'>Contact Us</Link>
+                                    <Link href={'/contactus'} className='link-hov text-black para'>Contact Us</Link>
                                 </li>
                             </ul>
                         </div>

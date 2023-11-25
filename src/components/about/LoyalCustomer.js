@@ -19,7 +19,7 @@ const LoyalCustomer = () => {
                             </p>
                             <Link href={'/contactus'} className='btn primary-btn'>Contact Us</Link>
                         </div>
-                        <div className="col-md-6 my-auto">
+                        <div className="col-md-6 my-md-auto mt-3">
                             <Image src={'/assets/images/card/Rectangle 84.png'} className='w-100 object-fit-cover h-auto' width={1000} height={1000} alt=''></Image>
                         </div>
                     </div>

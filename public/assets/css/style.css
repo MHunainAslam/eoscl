@@ -64,6 +64,7 @@ body {
   font-size: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
   font-family: "Inter", sans-serif;
   font-weight: 700;
+  color: black !important;
 }
 .heading span {
   color: var(--secondary);
@@ -71,11 +72,13 @@ body {
 .heading-m {
   font-size: calc(20px + (35 - 20) * ((100vw - 320px) / (1920 - 320)));
   font-family: "Inter", sans-serif;
+  color: black !important;
   font-weight: 700;
 }
 .heading-sm {
   font-size: calc(14px + (25 - 14) * ((100vw - 320px) / (1920 - 320)));
   font-family: "Inter", sans-serif;
+  color: black !important;
   font-weight: 700;
 }
 .heading-line {
@@ -110,6 +113,31 @@ body {
   /* background: linear-gradient(-225deg, #f5d2a3 0%, var(--primary) 50%) !important; */
   scale: 1.04;
   transition: 0.9s;
+}
+.primary-btn-border {
+  background: transparent;
+  color: var(--primary) !important;
+  border-radius: 50px !important;
+  padding-inline: calc(
+    10px + (35 - 10) * ((100vw - 320px) / (1920 - 320))
+  ) !important;
+  padding-block: calc(
+    9px + (12 - 9) * ((100vw - 320px) / (1920 - 320))
+  ) !important;
+  transition: 0.8s !important;
+  border: 2px solid var(--primary) !important;
+  font-weight: 600 !important;
+}
+.primary-btn-border:hover {
+  /* background: linear-gradient(-225deg, #f5d2a3 0%, var(--primary) 50%) !important; */
+  scale: 1.04;
+  transition: 0.9s;
+  color: white !important;
+  background: linear-gradient(
+    -125deg,
+    #e7b879 0%,
+    var(--primary) 50%
+  ) !important;
 }
 .banner-rating {
   display: flex;
@@ -151,9 +179,24 @@ body {
 .m-card {
   background-color: transparent !important;
   border: 0 !important;
+  z-index: 0;
   margin-top: 150px;
 }
-
+.m-modal {
+  background: linear-gradient(180deg, #f5d2a3 0%, white 70%);
+}
+.m-modal .inp,
+.m-modal .tarea {
+  background: transparent;
+  border-color: var(--primary) !important;
+}
+.m-modal .inp:focus,
+.m-modal .tarea:focus {
+  background: transparent;
+}
+.m-modal label {
+  font-weight: 500;
+}
 .m-card .card-body {
   background-color: white !important;
   border-radius: 15px;
@@ -434,4 +477,23 @@ body {
 .vendor-card .card-header .discount {
   background: var(--primary);
   border-radius: 0 5px 0 0;
+}
+.min-vh-75 {
+  min-height: 75vh;
+}
+.vendors-card .card:hover {
+  transform: scale(1.04);
+  transition: 0.3s;
+}
+.vendors-card .card {
+  transition: 0.3s;
+}
+.offcanva-btn:focus{
+  box-shadow: none !important;
+}
+@media (max-width: 992px) {
+  .offcanva-nav {
+    background: linear-gradient(180deg, #f5d2a3 0%, white 70%);
+  }
+  
 }

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const Vendors = () => {
@@ -11,7 +12,7 @@ const Vendors = () => {
                         Vendors
                     </p>
                     <p className="para text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea magni, fuga impedit rerum, ratione quae fugiat expedita beatae incidunt commodi praesentium. Sit tempora error neque unde aperiam quam cum consequatur!</p>
-                    <div className="row mt-5">
+                    <div className="row mt-5 vendors-card">
                         <div className="col-lg-3 col-md-4 col-6 mt-3">
                             <div className="card h-100">
                                 <div className="card-body px-2 py-1">
@@ -98,7 +99,7 @@ const Vendors = () => {
                         </div>
                     </div>
                     <div className='mt-5 text-center'>
-                        <button className='btn primary-btn '>View All</button>
+                        <Link href={'/vendors'} className='btn primary-btn '>View All</Link>
                     </div>
                 </div>
             </section>
