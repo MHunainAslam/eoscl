@@ -6,9 +6,9 @@ const MembershipModal = () => {
 
             <div class="modal fade" id="VendorModal" tabindex="-1" aria-labelledby="VendorModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content m-modal">
+                    <div class="modal-content m-modal py-5">
                       
-                        <div class="modal-body">
+                        <div class="modal-body ">
                             <form action="">
                                 <div className="row">
                                     <div className="col-md-6 mt-2">
@@ -34,7 +34,7 @@ const MembershipModal = () => {
                                 </div>
                             </form>
                         </div>
-                        <div class="modal-footer justify-content-center">
+                        <div class="modal-footer border-0 justify-content-center">
                             <button type="button" class="btn primary-btn-border" data-bs-dismiss="modal">Close</button>
                             <button type="button" class="btn primary-btn">Save changes</button>
                         </div>

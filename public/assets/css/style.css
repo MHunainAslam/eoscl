@@ -5,6 +5,17 @@
   --secondary: #26a4dd;
   --primary: #ef971f;
 }
+::-webkit-scrollbar {
+  width: 8px;
+}
+  ::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+  ::-webkit-scrollbar-thumb {
+  background: #f5d2a3; 
+    border-radius:0px;
+}
+
 body {
   min-height: 100vh;
   color: #707070;
