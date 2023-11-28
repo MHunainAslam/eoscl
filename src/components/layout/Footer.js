@@ -40,13 +40,13 @@ const Footer = () => {
                             </p>
                             <ul className='p-0'>
                                 <li className='list-unstyled my-3'>
-                                    <Link href={'#'} className='link-hov text-black para'>Privacy Policy</Link>
+                                    <Link href={'/privacypolicy'} className='link-hov text-black para'>Privacy Policy</Link>
                                 </li>
                                 <li className='list-unstyled my-3'>
-                                    <Link href={'#'} className='link-hov text-black para'>Terms & Conditions</Link>
+                                    <Link href={'/termsandcondition'} className='link-hov text-black para'>Terms & Conditions</Link>
                                 </li>
                                 <li className='list-unstyled my-3'>
-                                    <Link href={'#'} className='link-hov text-black para'>Faqs</Link>
+                                    <Link href={'/faq'} className='link-hov text-black para'>Faqs</Link>
                                 </li>
 
                             </ul>

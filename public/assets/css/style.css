@@ -8,12 +8,12 @@
 ::-webkit-scrollbar {
   width: 8px;
 }
-  ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
-  ::-webkit-scrollbar-thumb {
-  background: #f5d2a3; 
-    border-radius:0px;
+::-webkit-scrollbar-thumb {
+  background: #f5d2a3;
+  border-radius: 0px;
 }
 
 body {
@@ -75,7 +75,7 @@ body {
   font-size: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  color: black !important;
+  color: black;
 }
 .heading span {
   color: var(--secondary);
@@ -83,7 +83,7 @@ body {
 .heading-m {
   font-size: calc(20px + (35 - 20) * ((100vw - 320px) / (1920 - 320)));
   font-family: "Inter", sans-serif;
-  color: black !important;
+  color: black;
   font-weight: 700;
 }
 .heading-sm {
@@ -186,6 +186,12 @@ body {
 .membership {
   background: linear-gradient(180deg, #f5d2a3 0%, white 70%);
   padding-block: calc(60px + (100 - 40) * ((100vw - 320px) / (1920 - 320)));
+}
+.membership .swiper-wrapper {
+  margin-bottom: 65px;
+}
+.membership .swiper-slide.swiper-slide-active {
+  padding-right: 15px;
 }
 .m-card {
   background-color: transparent !important;
@@ -499,12 +505,25 @@ body {
 .vendors-card .card {
   transition: 0.3s;
 }
-.offcanva-btn:focus{
+.offcanva-btn:focus {
   box-shadow: none !important;
+}
+.faqs .accordion-button {
+  background: #d9d9d9 !important;
+  border-radius: 50px !important;
+}
+.faqs .accordion-button:focus {
+  box-shadow: none;
+}
+.faqs .accordion-item{
+  border: 0;
+}
+
+.faqs .accordion-item {
+  margin-block: 10px;
 }
 @media (max-width: 992px) {
   .offcanva-nav {
     background: linear-gradient(180deg, #f5d2a3 0%, white 70%);
   }
-  
 }
