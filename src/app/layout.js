@@ -1,9 +1,7 @@
 import { Inter } from 'next/font/google'
 import '../../public/assets/css/style.css'
-import Header from '@/components/layout/Header'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
 import Script from 'next/script';
 import Footer from '@/components/layout/Footer';
 
