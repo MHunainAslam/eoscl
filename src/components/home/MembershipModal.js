@@ -1,24 +1,47 @@
 'use client'
 
 import React, { useState } from 'react'
-
-const MembershipModal = () => {
+import PyamentModal from '../membership/PyamentModal';
+import StripeModal from '../membership/StripeModal';
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+const MembershipModal = ({ PkgName, PkgPrice }) => {
     const [activeComponent, setActiveComponent] = useState('step1');
+    const [completedSteps, setCompletedSteps] = useState([]);
+    const [PaymentMethod, setPaymentMethod] = useState('')
+    const [PayPal, setPayPal] = useState(false)
+
     const handleComponentChange = (componentName) => {
         setActiveComponent(componentName);
+        if (!completedSteps.includes(componentName)) {
+            setCompletedSteps([...completedSteps, componentName]);
+        }
     };
+
     const MoveStep1 = () => {
-        handleComponentChange('step1')
-    }
+        handleComponentChange('step1');
+    };
+
     const MoveStep2 = () => {
-        handleComponentChange('step2')
-    }
+        handleComponentChange('step2');
+    };
+
     const MoveStep3 = () => {
-        handleComponentChange('step3')
-    }
+        handleComponentChange('step3');
+    };
+    const MoveStep4 = () => {
+        handleComponentChange('step4');
+        setPaymentMethod('paypal')
+    };
+    const MoveStep5 = () => {
+        handleComponentChange('step4');
+        setPaymentMethod('stripe')
+    };
+
     const formSubmit = () => {
-        document.querySelector('.modal-close').click()
-    }
+        document.querySelector('.modal-close').click();
+    };
+    const stripePromise = loadStripe('YOUR_STRIPE_PUBLISHABLE_KEY');
     return (
         <>
 
@@ -36,55 +59,75 @@ const MembershipModal = () => {
                                     </p>
                                     {activeComponent === 'step1' && <>
                                         <div className="col-md-12 mt-2">
-                                            <label htmlFor="" className='para'>Name:</label>
-                                            <input type="text" className='form-control inp' name="" id="" />
+                                            <label htmlFor="" className='para mt-3 text-p'>Name:</label>
+                                            <input type="text" className='form-control inp px-0' name="" id="" />
                                         </div>
                                         <div className="col-md-12 mt-2">
-                                            <label htmlFor="" className='para'>Email:</label>
-                                            <input type="text" className='form-control inp' name="" id="" />
+                                            <label htmlFor="" className='para mt-3 text-p'>Email:</label>
+                                            <input type="text" className='form-control inp px-0' name="" id="" />
                                         </div>
                                         <div className="col-md-12 mt-2">
-                                            <label htmlFor="" className='para'>Phone Number:</label>
-                                            <input type="text" className='form-control inp' name="" id="" />
+                                            <label htmlFor="" className='para mt-3 text-p'>Phone Number:</label>
+                                            <input type="text" className='form-control inp px-0' name="" id="" />
                                         </div>
                                         <div className="col-md-12 mt-2">
-                                            <label htmlFor="" className='para'>Message:</label>
-                                            <textarea name="" className='form-control tarea' id="" cols="30" rows="5"></textarea>
+                                            <label htmlFor="" className='para mt-3 text-p'>Message:</label>
+                                            <textarea name="" className='form-control tarea px-0' id="" cols="30" rows="5"></textarea>
                                         </div>
-                                        <div class="modal-footer mt-4 border-0 justify-content-center">
-                                            <button type="button" class="btn primary-btn" onClick={MoveStep2}>Save changes</button>
+                                        <div class="modal-footer mt-4 border-0 justify-content-end">
+                                            <button type="button" class="btn primary-btn" onClick={MoveStep2}>Next</button>
                                         </div>
                                     </>
                                     }
                                     {activeComponent === 'step2' && <>
                                         <div className="col-md-12 mt-2">
-                                            <label htmlFor="" className='para'>Package Name:</label>
-                                            <input type="text" className='form-control inp' name="" id="" />
+                                            <label htmlFor="" className='para mt-3 text-p'>Package Name:</label>
+                                            <input type="text" className='form-control inp px-0' value={PkgName} readOnly name="" id="" />
                                         </div>
                                         <div className="col-md-12 mt-2">
-                                            <label htmlFor="" className='para'>Package Price:</label>
-                                            <input type="text" className='form-control inp' name="" id="" />
+                                            <label htmlFor="" className='para mt-3 text-p'>Package Price:</label>
+                                            <input type="text" className='form-control inp px-0' value={PkgPrice} readOnly name="" id="" />
                                         </div>
-                                        <div class="modal-footer mt-4 border-0 justify-content-center">
-                                            <button type="button" class="btn primary-btn-border" onClick={MoveStep1} >Previous</button>
-                                            <button type="button" class="btn primary-btn" onClick={MoveStep3}>Save changes</button>
+                                        <div class="modal-footer mt-4 border-0 justify-content-end">
+                                            <button type="button" class="btn primary-btn" onClick={MoveStep1} >Previous</button>
+                                            <button type="button" class="btn primary-btn" onClick={MoveStep3}>Next</button>
                                         </div>
                                     </>
                                     }
                                     {activeComponent === 'step3' && <>
                                         <div className="col-md-6 mt-2">
-                                            <button className='btn primary-btn w-100'>Paypal</button>
+                                            <button className='btn primary-btn w-100' onClick={MoveStep4}>Paypal</button>
                                         </div>
                                         <div className="col-md-6 mt-2">
-                                            <button className='btn primary-btn w-100'>Stripe</button>
+                                            <button className='btn primary-btn w-100' onClick={MoveStep5}>Stripe</button>
                                         </div>
 
-                                        <div class="modal-footer mt-4 border-0 justify-content-center">
-                                            <button type="button" class="btn primary-btn-border" onClick={MoveStep1} >Previous</button>
-                                            <button type="button" class="btn primary-btn" onClick={formSubmit}>Save changes</button>
+                                        <div class="modal-footer mt-4 border-0 justify-content-end">
+                                            <button type="button" class="btn primary-btn" onClick={MoveStep1} >Previous</button>
+                                            {/* <button type="button" class="btn primary-btn" onClick={formSubmit}>Next</button> */}
                                         </div>
                                     </>
                                     }
+                                    {activeComponent === 'step4' && <>
+                                        {PaymentMethod === 'paypal' ?
+                                            <PyamentModal />
+                                            : 'stripe' ?
+                                                <Elements stripe={stripePromise}>
+                                                    <StripeModal />
+                                                </Elements>
+                                                : ''}
+                                        <div class="modal-footer mt-4 border-0 justify-content-end">
+                                            <button type="button" class="btn primary-btn" onClick={MoveStep3} >Previous</button>
+                                            {/* <button type="button" class="btn primary-btn" onClick={formSubmit}>Next</button> */}
+                                        </div>
+                                    </>
+                                    }
+                                    <div className="d-flex justify-content-center">
+                                        <div className={`steps ${completedSteps.includes('step2') ? 'complete' : ''}`}></div>
+                                        <div className={`steps ${completedSteps.includes('step3') ? 'complete' : ''}`}></div>
+                                        <div className={`steps ${completedSteps.includes('step4') ? 'complete' : ''}`}></div>
+                                        <div className={`steps ${completedSteps.includes('step5') ? 'complete' : ''}`}></div>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -92,6 +135,7 @@ const MembershipModal = () => {
                     </div>
                 </div>
             </div>
+
         </>
     )
 }

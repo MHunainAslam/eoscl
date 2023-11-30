@@ -1,8 +1,16 @@
+'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import MembershipModal from './MembershipModal'
 
 const MemberShip = () => {
+    const [PkgName, setPkgName] = useState('')
+    const [PkgPrice, setPkgPrice] = useState('')
+
+    const BeginnerModal = () => {
+        setPkgName('Beginner')
+        setPkgPrice('$200,000')
+    }
     return (
         <>
             <section className='membership mt-5'>
@@ -19,7 +27,7 @@ const MemberShip = () => {
                                     </p>
                                     <p className="heading-sm text-p">$200,000</p>
                                     <p className='para'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit repudiandae maxime quaerat est id laudantium minus quibusdam architecto molestias culpa.!</p>
-                                    <button className='btn primary-btn m-card-btn' data-bs-toggle="modal" data-bs-target="#VendorModal">Get Started</button>
+                                    <button className='btn primary-btn m-card-btn' data-bs-toggle="modal" data-bs-target="#VendorModal" onClick={BeginnerModal}>Get Started</button>
                                 </div>
                             </div>
                         </div>
@@ -33,6 +41,7 @@ const MemberShip = () => {
                                     <p className="heading-sm text-p">$200,000</p>
                                     <p className='para'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit repudiandae maxime quaerat est id laudantium minus quibusdam architecto molestias culpa.!</p>
                                     <button className='btn primary-btn m-card-btn' data-bs-toggle="modal" data-bs-target="#VendorModal">Get Started</button>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -52,7 +61,7 @@ const MemberShip = () => {
                     </div>
                 </div>
             </section>
-            <MembershipModal />
+            <MembershipModal PkgName={PkgName} PkgPrice={PkgPrice} />
         </>
     )
 }
