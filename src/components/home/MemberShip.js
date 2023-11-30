@@ -11,6 +11,14 @@ const MemberShip = () => {
         setPkgName('Beginner')
         setPkgPrice('$200,000')
     }
+    const PremierModal = () => {
+        setPkgName('Premier')
+        setPkgPrice('$200,000')
+    }
+    const EliteModal = () => {
+        setPkgName('Elite')
+        setPkgPrice('$200,000')
+    }
     return (
         <>
             <section className='membership mt-5'>
@@ -40,7 +48,7 @@ const MemberShip = () => {
                                     </p>
                                     <p className="heading-sm text-p">$200,000</p>
                                     <p className='para'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit repudiandae maxime quaerat est id laudantium minus quibusdam architecto molestias culpa.!</p>
-                                    <button className='btn primary-btn m-card-btn' data-bs-toggle="modal" data-bs-target="#VendorModal">Get Started</button>
+                                    <button className='btn primary-btn m-card-btn' data-bs-toggle="modal" data-bs-target="#VendorModal" onClick={PremierModal}>Get Started</button>
                                     
                                 </div>
                             </div>
@@ -54,7 +62,7 @@ const MemberShip = () => {
                                     </p>
                                     <p className="heading-sm text-p">$200,000</p>
                                     <p className='para'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit repudiandae maxime quaerat est id laudantium minus quibusdam architecto molestias culpa.!</p>
-                                    <button className='btn primary-btn m-card-btn' data-bs-toggle="modal" data-bs-target="#VendorModal">Get Started</button>
+                                    <button className='btn primary-btn m-card-btn' data-bs-toggle="modal" data-bs-target="#VendorModal" onClick={EliteModal}>Get Started</button>
                                 </div>
                             </div>
                         </div>
