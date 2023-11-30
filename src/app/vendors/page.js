@@ -10,7 +10,7 @@ const page = () => {
             <Banner heading={'Vendors'} />
             <VendorsTab />
             <LoyalCustomer />
-            <Contact />
+            {/* <Contact /> */}
         </>
     )
 }

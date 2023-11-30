@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import MemberShipForm from './membership/MemberShipForm'
 
 const MembershipBanner = ({ reverse }) => {
     return (
@@ -15,13 +16,15 @@ const MembershipBanner = ({ reverse }) => {
                         <p className="para text-white">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus fugiat architecto cumque maiores esse expedita aperiam corrupti
                         </p>
-                        <button className='btn primary-btn'>Get Your Card</button>
+                        <button className='btn primary-btn' >Get Your Card</button>
+                        {/* <button className='btn primary-btn' data-bs-toggle="modal" data-bs-target="#MembershipForm">Get Your Card</button> */}
                     </div>
                     <div className="col-lg-7 col-md-6 mt-md-0 mt-4">
                         <Image src={'/assets/images/card/Image 18.png'} className='w-100 object-fit-contain h-100' width={1000} height={1000} alt=''></Image>
                     </div>
                 </div>
             </div>
+            <MemberShipForm/>
         </section>
     )
 }

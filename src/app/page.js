@@ -8,6 +8,7 @@ import MembershipBanner from '@/components/MembershipBanner'
 import Testimonial from '@/components/home/Testimonial'
 import Contact from '@/components/Contact'
 import Footer from '@/components/layout/Footer'
+import ShopHome from '@/components/shop/ShopHome'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <MemberShip />
       <Vendors />
       <MembershipBanner reverse={false} />
+      {/* <ShopHome /> */}
       <Testimonial />
       <Contact />
     </>

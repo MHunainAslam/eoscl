@@ -12,7 +12,7 @@ const page = () => {
       <OurStory />
       <MembershipBanner reverse={true} />
       <LoyalCustomer />
-      <Contact />
+      {/* <Contact /> */}
     </>
   )
 }

@@ -7,8 +7,6 @@
   --primary: #ef971f;
 }
 
-
-
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -130,13 +128,19 @@ body {
 }
 
 .primary-btn {
-  background: linear-gradient(-125deg,
-      #e7b879 0%,
-      var(--primary) 50%) !important;
+  background: linear-gradient(
+    -125deg,
+    #e7b879 0%,
+    var(--primary) 50%
+  ) !important;
   color: white !important;
   border-radius: 50px !important;
-  padding-inline: calc(10px + (35 - 10) * ((100vw - 320px) / (1920 - 320))) !important;
-  padding-block: calc(9px + (12 - 9) * ((100vw - 320px) / (1920 - 320))) !important;
+  padding-inline: calc(
+    10px + (35 - 10) * ((100vw - 320px) / (1920 - 320))
+  ) !important;
+  padding-block: calc(
+    9px + (12 - 9) * ((100vw - 320px) / (1920 - 320))
+  ) !important;
   transition: 0.8s !important;
   border: 0 !important;
 }
@@ -151,8 +155,12 @@ body {
   background: transparent;
   color: var(--primary) !important;
   border-radius: 50px !important;
-  padding-inline: calc(10px + (35 - 10) * ((100vw - 320px) / (1920 - 320))) !important;
-  padding-block: calc(9px + (12 - 9) * ((100vw - 320px) / (1920 - 320))) !important;
+  padding-inline: calc(
+    10px + (35 - 10) * ((100vw - 320px) / (1920 - 320))
+  ) !important;
+  padding-block: calc(
+    9px + (12 - 9) * ((100vw - 320px) / (1920 - 320))
+  ) !important;
   transition: 0.8s !important;
   border: 2px solid var(--primary) !important;
   font-weight: 600 !important;
@@ -163,9 +171,11 @@ body {
   scale: 1.04;
   transition: 0.9s;
   color: white !important;
-  background: linear-gradient(-125deg,
-      #e7b879 0%,
-      var(--primary) 50%) !important;
+  background: linear-gradient(
+    -125deg,
+    #e7b879 0%,
+    var(--primary) 50%
+  ) !important;
 }
 
 .banner-rating {
@@ -220,7 +230,7 @@ body {
 
 .membership .swiper-slide.swiper-slide-active {
   padding-inline: 15px;
-  margin-right: 0 !important
+  margin-right: 0 !important;
 }
 
 .m-card {
@@ -278,9 +288,11 @@ body {
 
 .m-card .card-body::before {
   content: "";
-  background-image: radial-gradient(white -87%,
-      var(--secondary) 34%,
-      var(--secondary) 0%) !important;
+  background-image: radial-gradient(
+    white -87%,
+    var(--secondary) 34%,
+    var(--secondary) 0%
+  ) !important;
   transition: 0.3s;
   height: 100%;
   position: absolute;
@@ -321,9 +333,11 @@ body {
 }
 
 .MembershipBanner {
-  background-image: radial-gradient(white -87%,
-      var(--secondary) 34%,
-      var(--secondary) 0%) !important;
+  background-image: radial-gradient(
+    white -87%,
+    var(--secondary) 34%,
+    var(--secondary) 0%
+  ) !important;
 }
 
 .testimonial-card {
@@ -421,9 +435,11 @@ body {
 }
 
 .contact .card .card-header {
-  background-image: radial-gradient(white -100%,
-      var(--secondary) 34%,
-      var(--secondary) 0%) !important;
+  background-image: radial-gradient(
+    white -100%,
+    var(--secondary) 34%,
+    var(--secondary) 0%
+  ) !important;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 60% 45%;
@@ -611,8 +627,34 @@ body {
   padding: 0 !important;
   margin-inline: 3px;
 }
-.steps.complete{
+.steps.complete {
   background: grey;
+}
+.shop-card {
+  height: 400px !important;
+  border-radius: 15px !important;
+  box-shadow: 0 0.1rem 0.5rem rgb(0 0 0 / 8%) !important;
+  border: 2px solid #5f778230 !important;
+}
+.shop-btn {
+  border-radius: 100%;
+  height: 70px;
+  width: 70px;
+  padding: 10px !important;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.shop-btn i{
+  font-size: 2rem;
+}
+.shop-btn:hover {
+  background-image: radial-gradient(
+    white -100%,
+    var(--secondary) 34%,
+    var(--secondary) 0%
+  ) !important;
+  transition: 0.3s;
 }
 
 @media (max-width: 992px) {
