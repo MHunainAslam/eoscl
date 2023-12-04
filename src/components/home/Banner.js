@@ -20,7 +20,7 @@ const Banner = () => {
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur fuga laborum cumque unde quo distinctio dolorum aspernatur, architecto rerum dignissimos pariatur id placeat labore sint, nam aperiam possimus a corrupti.
                             </p>
                             <button className='btn primary-btn' data-bs-toggle="modal" data-bs-target="#MembershipForm">Get Started</button>
-                            <Link className='para text-s ps-3 link-hov' href={'#'}>Learn More <i class="bi bi-arrow-right"></i></Link>
+                            <Link className='para text-s ps-3 link-hov' href={'/about'}>Learn More <i class="bi bi-arrow-right"></i></Link>
                             <div className="d-flex flex-wrap pt-4 align-items-center">
                                 <ul className='banner-rating px-0 m-0'>
                                     <li>
