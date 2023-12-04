@@ -8,7 +8,7 @@ const MemberShipForm = () => {
             <div class="modal fade" id="MembershipForm" tabindex="-1" aria-labelledby="MembershipFormLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content m-modal">
-                        <div class="modal-header">
+                        <div class="modal-header border-0">
                      
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
@@ -45,6 +45,7 @@ const MemberShipForm = () => {
                 </div>
             </div>
         </div >
+        
         </>
     )
 }
