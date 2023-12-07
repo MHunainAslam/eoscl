@@ -9,7 +9,7 @@ const Vendors = () => {
                 <Image src={'/assets/images/card/Ellipse 4.png'} className='vendors-bg' width={100} height={100} alt=''></Image>
                 <div className="container mt-5">
                     <p className="heading text-center">
-                        Vendors
+                        Partners
                     </p>
                     <p className="para text-center px-md-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea magni, fuga impedit rerum, ratione quae fugiat expedita beatae incidunt commodi praesentium. Sit tempora error neque unde aperiam quam cum consequatur!</p>
                     <div className="row mt-5 vendors-card">
@@ -99,7 +99,7 @@ const Vendors = () => {
                         </div>
                     </div>
                     <div className='mt-5 text-center'>
-                        <Link href={'/vendors'} className='btn primary-btn '>View All</Link>
+                        <Link href={'/partners'} className='btn primary-btn '>View All</Link>
                     </div>
                 </div>
             </section>

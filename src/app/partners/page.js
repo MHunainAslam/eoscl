@@ -7,7 +7,7 @@ import React from 'react'
 const page = () => {
     return (
         <>
-            <Banner heading={'Vendors'} />
+            <Banner heading={'Partners'} />
             <VendorsTab />
             <LoyalCustomer />
             {/* <Contact /> */}

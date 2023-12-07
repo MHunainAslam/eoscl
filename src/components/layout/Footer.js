@@ -27,7 +27,7 @@ const Footer = () => {
                                     <Link href={'#'} className='link-hov text-black para'>Shop</Link>
                                 </li> */}
                                 <li className='list-unstyled my-3'>
-                                    <Link href={'/vendors'} className='link-hov text-black para'>Vendors</Link>
+                                    <Link href={'/partners'} className='link-hov text-black para'>Partners</Link>
                                 </li>
                                 <li className='list-unstyled my-3'>
                                     <Link href={'/contactus'} className='link-hov text-black para'>Contact Us</Link>

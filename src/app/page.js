@@ -14,9 +14,9 @@ export default function Home() {
   return (
     < >
       <Banner />
+      <Vendors />
       <About />
       <MemberShip />
-      <Vendors />
       <MembershipBanner reverse={false} />
       {/* <ShopHome /> */}
       <Testimonial />

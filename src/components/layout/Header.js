@@ -15,7 +15,7 @@ const Header = () => {
         < >
             <nav class="navbar navbar-expand-lg custome-nav " aria-label="Offcanvas navbar large">
                 <div class="container-xl container-fluid">
-                    <Link class="navbar-brand " href="#">
+                    <Link class="navbar-brand " href="/">
                         <Image src="/assets/images/logo/eoscl-logo.png" width={500} height={500} alt="" class="header-logo" /></Link>
                     <button class="navbar-toggler offcanva-btn border-0" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
@@ -43,7 +43,10 @@ const Header = () => {
                                 </li> */}
 
                                 <li class="nav-item">
-                                    <Link class="nav-link" href="/vendors">Vendors</Link>
+                                    <Link class="nav-link" href="/membershipcards">Membership Cards</Link>
+                                </li>
+                                <li class="nav-item">
+                                    <Link class="nav-link" href="/partners">Partners</Link>
                                 </li>
 
                                 <li class="nav-item">
@@ -52,9 +55,9 @@ const Header = () => {
 
                             </ul>
                             {/* <i class="bi bi-cart-fill"></i> */}
-                            <div className='text-center pe-lg-0 pe-5'>
+                            {/* <div className='text-center pe-lg-0 pe-5'>
                                 <i class="bi bi-person-fill"></i>
-                            </div>
+                            </div> */}
 
                         </div>
                     </div>
