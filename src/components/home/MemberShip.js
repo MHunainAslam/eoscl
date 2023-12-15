@@ -14,18 +14,11 @@ const MemberShip = () => {
     const [data, setdata] = useState([])
     const [isLoading, setisLoading] = useState(true)
 
-    const BeginnerModal = () => {
-        setPkgName('Beginner')
-        setPkgPrice('$200,000')
+    const BeginnerModal = (title, price) => {
+        setPkgName(title)
+        setPkgPrice(`$${price}`)
     }
-    const PremierModal = () => {
-        setPkgName('Premier')
-        setPkgPrice('$200,000')
-    }
-    const EliteModal = () => {
-        setPkgName('Elite')
-        setPkgPrice('$200,000')
-    }
+ 
     GetLocaldata()
     useEffect(() => {
         axios.get(`${app_url}/api/memberships`, {
@@ -50,11 +43,11 @@ const MemberShip = () => {
                 <div className="container text-center">
                     <p className='heading'>The Membership Card Option</p>
                     <p className='para-m px-md-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                    <div className="row mb-5">
+                    <div className="row mb-5" >
                         {data?.data?.slice(0, 3).map((item, i) => (
-                            <div className="col-lg-4 col-md-6" key={i}>
-                                <div className="card h-100 m-card ">
-                                    <div className="card-body pb-5 text-center">
+                            <div className="col-lg-4 col-md-6 " style={{ marginTop: '150px' }} key={i}>
+                                <div className="card h-100 m-card-2 ">
+                                    <div className="card-body  text-center">
                                         <Image src={'/assets/images/card/Image 5.png'} className='m-card-img' alt="" width={500} height={500}></Image>
                                         <p className="heading-m w-fit-content mt-3 mx-auto">{item.title}
                                             <br /> <span className='heading-line'></span>
@@ -63,8 +56,8 @@ const MemberShip = () => {
                                         <p className='para' dangerouslySetInnerHTML={{ __html: item.description }}></p>
 
                                     </div>
-                                    <div className="card-footer">
-                                        <button className='btn primary-btn m-card-btn' data-bs-toggle="modal" data-bs-target="#VendorModal" onClick={BeginnerModal}>Get Started</button>
+                                    <div className="card-footer border-0 bg-transparent mb-3">
+                                        <button className='btn primary-btn ' data-bs-toggle="modal" data-bs-target="#VendorModal" onClick={() => BeginnerModal(item.title, item.price)}>Get Started</button>
                                     </div>
                                 </div>
                             </div>

@@ -128,19 +128,13 @@ body {
 }
 
 .primary-btn {
-  background: linear-gradient(
-    -125deg,
-    #e7b879 0%,
-    var(--primary) 50%
-  ) !important;
+  background: linear-gradient(-125deg,
+      #e7b879 0%,
+      var(--primary) 50%) !important;
   color: white !important;
   border-radius: 50px !important;
-  padding-inline: calc(
-    10px + (35 - 10) * ((100vw - 320px) / (1920 - 320))
-  ) !important;
-  padding-block: calc(
-    9px + (12 - 9) * ((100vw - 320px) / (1920 - 320))
-  ) !important;
+  padding-inline: calc(10px + (35 - 10) * ((100vw - 320px) / (1920 - 320))) !important;
+  padding-block: calc(9px + (12 - 9) * ((100vw - 320px) / (1920 - 320))) !important;
   transition: 0.8s !important;
   border: 0 !important;
 }
@@ -155,12 +149,8 @@ body {
   background: transparent;
   color: var(--primary) !important;
   border-radius: 50px !important;
-  padding-inline: calc(
-    10px + (35 - 10) * ((100vw - 320px) / (1920 - 320))
-  ) !important;
-  padding-block: calc(
-    9px + (12 - 9) * ((100vw - 320px) / (1920 - 320))
-  ) !important;
+  padding-inline: calc(10px + (35 - 10) * ((100vw - 320px) / (1920 - 320))) !important;
+  padding-block: calc(9px + (12 - 9) * ((100vw - 320px) / (1920 - 320))) !important;
   transition: 0.8s !important;
   border: 2px solid var(--primary) !important;
   font-weight: 600 !important;
@@ -171,11 +161,9 @@ body {
   scale: 1.04;
   transition: 0.9s;
   color: white !important;
-  background: linear-gradient(
-    -125deg,
-    #e7b879 0%,
-    var(--primary) 50%
-  ) !important;
+  background: linear-gradient(-125deg,
+      #e7b879 0%,
+      var(--primary) 50%) !important;
 }
 
 .banner-rating {
@@ -233,12 +221,6 @@ body {
   margin-right: 0 !important;
 }
 
-.m-card {
-  background-color: transparent !important;
-  border: 0 !important;
-  z-index: 0;
-  margin-top: 150px;
-}
 
 .m-modal {
   background: linear-gradient(180deg, #f5d2a3 0%, white 70%);
@@ -257,6 +239,13 @@ body {
 
 .m-modal label {
   font-weight: 500;
+}
+
+.m-card {
+  background-color: transparent !important;
+  border: 0 !important;
+  z-index: 0;
+  margin-top: 150px;
 }
 
 .m-card .card-body {
@@ -278,21 +267,15 @@ body {
   z-index: 9999;
 }
 
-.w-fit-content {
-  width: fit-content;
-}
-
 .m-card-btn {
   margin-bottom: -125px;
 }
 
 .m-card .card-body::before {
   content: "";
-  background-image: radial-gradient(
-    white -87%,
-    var(--secondary) 34%,
-    var(--secondary) 0%
-  ) !important;
+  background-image: radial-gradient(white -87%,
+      var(--secondary) 34%,
+      var(--secondary) 0%) !important;
   transition: 0.3s;
   height: 100%;
   position: absolute;
@@ -323,6 +306,72 @@ body {
   transition: 0.3s;
 }
 
+.m-card-2 {
+  background-color: transparent !important;
+  border: 0 !important;
+  z-index: 0;
+  background-color: white !important;
+  border-radius: 15px !important;
+  box-shadow: 0 0.1rem 0.5rem rgb(0 0 0 / 8%);
+  transition: background-color 0.3s linear;
+  /* Standard */
+  /* z-index: 9999999999; */
+  transition: 0.3s;
+  /* margin-top: 150px; */
+}
+
+.m-card-2 .m-card-img {
+  width: 80%;
+  height: 150px;
+  object-fit: contain;
+  margin-top: -110px;
+  /* border-radius: 30px */
+  z-index: 9999;
+}
+
+.m-card-btn {
+  margin-bottom: -125px;
+}
+
+.m-card-2::before {
+  content: "";
+  background-image: radial-gradient(white -87%,
+      var(--secondary) 34%,
+      var(--secondary) 0%) !important;
+  transition: 0.3s;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+  z-index: -1;
+  opacity: 0;
+}
+
+.m-card-2:hover::before {
+  opacity: 1;
+}
+
+.m-card-2:hover .heading-line {
+  background-color: white;
+  transition: 0.3s;
+}
+
+.m-card-2:hover p {
+  color: white !important;
+  transition: 0.3s;
+}
+
+.m-card-2:hover {
+  transform: translateY(-10px);
+  transition: 0.3s;
+}
+
+.w-fit-content {
+  width: fit-content;
+}
+
 .vendors-bg {
   color: transparent;
   position: absolute;
@@ -333,11 +382,9 @@ body {
 }
 
 .MembershipBanner {
-  background-image: radial-gradient(
-    white -87%,
-    var(--secondary) 34%,
-    var(--secondary) 0%
-  ) !important;
+  background-image: radial-gradient(white -87%,
+      var(--secondary) 34%,
+      var(--secondary) 0%) !important;
 }
 
 .testimonial-card {
@@ -435,11 +482,9 @@ body {
 }
 
 .contact .card .card-header {
-  background-image: radial-gradient(
-    white -100%,
-    var(--secondary) 34%,
-    var(--secondary) 0%
-  ) !important;
+  background-image: radial-gradient(white -100%,
+      var(--secondary) 34%,
+      var(--secondary) 0%) !important;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 60% 45%;
@@ -627,15 +672,18 @@ body {
   padding: 0 !important;
   margin-inline: 3px;
 }
+
 .steps.complete {
   background: grey;
 }
+
 .shop-card {
   height: 400px !important;
   border-radius: 15px !important;
   box-shadow: 0 0.1rem 0.5rem rgb(0 0 0 / 8%) !important;
   border: 2px solid #5f778230 !important;
 }
+
 .shop-btn {
   border-radius: 100%;
   height: 70px;
@@ -645,15 +693,15 @@ body {
   right: 10px;
   bottom: 10px;
 }
-.shop-btn i{
+
+.shop-btn i {
   font-size: 2rem;
 }
+
 .shop-btn:hover {
-  background-image: radial-gradient(
-    white -100%,
-    var(--secondary) 34%,
-    var(--secondary) 0%
-  ) !important;
+  background-image: radial-gradient(white -100%,
+      var(--secondary) 34%,
+      var(--secondary) 0%) !important;
   transition: 0.3s;
 }
 

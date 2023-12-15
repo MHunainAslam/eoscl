@@ -19,11 +19,28 @@ const Allmembershipcards = () => {
         setPkgName('Elite')
         setPkgPrice('$200,000')
     }
+    // useEffect(() => {
+    //     axios.get(`${app_url}/api/memberships`, {
+    //     })
+    //         .then(response => {
+    //             // Handle successful response here
+    //             console.log(response.data);
+    //             setisLoading(false)
+    //             setdata(response.data)
+
+    //         })
+    //         .catch(error => {
+    //             // Handle error here
+    //             console.error(error);
+    //             toast.error(error?.response?.data?.message)
+    //             setisLoading(false)
+    //         });
+    // }, [])
     return (
         <>
             <section className='membership pt-5 '>
                 <div className="container text-center">
-                  
+
                     <div className="row ">
                         <div className="col-lg-4 col-md-6">
                             <div className="card m-card ">
@@ -48,7 +65,7 @@ const Allmembershipcards = () => {
                                     <p className="heading-sm text-p">$200,000</p>
                                     <p className='para'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit repudiandae maxime quaerat est id laudantium minus quibusdam architecto molestias culpa.!</p>
                                     <button className='btn primary-btn m-card-btn' data-bs-toggle="modal" data-bs-target="#VendorModal" onClick={PremierModal}>Get Started</button>
-                                    
+
                                 </div>
                             </div>
                         </div>
