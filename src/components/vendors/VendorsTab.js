@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -18,6 +18,9 @@ import Goldy from './Goldy';
 import Isharp from './Isharp';
 import KalaLaw from './KalaLaw';
 import MuslimAssociation from './MuslimAssociation';
+import axios from 'axios';
+import { app_url } from '@/config';
+import toast from 'react-hot-toast';
 const VendorsTab = () => {
     const nextSlide = () => {
         document.querySelector('.swiper-button-next').click()
@@ -26,7 +29,60 @@ const VendorsTab = () => {
         document.querySelector('.swiper-button-prev').click()
     }
 
+    const [data, setdata] = useState([])
+    const [tabdata, settabdata] = useState([])
+    const [isLoading, setisLoading] = useState(true)
+    useEffect(() => {
+        axios.get(`${app_url}/api/partners`, {
+        })
+            .then(response => {
+                // Handle successful response here
+                console.log(response.data);
+                setisLoading(false)
+                setdata(response.data)
 
+            })
+            .catch(error => {
+                // Handle error here
+                console.error(error);
+                toast.error(error?.response?.data?.message)
+                setisLoading(false)
+            });
+    }, [])
+    useEffect(() => {
+        axios.get(`${app_url}/api/partners`, {
+        })
+            .then(response => {
+                // Handle successful response here
+                console.log(response.data);
+                setisLoading(false)
+                setdata(response.data)
+
+            })
+            .catch(error => {
+                // Handle error here
+                console.error(error);
+                toast.error(error?.response?.data?.message)
+                setisLoading(false)
+            });
+    }, [])
+    const activetab = (e) => {
+        axios.get(`${app_url}/api/partner-details/${e.target.value}/parent`, {
+        })
+            .then(response => {
+                // Handle successful response here
+                console.log(response.data);
+                setisLoading(false)
+                settabdata(response.data)
+
+            })
+            .catch(error => {
+                // Handle error here
+                console.error(error);
+                toast.error(error?.response?.data?.error)
+                setisLoading(false)
+            });
+    }
     return (
         <section>
             <div className="container my-5 py-5">
@@ -68,17 +124,19 @@ const VendorsTab = () => {
                                     modules={[FreeMode, Navigation]}
                                     className="mySwiper"
                                 >
-                                    <SwiperSlide>
-                                        <li class="nav-item nav-link active" id="NaanGuys-tab" data-bs-toggle="tab" data-bs-target="#NaanGuys" type="button" role="tab" aria-controls="NaanGuys" aria-selected="false" tabindex="-1">
-                                            Naan Guys
-                                        </li>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <li class="nav-item nav-link " id="AdilLaw-tab" data-bs-toggle="tab" data-bs-target="#AdilLaw" type="button" role="tab" aria-controls="AdilLaw" aria-selected="false" tabindex="-1">
+                                    {data?.data?.map((item, i) => (
+                                        <SwiperSlide>
+                                            <li class={`nav-item nav-link ${i === 0 ? 'active' : ''}`}  data-bs-toggle="tab" value={item.id} onClick={activetab} data-bs-target={`#a${item.id}`} type="button" role="tab" aria-controls="NaanGuys" aria-selected="false" tabindex="-1">
+                                                {item.company_name}
+                                            </li>
+                                        </SwiperSlide>
+                                    ))}
+                                    {/* <SwiperSlide>
+                                        <li class="nav-item nav-link " id="AdilLaw-tab" data-bs-toggle="tab" data-bs-target="#AdilLaw" type="button" >
                                             Adil Law
                                         </li>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
+                                    </SwiperSlide> */}
+                                    {/* <SwiperSlide>
                                         <li class="nav-item nav-link " id="AlamLaw-tab" data-bs-toggle="tab" data-bs-target="#AlamLaw" type="button" role="tab" aria-controls="AlamLaw" aria-selected="false" tabindex="-1">
                                             Alam Law
                                         </li>
@@ -127,7 +185,7 @@ const VendorsTab = () => {
                                         <li class="nav-item nav-link " id="MuslimAssociation-tab" data-bs-toggle="tab" data-bs-target="#MuslimAssociation" type="button" role="tab" aria-controls="MuslimAssociation" aria-selected="false" tabindex="-1">
                                             Muslim Association
                                         </li>
-                                    </SwiperSlide>
+                                    </SwiperSlide> */}
 
                                 </Swiper>
                             </ul>
@@ -137,10 +195,12 @@ const VendorsTab = () => {
                 </div>
                 <div className=" mt-5">
                     <div class="tab-content ">
-                        <div class="tab-pane fade active show" id="NaanGuys" role="tabpanel" aria-labelledby="NaanGuys-tab">
-                            <NaanGuys />
-                        </div>
-                        <div class="tab-pane fade " id="AdilLaw" role="tabpanel" aria-labelledby="AdilLaw-tab">
+                        {data?.data?.map((item, i) => (
+                            <div class={`tab-pane fade ${i === 0 ? 'show active' : ''}`} id={`a${item.id}`} role="tabpanel" aria-labelledby={i}>
+                                <NaanGuys />
+                            </div>
+                        ))}
+                        {/* <div class="tab-pane fade " id="AdilLaw">
                             <AdilLaw />
                         </div>
                         <div class="tab-pane fade " id="AlamLaw" role="tabpanel" aria-labelledby="AlamLaw-tab">
@@ -172,7 +232,7 @@ const VendorsTab = () => {
                         </div>
                         <div class="tab-pane fade " id="MuslimAssociation" role="tabpanel" aria-labelledby="MuslimAssociation-tab">
                             <MuslimAssociation />
-                        </div>
+                        </div> */}
 
                     </div>
                 </div>

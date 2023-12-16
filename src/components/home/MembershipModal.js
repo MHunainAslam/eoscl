@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PyamentModal from '../membership/PyamentModal';
 import StripeModal from '../membership/StripeModal';
 import { Elements } from '@stripe/react-stripe-js';
@@ -9,6 +9,10 @@ const MembershipModal = ({ PkgName, PkgPrice }) => {
     const [activeComponent, setActiveComponent] = useState('step1');
     const [completedSteps, setCompletedSteps] = useState([]);
     const [PaymentMethod, setPaymentMethod] = useState('')
+    const [step1, setstep1] = useState(false)
+    const [step2, setstep2] = useState(false)
+    const [step3, setstep3] = useState(false)
+    const [step4, setstep4] = useState(false)
     const [PayPal, setPayPal] = useState(false)
 
     const handleComponentChange = (componentName) => {
@@ -37,7 +41,26 @@ const MembershipModal = ({ PkgName, PkgPrice }) => {
         handleComponentChange('step4');
         setPaymentMethod('stripe')
     };
-
+    useEffect(() => {
+        if (activeComponent === 'step1') {
+            setstep1(false)
+            setstep2(false)
+            setstep3(false)
+        }
+        if (activeComponent === 'step2') {
+            setstep1(true)
+            setstep2(false)
+            setstep3(false)
+        }
+        if (activeComponent === 'step3') {
+            setstep2(true)
+            setstep3(false)
+        }
+        if (activeComponent === 'step4') {
+            setstep3(true)
+        }
+    }, [activeComponent])
+    
     const formSubmit = () => {
         document.querySelector('.modal-close').click();
     };
@@ -103,7 +126,7 @@ const MembershipModal = ({ PkgName, PkgPrice }) => {
                                         </div>
 
                                         <div class="modal-footer mt-4 border-0 justify-content-end">
-                                            <button type="button" class="btn primary-btn" onClick={MoveStep1} >Previous</button>
+                                            <button type="button" class="btn primary-btn" onClick={MoveStep2} >Previous</button>
                                             {/* <button type="button" class="btn primary-btn" onClick={formSubmit}>Next</button> */}
                                         </div>
                                     </>
@@ -123,10 +146,10 @@ const MembershipModal = ({ PkgName, PkgPrice }) => {
                                     </>
                                     }
                                     <div className="d-flex justify-content-center">
-                                        <div className={`steps ${completedSteps.includes('step2') ? 'complete' : ''}`}></div>
-                                        <div className={`steps ${completedSteps.includes('step3') ? 'complete' : ''}`}></div>
-                                        <div className={`steps ${completedSteps.includes('step4') ? 'complete' : ''}`}></div>
-                                        <div className={`steps ${completedSteps.includes('step5') ? 'complete' : ''}`}></div>
+                                        <div className={`steps ${step1 ? 'complete' : ''}`}></div>
+                                        <div className={`steps ${step2 ? 'complete' : ''}`}></div>
+                                        <div className={`steps ${step3 ? 'complete' : ''}`}></div>
+                                        <div className={`steps ${step4 ? 'complete' : ''}`}></div>
                                     </div>
                                 </div>
                             </form>

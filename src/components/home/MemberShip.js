@@ -5,7 +5,7 @@ import MembershipModal from './MembershipModal'
 import Link from 'next/link'
 import { app_url } from '@/config'
 import axios from 'axios'
-import { GetLocaldata } from '@/utils/Token'
+import { GetLocaldata, imgurl } from '@/utils/Token'
 import toast from 'react-hot-toast'
 
 const MemberShip = () => {
@@ -18,7 +18,7 @@ const MemberShip = () => {
         setPkgName(title)
         setPkgPrice(`$${price}`)
     }
- 
+
     GetLocaldata()
     useEffect(() => {
         axios.get(`${app_url}/api/memberships`, {
@@ -48,7 +48,10 @@ const MemberShip = () => {
                             <div className="col-lg-4 col-md-6 " style={{ marginTop: '150px' }} key={i}>
                                 <div className="card h-100 m-card-2 ">
                                     <div className="card-body  text-center">
-                                        <Image src={'/assets/images/card/Image 5.png'} className='m-card-img' alt="" width={500} height={500}></Image>
+                                        {item.image === null ?
+                                            <Image src={'/assets/images/download.png'} className='m-card-img' alt="" width={500} height={500}></Image> :
+                                            <Image loader={imgurl} src={item.image?.url} className='m-card-img' alt="" width={500} height={500}></Image>
+                                        }
                                         <p className="heading-m w-fit-content mt-3 mx-auto">{item.title}
                                             <br /> <span className='heading-line'></span>
                                         </p>
