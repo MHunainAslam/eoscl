@@ -32,6 +32,8 @@ const VendorsTab = () => {
     const [data, setdata] = useState([])
     const [tabdata, settabdata] = useState([])
     const [isLoading, setisLoading] = useState(true)
+    const [Logo, setLogo] = useState(null)
+
     useEffect(() => {
         axios.get(`${app_url}/api/partners`, {
         })
@@ -40,34 +42,17 @@ const VendorsTab = () => {
                 console.log(response.data);
                 setisLoading(false)
                 setdata(response.data)
-
+                document.querySelector('.activetab0').click()
             })
             .catch(error => {
                 // Handle error here
                 console.error(error);
-                toast.error(error?.response?.data?.message)
-                setisLoading(false)
-            });
-    }, [])
-    useEffect(() => {
-        axios.get(`${app_url}/api/partners`, {
-        })
-            .then(response => {
-                // Handle successful response here
-                console.log(response.data);
-                setisLoading(false)
-                setdata(response.data)
-
-            })
-            .catch(error => {
-                // Handle error here
-                console.error(error);
-                toast.error(error?.response?.data?.message)
+                // toast.error(error?.response?.data?.message+ 'lll')
                 setisLoading(false)
             });
     }, [])
     const activetab = (e) => {
-        axios.get(`${app_url}/api/partner-details/${e.target.value}/parent`, {
+        axios.get(`${app_url}/api/partner-details/${e.target.value}/parent?status='active'`, {
         })
             .then(response => {
                 // Handle successful response here
@@ -117,6 +102,7 @@ const VendorsTab = () => {
                                     }}
                                     slidesPerView={6}
                                     spaceBetween={30}
+                                    loop={true}
                                     pagination={{
                                         clickable: true,
                                     }}
@@ -126,7 +112,7 @@ const VendorsTab = () => {
                                 >
                                     {data?.data?.map((item, i) => (
                                         <SwiperSlide>
-                                            <li class={`nav-item nav-link ${i === 0 ? 'active' : ''}`}  data-bs-toggle="tab" value={item.id} onClick={activetab} data-bs-target={`#a${item.id}`} type="button" role="tab" aria-controls="NaanGuys" aria-selected="false" tabindex="-1">
+                                            <li class={`nav-item nav-link activetab${i} ${i === 0 ? 'active' : ''}`} state={item.image} data-bs-toggle="tab" value={item.id} onClick={(e) => { activetab(e), setLogo(item) }} data-bs-target={`#a${item.id}`} type="button" role="tab" aria-controls="NaanGuys" aria-selected="false" tabindex="-1">
                                                 {item.company_name}
                                             </li>
                                         </SwiperSlide>
@@ -197,7 +183,7 @@ const VendorsTab = () => {
                     <div class="tab-content ">
                         {data?.data?.map((item, i) => (
                             <div class={`tab-pane fade ${i === 0 ? 'show active' : ''}`} id={`a${item.id}`} role="tabpanel" aria-labelledby={i}>
-                                <NaanGuys />
+                                <NaanGuys tabdata={tabdata} logo={Logo} />
                             </div>
                         ))}
                         {/* <div class="tab-pane fade " id="AdilLaw">
