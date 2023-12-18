@@ -44,14 +44,14 @@ const MemberShipForm = () => {
         <>
 
 
-            <div class="modal fade" id="MembershipForm" tabindex="-1" aria-labelledby="MembershipFormLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content m-modal">
-                        <div class="modal-header border-0">
+            <div className="modal fade" id="MembershipForm" tabIndex="-1" aria-labelledby="MembershipFormLabel" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered">
+                    <div className="modal-content m-modal">
+                        <div className="modal-header border-0">
 
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             <form action="" onSubmit={sendmembershipreq}>
                                 <p className="heading-m text-center text-p">
                                     Membership
@@ -73,8 +73,8 @@ const MemberShipForm = () => {
                                     <label htmlFor="" className='para mt-3 text-p'>Message:</label>
                                     <textarea name="" value={Message} onChange={(e) => setMessage(e.target.value)} className='form-control tarea px-0' id="" cols="30" rows="5"></textarea>
                                 </div>
-                                <div class="modal-footer mt-4 border-0 justify-content-end">
-                                    <button type="submit" disabled={isLoading} class="btn primary-btn">Submit {isLoading ? <span class="spinner-border spinner-border-sm" aria-hidden="true"></span> : ''}</button>
+                                <div className="modal-footer mt-4 border-0 justify-content-end">
+                                    <button type="submit" disabled={isLoading} className="btn primary-btn">Submit {isLoading ? <span className="spinner-border spinner-border-sm" aria-hidden="true"></span> : ''}</button>
                                 </div>
 
                             </form>

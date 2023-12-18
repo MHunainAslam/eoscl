@@ -46,6 +46,32 @@ body {
   text-decoration: underline;
 }
 
+.custome-nav .nav-link {
+  transition: 0.3s;
+  position: relative;
+}
+
+.custome-nav .active-nav.nav-link::after {
+  width: 100%;
+}
+
+.custome-nav .nav-link::after {
+  content: '';
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  transition: 0.3s;
+  background-color: var(--dark);
+}
+
+.custome-nav .nav-link:hover::after {
+  width: 100%;
+  transition: 0.3s;
+
+}
+
 .custome-nav .header-logo {
   width: calc(100px + (150 - 100) * ((100vw - 320px) / (1920 - 320)));
   height: calc(70px + (120 - 70) * ((100vw - 320px) / (1920 - 320)));

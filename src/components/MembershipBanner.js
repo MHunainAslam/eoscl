@@ -4,7 +4,7 @@ import MemberShipForm from './membership/MemberShipForm'
 
 const MembershipBanner = ({ reverse }) => {
     return (
-        <section className='MembershipBanner mt-5'>
+        <section className='MembershipBanner '>
             <div className="container py-5 ">
                 <div className={`row py-5 ${reverse ? 'flex-row-reverse' : ''}`}>
                     <div className="col-lg-5 col-md-6">

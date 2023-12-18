@@ -59,17 +59,17 @@ const Testimonial = () => {
                                             <Image src={'/assets/images/user/Rectangle.png'} alt="" width={500} height={500}></Image>
                                         </div>
                                         <div className="d-flex justify-content-between heading-sm text-center mt-4">
-                                            <i class="bi bi-quote text-p"></i>
+                                            <i className="bi bi-quote text-p"></i>
                                             John Smith
-                                            <i class="bi bi-quote bi-quote-2 text-p"></i>
+                                            <i className="bi bi-quote bi-quote-2 text-p"></i>
                                         </div>
                                         <p className="para text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis accusamus </p>
                                         <div className="d-flex justify-content-center">
-                                            <i class="bi bi-star-fill text-p"></i>
-                                            <i class="bi bi-star-fill text-p"></i>
-                                            <i class="bi bi-star-fill text-p"></i>
-                                            <i class="bi bi-star-fill text-p"></i>
-                                            <i class="bi bi-star-fill text-p"></i>
+                                            <i className="bi bi-star-fill text-p"></i>
+                                            <i className="bi bi-star-fill text-p"></i>
+                                            <i className="bi bi-star-fill text-p"></i>
+                                            <i className="bi bi-star-fill text-p"></i>
+                                            <i className="bi bi-star-fill text-p"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -84,17 +84,17 @@ const Testimonial = () => {
                                             <Image src={'/assets/images/user/Rectangle 2.png'} alt="" width={500} height={500}></Image>
                                         </div>
                                         <div className="d-flex justify-content-between heading-sm text-center mt-4">
-                                            <i class="bi bi-quote text-p"></i>
+                                            <i className="bi bi-quote text-p"></i>
                                             Eliza Beth
-                                            <i class="bi bi-quote bi-quote-2 text-p"></i>
+                                            <i className="bi bi-quote bi-quote-2 text-p"></i>
                                         </div>
                                         <p className="para text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis accusamus </p>
                                         <div className="d-flex justify-content-center">
-                                            <i class="bi bi-star-fill text-p"></i>
-                                            <i class="bi bi-star-fill text-p"></i>
-                                            <i class="bi bi-star-fill text-p"></i>
-                                            <i class="bi bi-star-fill text-p"></i>
-                                            <i class="bi bi-star-fill text-p"></i>
+                                            <i className="bi bi-star-fill text-p"></i>
+                                            <i className="bi bi-star-fill text-p"></i>
+                                            <i className="bi bi-star-fill text-p"></i>
+                                            <i className="bi bi-star-fill text-p"></i>
+                                            <i className="bi bi-star-fill text-p"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -109,17 +109,17 @@ const Testimonial = () => {
                                             <Image src={'/assets/images/user/Rectangle 77.png'} alt="" width={500} height={500}></Image>
                                         </div>
                                         <div className="d-flex justify-content-between heading-sm text-center mt-4">
-                                            <i class="bi bi-quote text-p"></i>
+                                            <i className="bi bi-quote text-p"></i>
                                             John Smith
-                                            <i class="bi bi-quote bi-quote-2 text-p"></i>
+                                            <i className="bi bi-quote bi-quote-2 text-p"></i>
                                         </div>
                                         <p className="para text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis accusamus </p>
                                         <div className="d-flex justify-content-center">
-                                            <i class="bi bi-star-fill text-p"></i>
-                                            <i class="bi bi-star-fill text-p"></i>
-                                            <i class="bi bi-star-fill text-p"></i>
-                                            <i class="bi bi-star-fill text-p"></i>
-                                            <i class="bi bi-star-fill text-p"></i>
+                                            <i className="bi bi-star-fill text-p"></i>
+                                            <i className="bi bi-star-fill text-p"></i>
+                                            <i className="bi bi-star-fill text-p"></i>
+                                            <i className="bi bi-star-fill text-p"></i>
+                                            <i className="bi bi-star-fill text-p"></i>
                                         </div>
                                     </div>
                                 </div>

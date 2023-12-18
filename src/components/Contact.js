@@ -42,7 +42,7 @@ const Contact = () => {
         }
     }
     return (
-        <section className='contact mt-5 py-5'>
+        <section className='contact py-5'>
             <div className="container">
                 <div className="row">
                     <div className="col-12">
@@ -64,7 +64,7 @@ const Contact = () => {
                                             <label htmlFor="" className='para text-p mt-5'>Message</label>
                                             <textarea rows={4} type="text" value={Message} onChange={(e) => setMessage(e.target.value)} className='form-control tarea mt-2' name="" id="" />
 
-                                            <button type='submit' className='mt-4 btn primary-btn'>Submit {isLoading ? <span class="spinner-border spinner-border-sm" aria-hidden="true"></span> : ''}</button>
+                                            <button type='submit' className='mt-4 btn primary-btn'>Submit {isLoading ? <span className="spinner-border spinner-border-sm" aria-hidden="true"></span> : ''}</button>
                                         </form>
                                     </div>
                                     <div className="col-lg-5 col-md-6 mt-md-0 mt-5">

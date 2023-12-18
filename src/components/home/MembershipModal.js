@@ -117,13 +117,13 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
     return (
         <>
 
-            <div class="modal fade" id="VendorModal" tabindex="-1" aria-labelledby="VendorModalLabel" aria-hidden="true">
-                <div class="modal-dialog  modal-dialog-centered">
-                    <div class="modal-content m-modal ">
+            <div className="modal fade" id="VendorModal" tabIndex="-1" aria-labelledby="VendorModalLabel" aria-hidden="true">
+                <div className="modal-dialog  modal-dialog-centered">
+                    <div className="modal-content m-modal ">
                         <div className="modal-header border-0">
-                            <button type="button" class="btn-close modal-close" data-bs-dismiss="modal" aria-label="Close" onClick={MoveStep1}></button>
+                            <button type="button" className="btn-close modal-close" data-bs-dismiss="modal" aria-label="Close" onClick={MoveStep1}></button>
                         </div>
-                        <div class="modal-body pb-4">
+                        <div className="modal-body pb-4">
                             <form action="" onSubmit={purchasemembership}>
                                 <div className="row">
                                     <p className="heading-m text-center text-p">
@@ -146,8 +146,8 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                             <label htmlFor="" className='para mt-3 text-p'>Message:</label>
                                             <textarea name="" value={Message} onChange={(e) => setMessage(e.target.value)} className='form-control tarea px-0' id="" cols="30" rows="5"></textarea>
                                         </div>
-                                        <div class="modal-footer mt-4 border-0 justify-content-end">
-                                            <button type="button" class="btn primary-btn" onClick={MoveStep2}>Next</button>
+                                        <div className="modal-footer mt-4 border-0 justify-content-end">
+                                            <button type="button" className="btn primary-btn" onClick={MoveStep2}>Next</button>
                                         </div>
                                     </>
                                     }
@@ -160,9 +160,9 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                             <label htmlFor="" className='para mt-3 text-p'>Package Price:</label>
                                             <input type="text" className='form-control inp px-0' value={PkgPrice} readOnly name="" id="" />
                                         </div>
-                                        <div class="modal-footer mt-4 border-0 justify-content-end">
-                                            <button type="button" class="btn primary-btn" onClick={MoveStep1} >Previous</button>
-                                            <button type="button" class="btn primary-btn" onClick={MoveStep3}>Next</button>
+                                        <div className="modal-footer mt-4 border-0 justify-content-end">
+                                            <button type="button" className="btn primary-btn" onClick={MoveStep1} >Previous</button>
+                                            <button type="button" className="btn primary-btn" onClick={MoveStep3}>Next</button>
                                         </div>
                                     </>
                                     }
@@ -174,9 +174,9 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                             <button className='btn primary-btn w-100' onClick={MoveStep5}>Stripe</button>
                                         </div>
 
-                                        <div class="modal-footer mt-4 border-0 justify-content-end">
-                                            <button type="button" class="btn primary-btn" onClick={MoveStep2} >Previous</button>
-                                            {/* <button type="button" class="btn primary-btn" onClick={formSubmit}>Next</button> */}
+                                        <div className="modal-footer mt-4 border-0 justify-content-end">
+                                            <button type="button" className="btn primary-btn" onClick={MoveStep2} >Previous</button>
+                                            {/* <button type="button" className="btn primary-btn" onClick={formSubmit}>Next</button> */}
                                         </div>
                                     </>
                                     }
@@ -188,9 +188,9 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                                     <StripeModal settransaction_id={settransaction_id} />
                                                 </Elements>
                                                 : ''}
-                                        <div class="modal-footer mt-4 border-0 justify-content-end">
-                                            <button type="button" class="btn primary-btn" onClick={MoveStep3} >Previous</button>
-                                            <button type="submit" class="btn primary-btn" >Submit</button>
+                                        <div className="modal-footer mt-4 border-0 justify-content-end">
+                                            <button type="button" className="btn primary-btn" onClick={MoveStep3} >Previous</button>
+                                            <button type="submit" className="btn primary-btn" >Submit</button>
                                         </div>
                                     </>
                                     }
