@@ -5,7 +5,10 @@ import PyamentModal from '../membership/PyamentModal';
 import StripeModal from '../membership/StripeModal';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
-const MembershipModal = ({ PkgName, PkgPrice }) => {
+import toast from 'react-hot-toast';
+import axios from 'axios';
+import { app_url } from '@/config';
+const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
     const [activeComponent, setActiveComponent] = useState('step1');
     const [completedSteps, setCompletedSteps] = useState([]);
     const [PaymentMethod, setPaymentMethod] = useState('')
@@ -14,7 +17,14 @@ const MembershipModal = ({ PkgName, PkgPrice }) => {
     const [step3, setstep3] = useState(false)
     const [step4, setstep4] = useState(false)
     const [PayPal, setPayPal] = useState(false)
-
+    const [Name, setName] = useState('')
+    const [Email, setEmail] = useState('')
+    const [Phone, setPhone] = useState('')
+    const [Message, setMessage] = useState('')
+    const [transaction_id, settransaction_id] = useState('')
+    const [isLoading, setisLoading] = useState(false)
+    const [membership_id, setmembership_id] = useState('')
+    const [payment_type, setpayment_type] = useState('')
     const handleComponentChange = (componentName) => {
         setActiveComponent(componentName);
         if (!completedSteps.includes(componentName)) {
@@ -23,15 +33,26 @@ const MembershipModal = ({ PkgName, PkgPrice }) => {
     };
 
     const MoveStep1 = () => {
+
         handleComponentChange('step1');
+
     };
 
     const MoveStep2 = () => {
-        handleComponentChange('step2');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const isValidEmail = emailPattern.test(Email);
+        console.log(isValidEmail, ';;;')
+        if (Name === '' || Email === '' || !isValidEmail || Phone === '' || Message === '') {
+            toast.error('All Fields Are Required')
+        } else {
+            handleComponentChange('step2');
+        }
     };
 
     const MoveStep3 = () => {
+
         handleComponentChange('step3');
+
     };
     const MoveStep4 = () => {
         handleComponentChange('step4');
@@ -60,11 +81,39 @@ const MembershipModal = ({ PkgName, PkgPrice }) => {
             setstep3(true)
         }
     }, [activeComponent])
-    
+
     const formSubmit = () => {
         document.querySelector('.modal-close').click();
     };
     const stripePromise = loadStripe('YOUR_STRIPE_PUBLISHABLE_KEY');
+
+    const purchasemembership = (e) => {
+        e.preventDefault()
+
+        if (Name === '' || !Email || Phone === '' || Message === '') {
+            toast.error('All Fields Are Required')
+        } else {
+            setisLoading(true)
+            axios.post(`${app_url}/api/memberships-submission`, { name: Name, email: Email, phone_number: Phone, message: Message, membership_id: Pkgid, payment_type: PaymentMethod, transaction_id: transaction_id }, {
+                headers: {
+                    'Content-Type': 'application/json', // Specify the content type if needed.
+                }
+            })
+                .then(response => {
+                    // Handle successful response here
+                    console.log(response.data);
+                    toast.success(response?.data?.message)
+                    setisLoading(false)
+                 
+                })
+                .catch(error => {
+                    // Handle error here
+                    console.error(error);
+                    setisLoading(false)
+                    toast.error(error?.response?.data?.message)
+                });
+        }
+    }
     return (
         <>
 
@@ -75,7 +124,7 @@ const MembershipModal = ({ PkgName, PkgPrice }) => {
                             <button type="button" class="btn-close modal-close" data-bs-dismiss="modal" aria-label="Close" onClick={MoveStep1}></button>
                         </div>
                         <div class="modal-body pb-4">
-                            <form action="">
+                            <form action="" onSubmit={purchasemembership}>
                                 <div className="row">
                                     <p className="heading-m text-center text-p">
                                         Membership
@@ -83,19 +132,19 @@ const MembershipModal = ({ PkgName, PkgPrice }) => {
                                     {activeComponent === 'step1' && <>
                                         <div className="col-md-12 mt-2">
                                             <label htmlFor="" className='para mt-3 text-p'>Name:</label>
-                                            <input type="text" className='form-control inp px-0' name="" id="" />
+                                            <input type="text" value={Name} onChange={(e) => setName(e.target.value)} className='form-control inp px-0' name="" id="" />
                                         </div>
                                         <div className="col-md-12 mt-2">
                                             <label htmlFor="" className='para mt-3 text-p'>Email:</label>
-                                            <input type="text" className='form-control inp px-0' name="" id="" />
+                                            <input type="email" value={Email} onChange={(e) => setEmail(e.target.value)} className='form-control inp px-0' name="" id="" />
                                         </div>
                                         <div className="col-md-12 mt-2">
                                             <label htmlFor="" className='para mt-3 text-p'>Phone Number:</label>
-                                            <input type="text" className='form-control inp px-0' name="" id="" />
+                                            <input type="text" onKeyPress={(e) => !/[+0-9]/.test(e.key) && e.preventDefault()} value={Phone} onChange={(e) => setPhone(e.target.value)} className='form-control inp px-0' name="" id="" />
                                         </div>
                                         <div className="col-md-12 mt-2">
                                             <label htmlFor="" className='para mt-3 text-p'>Message:</label>
-                                            <textarea name="" className='form-control tarea px-0' id="" cols="30" rows="5"></textarea>
+                                            <textarea name="" value={Message} onChange={(e) => setMessage(e.target.value)} className='form-control tarea px-0' id="" cols="30" rows="5"></textarea>
                                         </div>
                                         <div class="modal-footer mt-4 border-0 justify-content-end">
                                             <button type="button" class="btn primary-btn" onClick={MoveStep2}>Next</button>
@@ -133,15 +182,15 @@ const MembershipModal = ({ PkgName, PkgPrice }) => {
                                     }
                                     {activeComponent === 'step4' && <>
                                         {PaymentMethod === 'paypal' ?
-                                            <PyamentModal />
+                                            <PyamentModal settransaction_id={settransaction_id}/>
                                             : 'stripe' ?
                                                 <Elements stripe={stripePromise}>
-                                                    <StripeModal />
+                                                    <StripeModal settransaction_id={settransaction_id} />
                                                 </Elements>
                                                 : ''}
                                         <div class="modal-footer mt-4 border-0 justify-content-end">
                                             <button type="button" class="btn primary-btn" onClick={MoveStep3} >Previous</button>
-                                            {/* <button type="button" class="btn primary-btn" onClick={formSubmit}>Next</button> */}
+                                            <button type="submit" class="btn primary-btn" >Submit</button>
                                         </div>
                                     </>
                                     }

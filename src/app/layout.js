@@ -5,6 +5,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import Script from 'next/script';
 import Footer from '@/components/layout/Footer';
 import { Toaster } from 'react-hot-toast';
+import NextTopLoader from 'nextjs-toploader';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,8 +20,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body className={inter.className}>
+      <NextTopLoader
+      color="#ed962e"
+      showSpinner={false}
+      crawlSpeed={1} />
         <Toaster
-          position="top-center"
+          position="top-right"
           reverseOrder={false}
         />
         {children}

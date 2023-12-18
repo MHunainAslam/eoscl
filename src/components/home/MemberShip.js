@@ -11,12 +11,14 @@ import toast from 'react-hot-toast'
 const MemberShip = () => {
     const [PkgName, setPkgName] = useState('')
     const [PkgPrice, setPkgPrice] = useState('')
+    const [Pkgid, setPkgid] = useState('')
     const [data, setdata] = useState([])
     const [isLoading, setisLoading] = useState(true)
 
-    const BeginnerModal = (title, price) => {
+    const BeginnerModal = (title, price, id) => {
         setPkgName(title)
         setPkgPrice(`$${price}`)
+        setPkgid(id)
     }
 
     GetLocaldata()
@@ -60,7 +62,7 @@ const MemberShip = () => {
 
                                     </div>
                                     <div className="card-footer border-0 bg-transparent mb-3">
-                                        <button className='btn primary-btn ' data-bs-toggle="modal" data-bs-target="#VendorModal" onClick={() => BeginnerModal(item.title, item.price)}>Get Started</button>
+                                        <button className='btn primary-btn ' data-bs-toggle="modal" data-bs-target="#VendorModal" onClick={() => BeginnerModal(item.title, item.price, item.id)}>Get Started</button>
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +73,7 @@ const MemberShip = () => {
                     <Link href="/membershipcards" className='btn primary-btn mt-5'>Show All</Link>
                 </div>
             </section>
-            <MembershipModal PkgName={PkgName} PkgPrice={PkgPrice} />
+            <MembershipModal PkgName={PkgName} Pkgid={Pkgid} PkgPrice={PkgPrice} />
         </>
     )
 }

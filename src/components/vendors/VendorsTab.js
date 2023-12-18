@@ -42,7 +42,9 @@ const VendorsTab = () => {
                 console.log(response.data);
                 setisLoading(false)
                 setdata(response.data)
-                document.querySelector('.activetab0').click()
+                setTimeout(() => {
+                    document.querySelector('.activetab0').click()
+                }, 1000);
             })
             .catch(error => {
                 // Handle error here
@@ -112,7 +114,7 @@ const VendorsTab = () => {
                                 >
                                     {data?.data?.map((item, i) => (
                                         <SwiperSlide>
-                                            <li class={`nav-item nav-link activetab${i} ${i === 0 ? 'active' : ''}`} state={item.image} data-bs-toggle="tab" value={item.id} onClick={(e) => { activetab(e), setLogo(item) }} data-bs-target={`#a${item.id}`} type="button" role="tab" aria-controls="NaanGuys" aria-selected="false" tabindex="-1">
+                                            <li class={`nav-item nav-link activetab${i} ${i === 0 ? 'active' : ''}`} data-bs-toggle="tab" value={item.id} onClick={(e) => { activetab(e), setLogo(item) }} data-bs-target={`#a${item.id}`} type="button" role="tab" aria-controls="NaanGuys" aria-selected="false" tabindex="-1">
                                                 {item.company_name}
                                             </li>
                                         </SwiperSlide>

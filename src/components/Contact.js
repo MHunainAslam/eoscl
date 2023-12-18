@@ -1,7 +1,46 @@
+'use client'
+import { app_url } from '@/config'
+import axios from 'axios'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
+import toast from 'react-hot-toast'
 
 const Contact = () => {
+    const [Name, setName] = useState('')
+    const [Email, setEmail] = useState('')
+    const [Phone, setPhone] = useState('')
+    const [Message, setMessage] = useState('')
+    const [Type, setType] = useState('contact')
+    const [isLoading, setisLoading] = useState(false)
+    const sendcontact = (e) => {
+        e.preventDefault()
+        if (Name === '' || Email === '' || Phone === '' || Message === '') {
+            toast.error('All Fields Are Required')
+        } else {
+            setisLoading(true)
+            axios.post(`${app_url}/api/membership-requests`, { name: Name, email: Email, phone_number: Phone, message: Message, type: Type }, {
+                headers: {
+                    'Content-Type': 'application/json', // Specify the content type if needed.
+                }
+            })
+                .then(response => {
+                    // Handle successful response here
+                    console.log(response.data);
+                    toast.success(response?.data?.message)
+                    setisLoading(false)
+                    setName('')
+                    setEmail('')
+                    setPhone('')
+                    setMessage('')
+                })
+                .catch(error => {
+                    // Handle error here
+                    console.error(error);
+                    setisLoading(false)
+                    toast.error(error?.response?.data?.message)
+                });
+        }
+    }
     return (
         <section className='contact mt-5 py-5'>
             <div className="container">
@@ -15,17 +54,17 @@ const Contact = () => {
                             <div className="card-body py-5">
                                 <div className="row py-3">
                                     <div className="col-lg-7 col-md-6">
-                                        <form action="">
+                                        <form action="" onSubmit={sendcontact}>
                                             <label htmlFor="" className='para text-p mt-5'>Name</label>
-                                            <input type="text" className='form-control inp mt-2' name="" id="" />
+                                            <input type="text" value={Name} onChange={(e) => setName(e.target.value)} className='form-control inp mt-2' name="" id="" />
                                             <label htmlFor="" className='para text-p mt-5'>Email Address</label>
-                                            <input type="text" className='form-control inp mt-2' name="" id="" />
+                                            <input type="email" value={Email} onChange={(e) => setEmail(e.target.value)} className='form-control inp mt-2' name="" id="" />
                                             <label htmlFor="" className='para text-p mt-5'>Phone Number</label>
-                                            <input type="text" className='form-control inp mt-2' name="" id="" />
+                                            <input type="text" onKeyPress={(e) => !/[+0-9]/.test(e.key) && e.preventDefault()} value={Phone} onChange={(e) => setPhone(e.target.value)} className='form-control inp mt-2' name="" id="" />
                                             <label htmlFor="" className='para text-p mt-5'>Message</label>
-                                            <textarea rows={4} type="text" className='form-control tarea mt-2' name="" id="" />
+                                            <textarea rows={4} type="text" value={Message} onChange={(e) => setMessage(e.target.value)} className='form-control tarea mt-2' name="" id="" />
 
-                                            <button className='mt-4 btn primary-btn'>Submit</button>
+                                            <button type='submit' className='mt-4 btn primary-btn'>Submit {isLoading ? <span class="spinner-border spinner-border-sm" aria-hidden="true"></span> : ''}</button>
                                         </form>
                                     </div>
                                     <div className="col-lg-5 col-md-6 mt-md-0 mt-5">

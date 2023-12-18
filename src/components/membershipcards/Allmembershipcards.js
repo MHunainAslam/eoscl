@@ -11,11 +11,13 @@ const Allmembershipcards = () => {
     const [data, setdata] = useState([])
     const [isLoading, setisLoading] = useState(true)
     const [PkgName, setPkgName] = useState('')
+    const [Pkgid, setPkgid] = useState('')
     const [PkgPrice, setPkgPrice] = useState('')
 
-    const BeginnerModal = (title, price) => {
+    const BeginnerModal = (title, price, id) => {
         setPkgName(title)
         setPkgPrice(`$${price}`)
+        setPkgid(id)
     }
     useEffect(() => {
         axios.get(`${app_url}/api/memberships`, {
@@ -53,7 +55,7 @@ const Allmembershipcards = () => {
                                         </p>
                                         <p className="heading-sm text-p">${item.price}</p>
                                         <p className='para'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit repudiandae maxime quaerat est id laudantium minus quibusdam architecto molestias culpa.!</p>
-                                        <button className='btn primary-btn m-card-btn' data-bs-toggle="modal" data-bs-target="#VendorModal" onClick={() => BeginnerModal(item.title, item.price)}>Get Started</button>
+                                        <button className='btn primary-btn m-card-btn' data-bs-toggle="modal" data-bs-target="#VendorModal" onClick={() => BeginnerModal(item.title, item.price, item.id)}>Get Started</button>
                                     </div>
                                 </div>
                             </div>
@@ -62,7 +64,7 @@ const Allmembershipcards = () => {
                     </div>
                 </div>
             </section>
-            <MembershipModal PkgName={PkgName} PkgPrice={PkgPrice} />
+            <MembershipModal PkgName={PkgName} Pkgid={Pkgid} PkgPrice={PkgPrice} />
         </>
     )
 }
