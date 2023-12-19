@@ -10,7 +10,7 @@ const Vendors = () => {
     const [data, setdata] = useState([])
     const [isLoading, setisLoading] = useState(true)
     useEffect(() => {
-        axios.get(`${app_url}/api/partners`, {
+        axios.get(`${app_url}/api/partners?status=active`, {
         })
             .then(response => {
                 // Handle successful response here
@@ -34,7 +34,7 @@ const Vendors = () => {
                     <p className="heading text-center">
                         Partners
                     </p>
-                    <p className="para text-center px-md-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea magni, fuga impedit rerum, ratione quae fugiat expedita beatae incidunt commodi praesentium. Sit tempora error neque unde aperiam quam cum consequatur!</p>
+                    <p className="para text-center px-md-5">The success of our Business Club is strengthened by our esteemed partners, who play a pivotal role in shaping the community ecosystem. We are proud to align with industry leaders, innovators, and influencers who share our commitment to excellence. Most of these business club partners are part of other Event Ontario Initiatives, such as Cricket league, Entrepreneur program, etc.</p>
                     <div className="row mt-5 vendors-card">
                         {data?.data?.slice(0, 12).map((item, i) => (
 

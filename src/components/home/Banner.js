@@ -12,12 +12,11 @@ const Banner = () => {
                 <div className="container  min-vh-75 d-flex align-items-center">
                     <div className="row">
                         <div className="col-lg-6">
-                            <p className="heading">Discover A Limitless
-                                Possibilities With
-                                <span> Your Membership</span>
+                            <p className="heading ">Unlock opportunities, Elevate your network, and join the 
+                                <span> Membership Program</span>
                             </p>
                             <p className="para mb-4">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur fuga laborum cumque unde quo distinctio dolorum aspernatur, architecto rerum dignissimos pariatur id placeat labore sint, nam aperiam possimus a corrupti.
+                            Welcome to our exclusive Membership Program, where opportunities abound and connections flourish. Immerse yourself in a dynamic community of like-minded business enthusiasts and entrepreneurs dedicated to fostering success.
                             </p>
                             <button className='btn primary-btn' data-bs-toggle="modal" data-bs-target="#MembershipForm">Get Started</button>
                             <Link className='para text-s ps-3 link-hov' href={'/about'}>Learn More <i className="bi bi-arrow-right"></i></Link>

@@ -14,8 +14,8 @@ const About = () => {
                         <div className="col-md-7 my-auto">
                             <p className="heading">About Us </p>
                             <p className="para">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus deleniti nisi eligendi, omnis et eveniet eum! Distinctio, laborum. Eos ipsa nesciunt ipsam nobis alias sed odio iusto vitae officia, nemo laudantium, animi provident nihil optio ex enim dicta hic? Sequi beatae ut assumenda, dicta animi autem quos in quam ullam, minus obcaecati esse ratione eligendi numquam illo sint perspiciatis unde earum maiores vel eius dolorum dolore id? Similique, quidem accusantium. Dolorem culpa neque vitae corrupti quam tempora, corporis, eaque omnis consectetur nam quibusdam consequuntur impedit. Sint, pariatur quidem? Nesciunt minus reprehenderit hic, fuga molestiae perspiciatis voluptatem sint aliquid deleniti illum aliquam dolorem laboriosam ut nobis delectus, eius voluptatibus. <br /><br />
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, quibusdam recusandae, reiciendis ullam dolores pariatur atque cumque placeat fuga voluptates fugit facere natus quasi distinctio eos libero! Praesentium, quasi temporibus!
+                                Welcome to the EventOntario business club program! This program is a fantastic opportunity for entrepreneurs and professionals to take advantage of discounts and incentives offered by EOSCL sponsors. As a business member, you can benefit from these special offers and connect with other EOSCL players. We are proud to offer this program and support the success of our members. 
+
                             </p>
                             <Link href="/about" className='btn primary-btn mt-3'>Read More</Link>
                         </div>

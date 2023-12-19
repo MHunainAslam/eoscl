@@ -1,7 +1,8 @@
 import { PayPalButtons, PayPalScriptProvider } from '@paypal/react-paypal-js';
 import React from 'react'
 
-const PyamentModal = () => {
+const PyamentModal = ({PkgPrice}) => {
+    console.log(PkgPrice)
     // const handleApprove = async (data, actions) => {
     //     const order = await actions.order.capture();
     //     if (order) {
@@ -53,8 +54,8 @@ const PyamentModal = () => {
                                             purchase_units: [
                                                 {
                                                     amount: {
-                                                        currency_code: 'usd',
-                                                        value: '10',
+                                                        currency_code: 'USD',
+                                                        value: PkgPrice,
                                                     },
                                                     // custom_id: paypalinfostate?.topOrder[0].systemOrderId,
                                                 },

@@ -17,13 +17,13 @@ const MemberShip = () => {
 
     const BeginnerModal = (title, price, id) => {
         setPkgName(title)
-        setPkgPrice(`$${price}`)
+        setPkgPrice(`${price}`)
         setPkgid(id)
     }
 
     GetLocaldata()
     useEffect(() => {
-        axios.get(`${app_url}/api/memberships`, {
+        axios.get(`${app_url}/api/memberships?status=active`, {
         })
             .then(response => {
                 // Handle successful response here
@@ -44,7 +44,7 @@ const MemberShip = () => {
             <section className='membership mt-5'>
                 <div className="container text-center">
                     <p className='heading'>The Membership Card Option</p>
-                    <p className='para-m px-md-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                    <p className='para-m px-md-5'>Join our Business Club Partner program by paying an annual fee and enjoy a steady stream of customers using your services.</p>
                     <div className="row mb-5" >
                         {data?.data?.slice(0, 3).map((item, i) => (
                             <div className="col-lg-4 col-md-6 " style={{ marginTop: '150px' }} key={i}>

@@ -18,6 +18,7 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
     const [step4, setstep4] = useState(false)
     const [PayPal, setPayPal] = useState(false)
     const [Name, setName] = useState('')
+    const [UserName, setUserName] = useState('')
     const [Email, setEmail] = useState('')
     const [Phone, setPhone] = useState('')
     const [Message, setMessage] = useState('')
@@ -85,26 +86,26 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
     const formSubmit = () => {
         document.querySelector('.modal-close').click();
     };
-    const stripePromise = loadStripe('YOUR_STRIPE_PUBLISHABLE_KEY');
+    const stripePromise = loadStripe('AY_Wql-Q_GmPwBxin8-cg-EhrH3dxYH5XbfBou9RwfZVCdJiOCBtaOIUPjJOi72lTDR4WEdPi2GegIcT');
 
     const purchasemembership = (e) => {
         e.preventDefault()
 
-        if (Name === '' || !Email || Phone === '' || Message === '') {
+        if (Name === '' || !Email || Phone === '' || Message === '' || UserName === '') {
             toast.error('All Fields Are Required')
         } else {
             setisLoading(true)
-            axios.post(`${app_url}/api/memberships-submission`, { name: Name, email: Email, phone_number: Phone, message: Message, membership_id: Pkgid, payment_type: PaymentMethod, transaction_id: transaction_id }, {
+            axios.post(`${app_url}/api/memberships-submission`, { name: Name, username: UserName, email: Email, phone_number: Phone, message: Message, membership_id: Pkgid, payment_type: PaymentMethod, transaction_id: transaction_id }, {
                 headers: {
                     'Content-Type': 'application/json', // Specify the content type if needed.
                 }
             })
                 .then(response => {
                     // Handle successful response here
-                    console.log(response.data);
+                    console.log('formsubmit', response.data);
                     toast.success(response?.data?.message)
                     setisLoading(false)
-                 
+
                 })
                 .catch(error => {
                     // Handle error here
@@ -135,6 +136,10 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                             <input type="text" value={Name} onChange={(e) => setName(e.target.value)} className='form-control inp px-0' name="" id="" />
                                         </div>
                                         <div className="col-md-12 mt-2">
+                                            <label htmlFor="" className='para mt-3 text-p'>Username:</label>
+                                            <input type="text" value={UserName} onChange={(e) => setUserName(e.target.value)} className='form-control inp px-0' name="" id="" />
+                                        </div>
+                                        <div className="col-md-12 mt-2">
                                             <label htmlFor="" className='para mt-3 text-p'>Email:</label>
                                             <input type="email" value={Email} onChange={(e) => setEmail(e.target.value)} className='form-control inp px-0' name="" id="" />
                                         </div>
@@ -158,7 +163,7 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                         </div>
                                         <div className="col-md-12 mt-2">
                                             <label htmlFor="" className='para mt-3 text-p'>Package Price:</label>
-                                            <input type="text" className='form-control inp px-0' value={PkgPrice} readOnly name="" id="" />
+                                            <input type="text" className='form-control inp px-0' value={`$${PkgPrice}`} readOnly name="" id="" />
                                         </div>
                                         <div className="modal-footer mt-4 border-0 justify-content-end">
                                             <button type="button" className="btn primary-btn" onClick={MoveStep1} >Previous</button>
@@ -182,7 +187,7 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                     }
                                     {activeComponent === 'step4' && <>
                                         {PaymentMethod === 'paypal' ?
-                                            <PyamentModal settransaction_id={settransaction_id}/>
+                                            <PyamentModal settransaction_id={settransaction_id} PkgPrice={PkgPrice}/>
                                             : 'stripe' ?
                                                 <Elements stripe={stripePromise}>
                                                     <StripeModal settransaction_id={settransaction_id} />

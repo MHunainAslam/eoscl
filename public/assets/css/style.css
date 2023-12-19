@@ -583,7 +583,9 @@ body {
 .min-vh-30 {
   min-height: 30vh;
 }
-
+/* .vendors-tab .swiper-slide {
+  width: auto !important;
+} */
 .vendors-tab li:hover {
   background-color: var(--primary);
   color: white;

@@ -20,7 +20,7 @@ const Allmembershipcards = () => {
         setPkgid(id)
     }
     useEffect(() => {
-        axios.get(`${app_url}/api/memberships`, {
+        axios.get(`${app_url}/api/memberships?status=active`, {
         })
             .then(response => {
                 // Handle successful response here

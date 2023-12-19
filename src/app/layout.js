@@ -6,6 +6,9 @@ import Script from 'next/script';
 import Footer from '@/components/layout/Footer';
 import { Toaster } from 'react-hot-toast';
 import NextTopLoader from 'nextjs-toploader';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 
 const inter = Inter({ subsets: ['latin'] })

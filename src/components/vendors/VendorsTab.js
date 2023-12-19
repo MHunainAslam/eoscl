@@ -21,6 +21,9 @@ import MuslimAssociation from './MuslimAssociation';
 import axios from 'axios';
 import { app_url } from '@/config';
 import toast from 'react-hot-toast';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 const VendorsTab = () => {
     const nextSlide = () => {
         document.querySelector('.swiper-button-next').click()
@@ -29,17 +32,23 @@ const VendorsTab = () => {
         document.querySelector('.swiper-button-prev').click()
     }
 
-    const [data, setdata] = useState([])
+    const [data, setdata] = useState()
     const [tabdata, settabdata] = useState([])
     const [isLoading, setisLoading] = useState(true)
     const [Logo, setLogo] = useState(null)
+    const [swiperlength, setswiperlength] = useState()
 
     useEffect(() => {
-        axios.get(`${app_url}/api/partners`, {
+        axios.get(`${app_url}/api/partners?status=active`, {
         })
             .then(response => {
                 // Handle successful response here
-                console.log(response.data);
+
+                console.log(response.data.data.length, 'llo');
+                setswiperlength(response.data.data)
+                // if (response.data.data.length < 6) {
+                //     console.log('first')
+                // }
                 setisLoading(false)
                 setdata(response.data)
                 setTimeout(() => {
@@ -54,7 +63,8 @@ const VendorsTab = () => {
             });
     }, [])
     const activetab = (e) => {
-        axios.get(`${app_url}/api/partner-details/${e.target.value}/parent?status='active'`, {
+        console.log(swiperlength?.length < 5 ? swiperlength?.length : 5)
+        axios.get(`${app_url}/api/partner-details/${e.target.value}/parent?status=active`, {
         })
             .then(response => {
                 // Handle successful response here
@@ -85,31 +95,31 @@ const VendorsTab = () => {
                                 <Swiper
                                     breakpoints={{
                                         1200: {
-                                            slidesPerView: 6,
+                                            slidesPerView: swiperlength?.length < 6 ? swiperlength?.length : 6,
                                             spaceBetween: 20
                                         },
                                         992: {
-                                            slidesPerView: 5,
+                                            slidesPerView: swiperlength?.length < 5 ? swiperlength?.length : 5,
                                             spaceBetween: 20
                                         },
                                         768: {
-                                            slidesPerView: 4,
+                                            slidesPerView: swiperlength?.length < 4 ? swiperlength?.length : 4,
                                             spaceBetween: 20
                                         },
                                         320: {
-                                            slidesPerView: 3,
+                                            slidesPerView: swiperlength?.length < 2 ? swiperlength?.length : 2,
                                             spaceBetween: 20
                                         },
 
                                     }}
-                                    slidesPerView={6}
+                                    slidesPerView={swiperlength?.length < 6 ? swiperlength?.length : 6}
                                     spaceBetween={30}
                                     loop={true}
                                     pagination={{
                                         clickable: true,
                                     }}
                                     navigation={true}
-                                    modules={[FreeMode, Navigation]}
+                                    modules={[Navigation]}
                                     className="mySwiper"
                                 >
                                     {data?.data?.map((item, i) => (

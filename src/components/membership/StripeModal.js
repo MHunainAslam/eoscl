@@ -30,15 +30,15 @@ const StripeModal = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <div >
             <CardElement className='form-control py-3' />
             <div className="d-flex">
-                <button className='btn primary-btn  mt-3 ms-auto' type="submit" disabled={!stripe}>
+                <button className='btn primary-btn  mt-3 ms-auto' type="submit" onClick={handleSubmit} disabled={!stripe}>
                     Pay
                 </button>
             </div>
             {error && <div>{error}</div>}
-        </form>
+        </div>
     );
 };
 
