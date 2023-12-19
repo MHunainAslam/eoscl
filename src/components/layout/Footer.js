@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-4  mt-3 text-lg-start text-center ">
-                            <Image src={'/assets/images/logo/eoscl-logo-white.png'} className='footer-logo' alt="" width={500} height={500}></Image>
+                            <Image src={'/assets/images/logo/logo.png'} className='footer-logo' alt="" width={500} height={500}></Image>
                             <p className="para-m mt-3 text-black">Welcome to our exclusive Membership Program, where opportunities abound and connections flourish. Immerse yourself in a dynamic community of like-minded business enthusiasts and entrepreneurs dedicated to fostering success.</p>
                         </div>
                         <div className="col-lg col-md-6 mt-3 text-lg-start text-center" col-md-6>

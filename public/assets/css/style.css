@@ -73,9 +73,9 @@ body {
 }
 
 .custome-nav .header-logo {
-  width: calc(100px + (150 - 100) * ((100vw - 320px) / (1920 - 320)));
-  height: calc(70px + (120 - 70) * ((100vw - 320px) / (1920 - 320)));
-  object-fit: cover;
+  width: calc(90px + (130 - 90) * ((100vw - 320px) / (1920 - 320)));
+  height: calc(60px + (110 - 60) * ((100vw - 320px) / (1920 - 320)));
+  object-fit: contain;
 }
 
 .custome-nav li a {
@@ -115,7 +115,7 @@ body {
 }
 
 .heading {
-  font-size: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(25px + (40 - 25) * ((100vw - 320px) / (1920 - 320)));
   font-family: "Inter", sans-serif;
   font-weight: 700;
   color: black;
@@ -544,7 +544,7 @@ body {
 }
 
 .footer-logo {
-  width: 300px;
+  width: 100px;
   height: auto;
   text-align: center;
   object-fit: contain;
