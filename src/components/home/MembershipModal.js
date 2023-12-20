@@ -86,7 +86,7 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
     const formSubmit = () => {
         document.querySelector('.modal-close').click();
     };
-    const stripePromise = loadStripe('AY_Wql-Q_GmPwBxin8-cg-EhrH3dxYH5XbfBou9RwfZVCdJiOCBtaOIUPjJOi72lTDR4WEdPi2GegIcT');
+    const stripePromise = loadStripe('pk_test_51O7lG8G7P2PzfPo57bZpXzvFZf85D04PLUXKts0HyXZVasYXlBlBMjs95tUFz4Y34dodcvAQJazbEvZ4djz6flK8000nnH1lHv');
 
     const purchasemembership = (e) => {
         e.preventDefault()
