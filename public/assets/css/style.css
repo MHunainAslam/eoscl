@@ -646,7 +646,7 @@ body {
   color: transparent;
   width: 154px;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .vendor-card .card-header .discount {

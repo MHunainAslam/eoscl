@@ -14,9 +14,9 @@ const NaanGuys = ({ tabdata, logo }) => {
                 :
                 <>
                     {tabdata?.data?.map((item, i) => (
-                        <div className="col-lg-4 col-md-6 mt-3">
+                        <div className="col-xl-3 col-lg-4 col-md-6 mt-3 ">
                             <div className="card vendor-card h-100">
-                                <div className="card-header">
+                                {/* <div className="card-header">
                                     {logo.image === null ?
                                         <Image src={'/assets/images/download.png'} className='pt-2' width={1000} height={1000} alt=''></Image> :
                                         <Image loader={imgurl} src={logo?.image?.url} className='pt-2' width={1000} height={1000} alt=''></Image>
@@ -26,9 +26,10 @@ const NaanGuys = ({ tabdata, logo }) => {
                                         <div className="heading-m text-white text-center">% Off</div>
 
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className="card-body">
-                                    <p className="para">{item.description} </p>
+                                <div className="heading-m text-white back-p text-center">{item.discount} % Off</div>
+                                    <p className="para my-3 text-center">{item.description} </p>
                                 </div>
                             </div>
                         </div>

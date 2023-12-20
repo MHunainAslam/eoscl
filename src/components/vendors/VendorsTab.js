@@ -24,6 +24,7 @@ import toast from 'react-hot-toast';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import CategpryTab from './VendorsTabData/CategpryTab';
 const VendorsTab = () => {
     const nextSlide = () => {
         document.querySelector('.swiper-button-next').click()
@@ -34,12 +35,13 @@ const VendorsTab = () => {
 
     const [data, setdata] = useState()
     const [tabdata, settabdata] = useState([])
+    const [partnertabdata, setpartnertabdata] = useState([])
     const [isLoading, setisLoading] = useState(true)
     const [Logo, setLogo] = useState(null)
     const [swiperlength, setswiperlength] = useState()
 
     useEffect(() => {
-        axios.get(`${app_url}/api/partners?status=active`, {
+        axios.get(`${app_url}/api/categories`, {
         })
             .then(response => {
                 // Handle successful response here
@@ -64,11 +66,11 @@ const VendorsTab = () => {
     }, [])
     const activetab = (e) => {
         console.log(swiperlength?.length < 5 ? swiperlength?.length : 5)
-        axios.get(`${app_url}/api/partner-details/${e.target.value}/parent?status=active`, {
+        axios.get(`${app_url}/api/partners?category_id=${e.target.value}`, {
         })
             .then(response => {
                 // Handle successful response here
-                console.log(response.data);
+                console.log(response.data, 'cat');
                 setisLoading(false)
                 settabdata(response.data)
 
@@ -80,6 +82,7 @@ const VendorsTab = () => {
                 setisLoading(false)
             });
     }
+    
     return (
         <section>
             <div className="container my-5 py-5">
@@ -124,8 +127,8 @@ const VendorsTab = () => {
                                 >
                                     {data?.data?.map((item, i) => (
                                         <SwiperSlide>
-                                            <li class={`nav-item nav-link activetab${i} ${i === 0 ? 'active' : ''}`} data-bs-toggle="tab" value={item.id} onClick={(e) => { activetab(e), setLogo(item) }} data-bs-target={`#a${item.id}`} type="button" role="tab" aria-controls="NaanGuys" aria-selected="false" tabIndex="-1">
-                                                {item.company_name}
+                                            <li class={`nav-item nav-link text-capitalize activetab${i} ${i === 0 ? 'active' : ''}`} data-bs-toggle="tab" value={item.id} onClick={(e) => { activetab(e), setLogo(item) }} data-bs-target={`#a${item.id}`} type="button" role="tab" aria-controls="NaanGuys" aria-selected="false" tabIndex="-1">
+                                                {item.name}
                                             </li>
                                         </SwiperSlide>
                                     ))}
@@ -195,7 +198,7 @@ const VendorsTab = () => {
                     <div className="tab-content ">
                         {data?.data?.map((item, i) => (
                             <div class={`tab-pane fade ${i === 0 ? 'show active' : ''}`} id={`a${item.id}`} role="tabpanel" aria-labelledby={i}>
-                                <NaanGuys tabdata={tabdata} logo={Logo} />
+                                <CategpryTab tabdata={tabdata} logo={Logo} />
                             </div>
                         ))}
                         {/* <div className="tab-pane fade " id="AdilLaw">
