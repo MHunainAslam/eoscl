@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 
-const StripeModal = () => {
+const StripeModal = ({ PkgPrice , settransaction_id}) => {
     const stripe = useStripe();
     const elements = useElements();
     const [error, setError] = useState(null);
@@ -18,6 +18,7 @@ const StripeModal = () => {
         const { error, paymentMethod } = await stripe.createPaymentMethod({
             type: 'card',
             card: cardElement,
+            // amount: PkgPrice * 100,
         });
 
         if (error) {
@@ -26,6 +27,7 @@ const StripeModal = () => {
         } else {
             // Send paymentMethod.id to your server to complete the payment
             console.log('Payment Method:', paymentMethod);
+            settransaction_id(paymentMethod?.id)
         }
     };
 

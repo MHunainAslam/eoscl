@@ -190,7 +190,7 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                             <PyamentModal settransaction_id={settransaction_id} PkgPrice={PkgPrice}/>
                                             : 'stripe' ?
                                                 <Elements stripe={stripePromise}>
-                                                    <StripeModal settransaction_id={settransaction_id} />
+                                                    <StripeModal settransaction_id={settransaction_id} PkgPrice={PkgPrice} />
                                                 </Elements>
                                                 : ''}
                                         <div className="modal-footer mt-4 border-0 justify-content-end">
