@@ -163,7 +163,7 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                         </div>
                                         <div className="col-md-12 mt-2">
                                             <label htmlFor="" className='para mt-3 text-p'>Package Price:</label>
-                                            <input type="text" className='form-control inp px-0' value={`$${PkgPrice}`} readOnly name="" id="" />
+                                            <input type="text" className='form-control inp px-0' value={`${PkgPrice}`} readOnly name="" id="" />
                                         </div>
                                         <div className="modal-footer mt-4 border-0 justify-content-end">
                                             <button type="button" className="btn primary-btn" onClick={MoveStep1} >Previous</button>

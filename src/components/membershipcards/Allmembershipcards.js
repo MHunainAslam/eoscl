@@ -16,7 +16,7 @@ const Allmembershipcards = () => {
 
     const BeginnerModal = (title, price, id) => {
         setPkgName(title)
-        setPkgPrice(`$${price}`)
+        setPkgPrice(`${price}`)
         setPkgid(id)
     }
     useEffect(() => {

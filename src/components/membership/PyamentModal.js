@@ -1,8 +1,16 @@
 import { PayPalButtons, PayPalScriptProvider } from '@paypal/react-paypal-js';
 import React from 'react'
 
-const PyamentModal = ({PkgPrice}) => {
+const PyamentModal = ({ PkgPrice, settransaction_id }) => {
     console.log(PkgPrice)
+    const handleApprove = async (data, actions) => {
+        const order = await actions.order.capture();
+        console.log('done', actions.order.capture())
+        if (order) {
+            
+            settransaction_id(order?.value?.id)
+        }
+    }
     // const handleApprove = async (data, actions) => {
     //     const order = await actions.order.capture();
     //     if (order) {
@@ -38,35 +46,35 @@ const PyamentModal = ({PkgPrice}) => {
     //     }
     // };
 
-    // const handleError = (err) => {
-    //     console.log('Payment error:', err);
-    // };
+    const handleError = (err) => {
+        console.log('Payment error:', err);
+    };
     return (
         <>
 
 
-        
-                            <PayPalScriptProvider options={{ "client-id": 'AY_Wql-Q_GmPwBxin8-cg-EhrH3dxYH5XbfBou9RwfZVCdJiOCBtaOIUPjJOi72lTDR4WEdPi2GegIcT' }}>
-                                <PayPalButtons
-                                    createOrder={(data, actions) => {
-                                        // Define the order creation logic here
-                                        return actions.order.create({
-                                            purchase_units: [
-                                                {
-                                                    amount: {
-                                                        currency_code: 'USD',
-                                                        value: PkgPrice,
-                                                    },
-                                                    // custom_id: paypalinfostate?.topOrder[0].systemOrderId,
-                                                },
-                                            ],
-                                        });
-                                    }}
-                                // onApprove={handleApprove}
-                                // onError={handleError}
-                                />
-                            </PayPalScriptProvider>
-                       
+
+            <PayPalScriptProvider options={{ "client-id": 'AY_Wql-Q_GmPwBxin8-cg-EhrH3dxYH5XbfBou9RwfZVCdJiOCBtaOIUPjJOi72lTDR4WEdPi2GegIcT' }}>
+                <PayPalButtons
+                    createOrder={(data, actions) => {
+                        // Define the order creation logic here
+                        return actions.order.create({
+                            purchase_units: [
+                                {
+                                    amount: {
+                                        currency_code: 'USD',
+                                        value: PkgPrice,
+                                    },
+                                    // custom_id: paypalinfostate?.topOrder[0].systemOrderId,
+                                },
+                            ],
+                        });
+                    }}
+                    onApprove={handleApprove}
+                    onError={handleError}
+                />
+            </PayPalScriptProvider>
+
 
         </>
     )
