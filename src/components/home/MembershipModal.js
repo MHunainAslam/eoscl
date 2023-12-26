@@ -46,10 +46,35 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
         if (Name === '' || Email === '' || !isValidEmail || Phone === '' || Message === '') {
             toast.error('All Fields Are Required')
         } else {
-            handleComponentChange('step2');
+            setisLoading(true)
+            axios.post(`${app_url}/api/check-username-exists`, { email: Email, username: UserName }, {
+                headers: {
+                    'Content-Type': 'application/json', // Specify the content type if needed.
+                }
+            })
+                .then(response => {
+                    // Handle successful response here
+                    console.log(response);
+
+                    setisLoading(false)
+                    toast.error(response?.data?.message)
+
+                })
+                .catch(error => {
+                    // Handle error here
+                    console.error(error);
+                    setisLoading(false)
+                    handleComponentChange('step2');
+                });
+
         }
     };
 
+    const backStep2 = () => {
+
+        handleComponentChange('step2');
+
+    };
     const MoveStep3 = () => {
 
         handleComponentChange('step3');
@@ -152,7 +177,7 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                             <textarea name="" value={Message} onChange={(e) => setMessage(e.target.value)} className='form-control tarea px-0' id="" cols="30" rows="5"></textarea>
                                         </div>
                                         <div className="modal-footer mt-4 border-0 justify-content-end">
-                                            <button type="button" className="btn primary-btn" onClick={MoveStep2}>Next</button>
+                                            <button type="button" className="btn primary-btn" onClick={MoveStep2}>Next {isLoading ? <span class="spinner-border spinner-border-sm" aria-hidden="true"></span> : ''}</button>
                                         </div>
                                     </>
                                     }
@@ -180,14 +205,14 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                         </div>
 
                                         <div className="modal-footer mt-4 border-0 justify-content-end">
-                                            <button type="button" className="btn primary-btn" onClick={MoveStep2} >Previous</button>
+                                            <button type="button" className="btn primary-btn" onClick={backStep2} >Previous</button>
                                             {/* <button type="button" className="btn primary-btn" onClick={formSubmit}>Next</button> */}
                                         </div>
                                     </>
                                     }
                                     {activeComponent === 'step4' && <>
                                         {PaymentMethod === 'paypal' ?
-                                            <PyamentModal settransaction_id={settransaction_id} PkgPrice={PkgPrice}/>
+                                            <PyamentModal settransaction_id={settransaction_id} PkgPrice={PkgPrice} />
                                             : 'stripe' ?
                                                 <Elements stripe={stripePromise}>
                                                     <StripeModal settransaction_id={settransaction_id} PkgPrice={PkgPrice} />
