@@ -27,7 +27,10 @@ const Footer = () => {
                                     <Link href={'#'} className='link-hov text-black para'>Shop</Link>
                                 </li> */}
                                 <li className='list-unstyled my-3'>
-                                    <Link href={'/partners'} className='link-hov text-black para'>Partners</Link>
+                                    <Link href={'/businessclubpartners'} className='link-hov text-black para'>Business Club Partners</Link>
+                                </li>
+                                <li className='list-unstyled my-3'>
+                                    <Link href={'/membershipcards'} className='link-hov text-black para'>Membership Cards</Link>
                                 </li>
                                 <li className='list-unstyled my-3'>
                                     <Link href={'/contactus'} className='link-hov text-black para'>Contact Us</Link>

@@ -29,11 +29,11 @@ const Vendors = () => {
     }, [])
     return (
         <>
-            <section className='vendors position-relative overflow-x-hidden py-5'>
-                <Image src={'/assets/images/card/Ellipse 4.png'} className='vendors-bg' width={100} height={100} alt=''></Image>
+            <section className='vendors position-relative overflow-x-hidden '>
+                <Image src={'/assets/images/card/Ellipse 4.png'} className='vendors-bg pt-5' width={100} height={100} alt=''></Image>
                 <div className="container mt-5">
                     <p className="heading text-center">
-                        Partners
+                        Business Club Partners
                     </p>
                     <p className="para text-center px-md-5">The success of our Business Club is strengthened by our esteemed partners, who play a pivotal role in shaping the community ecosystem. We are proud to align with industry leaders, innovators, and influencers who share our commitment to excellence. Most of these business club partners are part of other Event Ontario Initiatives, such as Cricket league, Entrepreneur program, etc.</p>
                     <div className="row mt-5 vendors-card">
@@ -54,7 +54,7 @@ const Vendors = () => {
 
                     </div>
                     <div className='mt-5 text-center'>
-                        <Link href={'/partners'} className='btn primary-btn '>View All</Link>
+                        <Link href={'/businessclubpartners'} className='btn primary-btn '>View All</Link>
                     </div>
                 </div>
             </section>

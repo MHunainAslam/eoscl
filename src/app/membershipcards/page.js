@@ -9,7 +9,7 @@ const page = () => {
         <>
             <Banner heading={'Membership Cards'} />
             <Allmembershipcards />
-            <LoyalCustomer />
+            {/* <LoyalCustomer /> */}
         </>
     )
 }

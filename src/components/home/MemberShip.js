@@ -41,7 +41,7 @@ const MemberShip = () => {
     }, [])
     return (
         <>
-            <section className='membership mt-5'>
+            <section className='membership mt-4'>
                 <div className="container text-center">
                     <p className='heading'>The Membership Card Option</p>
                     <p className='para-m px-md-5'>Join our Business Club Partner program by paying an annual fee and enjoy a steady stream of customers using your services.</p>

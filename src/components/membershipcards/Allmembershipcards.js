@@ -38,7 +38,7 @@ const Allmembershipcards = () => {
     }, [])
     return (
         <>
-            <section className='membership pt-5 '>
+            <section className='membership pt-0 pb-5'>
                 <div className="container text-center">
 
                     <div className="row ">

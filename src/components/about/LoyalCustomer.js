@@ -15,7 +15,7 @@ const LoyalCustomer = () => {
                                 Our Team Right Now
                             </p>
                             <p className="para">
-                                As a member of the EOSCL business club, you can enjoy several additional benefits, including a business card holder and access to various perks. These perks include discounted advertising opportunities at EventOntario events, a free business advertisement in the EventOntario marketing video on social media, invitations to business club events to expand your professional network, preferred rates on marketing packages, and your business logo featured on the EOSCL website at no extra cost. You can also take advantage of preferred rates on the voucher program and more. <br /><br />
+                                As a member of the EOSCL business club, you can enjoy several additional benefits, including a business card holder and access to various perks. These perks include discounted advertising opportunities at Event Ontario events, a free business advertisement in the Event Ontario marketing video on social media, invitations to business club events to expand your professional network, preferred rates on marketing packages, and your business logo featured on the EOSCL website at no extra cost. You can also take advantage of preferred rates on the voucher program and more. <br /><br />
                                 Join our Business Club Partner program by paying an annual fee and enjoy a steady stream of customers using your services.
 
                             </p>

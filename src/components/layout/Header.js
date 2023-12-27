@@ -48,7 +48,7 @@ const Header = () => {
                                     <Link className={`nav-link ${pathname === '/membershipcards'  ? 'active-nav' : ''} `} href="/membershipcards">Membership Cards</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className={`nav-link ${pathname === '/partners'  ? 'active-nav' : ''} `} href="/partners">Partners</Link>
+                                    <Link className={`nav-link ${pathname === '/businessclubpartners'  ? 'active-nav' : ''} `} href="/businessclubpartners">Business Club Partners</Link>
                                 </li>
 
                                 <li className="nav-item">

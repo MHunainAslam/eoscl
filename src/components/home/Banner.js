@@ -20,7 +20,7 @@ const Banner = () => {
                             </p>
                             <button className='btn primary-btn' data-bs-toggle="modal" data-bs-target="#MembershipForm">Get Started</button>
                             <Link className='para text-s ps-3 link-hov' href={'/about'}>Learn More <i className="bi bi-arrow-right"></i></Link>
-                            <div className="d-flex flex-wrap pt-4 align-items-center">
+                            {/* <div className="d-flex flex-wrap pt-4 align-items-center">
                                 <ul className='banner-rating px-0 m-0'>
                                     <li>
                                         <Link href={'#'}><Image src={'/assets/images/user/Ellipse 1.png'} width={100} height={100} alt='' /></Link>
@@ -44,7 +44,7 @@ const Banner = () => {
                                         Over 2K+ Active User's
                                     </p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="home-banner-bg col-lg-6">
 

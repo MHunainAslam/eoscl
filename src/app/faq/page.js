@@ -6,7 +6,7 @@ const page = () => {
         <>
             <Banner heading={"FAQ's"} />
             <section>
-                <div className="container py-5 faqs">
+                <div className="container py-4 faqs">
                     <div className="row justify-content-center">
                         <div className="col-lg-10">
                             <div className="accordion accordion-flush" id="accordionFlushExample">

@@ -82,11 +82,11 @@ const VendorsTab = () => {
                 setisLoading(false)
             });
     }
-    
+
     return (
         <section>
-            <div className="container my-5 py-5">
-                <div className="row justify-content-center ">
+            <div className="container mt-4">
+                {/* <div className="row justify-content-center ">
                     <div className="col-lg-12 col-md-11 col-10">
                         <div className="position-relative align-items-center">
                             <i className="bi bi-arrow-left-circle-fill left-slider" onClick={prevSlide}></i>
@@ -132,68 +132,24 @@ const VendorsTab = () => {
                                             </li>
                                         </SwiperSlide>
                                     ))}
-                                    {/* <SwiperSlide>
-                                        <li className="nav-item nav-link " id="AdilLaw-tab" data-bs-toggle="tab" data-bs-target="#AdilLaw" type="button" >
-                                            Adil Law
-                                        </li>
-                                    </SwiperSlide> */}
-                                    {/* <SwiperSlide>
-                                        <li className="nav-item nav-link " id="AlamLaw-tab" data-bs-toggle="tab" data-bs-target="#AlamLaw" type="button" role="tab" aria-controls="AlamLaw" aria-selected="false" tabIndex="-1">
-                                            Alam Law
-                                        </li>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <li className="nav-item nav-link " id="BigPicker-tab" data-bs-toggle="tab" data-bs-target="#BigPicker" type="button" role="tab" aria-controls="BigPicker" aria-selected="false" tabIndex="-1">
-                                            Big Pickering
-                                        </li>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <li className="nav-item nav-link " id="Cellrox-tab" data-bs-toggle="tab" data-bs-target="#Cellrox" type="button" role="tab" aria-controls="Cellrox" aria-selected="false" tabIndex="-1">
-                                            Cellrox
-                                        </li>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <li className="nav-item nav-link " id="Cirruslabs-tab" data-bs-toggle="tab" data-bs-target="#Cirruslabs" type="button" role="tab" aria-controls="Cirruslabs" aria-selected="false" tabIndex="-1">
-                                            Cirruslabs
-                                        </li>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <li className="nav-item nav-link " id="Dragon-tab" data-bs-toggle="tab" data-bs-target="#Dragon" type="button" role="tab" aria-controls="Dragon" aria-selected="false" tabIndex="-1">
-                                            Dragon Taek Wondo
-                                        </li>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <li className="nav-item nav-link " id="Goldy-tab" data-bs-toggle="tab" data-bs-target="#Goldy" type="button" role="tab" aria-controls="Goldy" aria-selected="false" tabIndex="-1">
-                                            Goldy
-                                        </li>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <li className="nav-item nav-link " id="Isharp-tab" data-bs-toggle="tab" data-bs-target="#Isharp" type="button" role="tab" aria-controls="Isharp" aria-selected="false" tabIndex="-1">
-                                            Isharp
-                                        </li>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <li className="nav-item nav-link " id="KalaLaw-tab" data-bs-toggle="tab" data-bs-target="#KalaLaw" type="button" role="tab" aria-controls="KalaLaw" aria-selected="false" tabIndex="-1">
-                                            Kala Law
-                                        </li>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <li className="nav-item nav-link " id="ChamberofCommerce-tab" data-bs-toggle="tab" data-bs-target="#ChamberofCommerce" type="button" role="tab" aria-controls="ChamberofCommerce" aria-selected="false" tabIndex="-1">
-                                            Chamber of Commerce
-                                        </li>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <li className="nav-item nav-link " id="MuslimAssociation-tab" data-bs-toggle="tab" data-bs-target="#MuslimAssociation" type="button" role="tab" aria-controls="MuslimAssociation" aria-selected="false" tabIndex="-1">
-                                            Muslim Association
-                                        </li>
-                                    </SwiperSlide> */}
 
                                 </Swiper>
                             </ul>
 
                         </div>
                     </div>
-                </div>
+                </div> */}
+                <ul role="tablist" className="nav vendors-tab d-block nav-tabs border-0 justify-content-center ">
+                    <div className="row">
+                        {data?.data?.map((item, i) => (
+                            <div className="col-md-3 mt-3">
+                                <li class={`nav-item nav-link text-capitalize activetab${i} ${i === 0 ? 'active' : ''}`} data-bs-toggle="tab" value={item.id} onClick={(e) => { activetab(e), setLogo(item) }} data-bs-target={`#a${item.id}`} type="button" role="tab" aria-controls="NaanGuys" aria-selected="false" tabIndex="-1">
+                                    {item.name}
+                                </li>
+                            </div>
+                        ))}
+                    </div>
+                </ul>
                 <div className=" mt-5">
                     <div className="tab-content ">
                         {data?.data?.map((item, i) => (
@@ -201,39 +157,6 @@ const VendorsTab = () => {
                                 <CategpryTab tabdata={tabdata} logo={Logo} />
                             </div>
                         ))}
-                        {/* <div className="tab-pane fade " id="AdilLaw">
-                            <AdilLaw />
-                        </div>
-                        <div className="tab-pane fade " id="AlamLaw" role="tabpanel" aria-labelledby="AlamLaw-tab">
-                            <AlamLaw />
-                        </div>
-                        <div className="tab-pane fade " id="BigPicker" role="tabpanel" aria-labelledby="BigPicker-tab">
-                            <BigPicker />
-                        </div>
-                        <div className="tab-pane fade " id="Cellrox" role="tabpanel" aria-labelledby="Cellrox-tab">
-                            <Cellrox />
-                        </div>
-                        <div className="tab-pane fade " id="Cirruslabs" role="tabpanel" aria-labelledby="Cirruslabs-tab">
-                            <Cirruslab />
-                        </div>
-                        <div className="tab-pane fade " id="Dragon" role="tabpanel" aria-labelledby="Dragon-tab">
-                            <Dragon />
-                        </div>
-                        <div className="tab-pane fade " id="Goldy" role="tabpanel" aria-labelledby="Goldy-tab">
-                            <Goldy />
-                        </div>
-                        <div className="tab-pane fade " id="Isharp" role="tabpanel" aria-labelledby="Isharp-tab">
-                            <Isharp />
-                        </div>
-                        <div className="tab-pane fade " id="KalaLaw" role="tabpanel" aria-labelledby="KalaLaw-tab">
-                            <KalaLaw />
-                        </div>
-                        <div className="tab-pane fade " id="ChamberofCommerce" role="tabpanel" aria-labelledby="ChamberofCommerce-tab">
-                            <ChamberofCommerce />
-                        </div>
-                        <div className="tab-pane fade " id="MuslimAssociation" role="tabpanel" aria-labelledby="MuslimAssociation-tab">
-                            <MuslimAssociation />
-                        </div> */}
 
                     </div>
                 </div>
