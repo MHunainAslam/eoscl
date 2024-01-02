@@ -8,6 +8,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import toast from 'react-hot-toast';
 import axios from 'axios';
 import { app_url } from '@/config';
+import SquareModal from '../membership/SquareModal';
 const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
     const [activeComponent, setActiveComponent] = useState('step1');
     const [completedSteps, setCompletedSteps] = useState([]);
@@ -86,7 +87,7 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
     };
     const MoveStep5 = () => {
         handleComponentChange('step4');
-        setPaymentMethod('stripe')
+        setPaymentMethod('square')
     };
     useEffect(() => {
         if (activeComponent === 'step1') {
@@ -201,8 +202,11 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                             <button className='btn primary-btn w-100' onClick={MoveStep4}>Paypal</button>
                                         </div>
                                         <div className="col-md-6 mt-2">
-                                            <button className='btn primary-btn w-100' onClick={MoveStep5}>Stripe</button>
+                                            <button className='btn primary-btn w-100' onClick={MoveStep5}>Square</button>
                                         </div>
+                                        {/* <div className="col-md-6 mt-2">
+                                            <button className='btn primary-btn w-100' onClick={MoveStep5}>Stripe</button>
+                                        </div> */}
 
                                         <div className="modal-footer mt-4 border-0 justify-content-end">
                                             <button type="button" className="btn primary-btn" onClick={backStep2} >Previous</button>
@@ -213,10 +217,11 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                     {activeComponent === 'step4' && <>
                                         {PaymentMethod === 'paypal' ?
                                             <PyamentModal settransaction_id={settransaction_id} PkgPrice={PkgPrice} />
-                                            : 'stripe' ?
-                                                <Elements stripe={stripePromise}>
-                                                    <StripeModal settransaction_id={settransaction_id} PkgPrice={PkgPrice} />
-                                                </Elements>
+                                            : 'square' ?
+                                                // <Elements stripe={stripePromise}>
+                                                //     <StripeModal settransaction_id={settransaction_id} PkgPrice={PkgPrice} />
+                                                // </Elements>
+                                                <SquareModal settransaction_id={settransaction_id} PkgPrice={PkgPrice} />
                                                 : ''}
                                         <div className="modal-footer mt-4 border-0 justify-content-end">
                                             <button type="button" className="btn primary-btn" onClick={MoveStep3} >Previous</button>
