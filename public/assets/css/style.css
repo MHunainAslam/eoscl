@@ -3,8 +3,10 @@
 
 :root {
   --dark: #707070;
-  --secondary: #26a4dd;
-  --primary: #ef971f;
+  /* --secondary: #26a4dd; */
+  --secondary: #b5892b;
+  /* --primary: #ef971f; */
+  --primary: #25235a;
 }
 
 ::-webkit-scrollbar {
@@ -103,7 +105,8 @@ body {
 }
 
 .home-banner {
-  background: linear-gradient(225deg, #f5d2a3 0%, white 50%);
+  /* background: linear-gradient(225deg, #of5d2a3 0%, white 50%); */
+  background: linear-gradient(225deg, #b5892bab 0%, white 50%);
   min-height: 100vh;
 }
 
@@ -155,7 +158,7 @@ body {
 
 .primary-btn {
   background: linear-gradient(-125deg,
-      #e7b879 0%,
+      #5a54bf 0%,
       var(--primary) 50%) !important;
   color: white !important;
   border-radius: 50px !important;
@@ -166,7 +169,7 @@ body {
 }
 
 .primary-btn:hover {
-  /* background: linear-gradient(-225deg, #f5d2a3 0%, var(--primary) 50%) !important; */
+  /* background: linear-gradient(-225deg, #b5892bab 0%, var(--primary) 50%) !important; */
   scale: 1.04;
   transition: 0.9s;
 }
@@ -183,12 +186,12 @@ body {
 }
 
 .primary-btn-border:hover {
-  /* background: linear-gradient(-225deg, #f5d2a3 0%, var(--primary) 50%) !important; */
+  /* background: linear-gradient(-225deg, #b5892bab 0%, var(--primary) 50%) !important; */
   scale: 1.04;
   transition: 0.9s;
   color: white !important;
   background: linear-gradient(-125deg,
-      #e7b879 0%,
+      #5a54bf 0%,
       var(--primary) 50%) !important;
 }
 
@@ -234,7 +237,7 @@ body {
 }
 
 .membership {
-  background: linear-gradient(180deg, #f5d2a3 0%, white 70%);
+  background: linear-gradient(180deg, #b5892bab 0%, white 70%);
   padding-top: calc(40px + (50 - 40) * ((100vw - 320px) / (1920 - 320)));
 }
 
@@ -249,7 +252,7 @@ body {
 
 
 .m-modal {
-  background: linear-gradient(180deg, #f5d2a3 0%, white 70%);
+  background: linear-gradient(180deg, #b5892bab 0%, white 70%);
 }
 
 .m-modal .inp,
@@ -540,7 +543,8 @@ body {
 
 .footer {
   background: url("/assets/images/banner/Rectangle 82.png");
-  background-color: rgba(239, 152, 31, 0.694);
+  /* background-color: rgba(239, 152, 31, 0.694); */
+  background-color: #b5892b;
   padding-block: calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320)));
 }
 
@@ -735,6 +739,6 @@ body {
 
 @media (max-width: 992px) {
   .offcanva-nav {
-    background: linear-gradient(180deg, #f5d2a3 0%, white 70%);
+    background: linear-gradient(180deg, #b5892bab 0%, white 70%);
   }
 }
