@@ -16,7 +16,7 @@ const Testimonial = () => {
                     What Users Says About
                     Our Service
                 </p>
-                <p className="para px-md-5 text-center">
+                <p className="para text-p px-md-5 text-center">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, voluptas! Hic reiciendis similique animi eius sit, nemo dicta culpa officiis dignissimos maxime est repudiandae voluptate odit beatae itaque iste tempore.
                 </p>
                 <div className="row">
@@ -34,7 +34,7 @@ const Testimonial = () => {
                                 slidesPerView: 1,
                                 spaceBetween: 20
                             },
-                            320: {
+                            0: {
                                 slidesPerView: 1,
                                 spaceBetween: 20
                             },

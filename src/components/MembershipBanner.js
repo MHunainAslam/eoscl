@@ -9,7 +9,7 @@ const MembershipBanner = ({ reverse }) => {
                 <div className={`row py-5 ${reverse ? 'flex-row-reverse' : ''}`}>
                     <div className="col-lg-5 col-md-6">
                         <p className="heading  text-white mb-1">
-                            The Business Card and How It Works ?
+                            The Business Card and How It Works?
                         </p>
                         <p className="para text-white">
                             A plastic card with networking perks is an intelligent investment, and It's a must-have for entrepreneurs and

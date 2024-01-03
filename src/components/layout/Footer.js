@@ -45,12 +45,12 @@ const Footer = () => {
                                 <li className='list-unstyled my-3'>
                                     <Link href={'/privacypolicy'} className='link-hov text-black para'>Privacy Policy</Link>
                                 </li>
-                                <li className='list-unstyled my-3'>
+                                {/* <li className='list-unstyled my-3'>
                                     <Link href={'/termsandcondition'} className='link-hov text-black para'>Terms & Conditions</Link>
                                 </li>
                                 <li className='list-unstyled my-3'>
                                     <Link href={'/faq'} className='link-hov text-black para'>Faqs</Link>
-                                </li>
+                                </li> */}
 
                             </ul>
                         </div>
@@ -59,18 +59,18 @@ const Footer = () => {
                                 Contact Us
                             </p>
                             <ul className='p-0'>
-                                <li className='list-unstyled my-3'>
+                                {/* <li className='list-unstyled my-3'>
                                     <i className="bi bi-geo-alt-fill me-4 text-black"></i>
                                     <Link href={'#'} className='link-hov text-black para'>Lorem ipsum</Link>
-                                </li>
+                                </li> */}
                                 <li className='list-unstyled my-3'>
                                     <i className="bi bi-envelope-fill me-4 text-black"></i>
-                                    <Link href={'#'} className='link-hov text-black para'>Info@support.com</Link>
+                                    <Link href={'mailto:eventontario@gmail.com'} className='link-hov text-black para'>Eventontario@gmail.com</Link>
                                 </li>
-                                <li className='list-unstyled my-3'>
+                                {/* <li className='list-unstyled my-3'>
                                     <i className="bi bi-telephone-fill me-4 text-black"></i>
                                     <Link href={'#'} className='link-hov text-black para'>123 456 789</Link>
-                                </li>
+                                </li> */}
 
                             </ul>
                             <div className="footer-icon justify-content-lg-start justify-content-center">

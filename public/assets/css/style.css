@@ -52,7 +52,10 @@ body {
   transition: 0.3s;
   position: relative;
 }
-
+.custome-nav .active-nav {
+  color: var(--primary);
+  font-weight: 700;
+}
 .custome-nav .active-nav.nav-link::after {
   width: 100%;
 }
@@ -65,7 +68,7 @@ body {
   left: 0;
   height: 2px;
   transition: 0.3s;
-  background-color: var(--dark);
+  background-color: var(--primary);
 }
 
 .custome-nav .nav-link:hover::after {
@@ -86,7 +89,10 @@ body {
   color: var(--dark);
   font-weight: 500;
 }
-
+.custome-nav li a:hover{
+  color: var(--primary) !important;
+  /* font-weight: 700; */
+}
 .custome-nav li {
   margin-inline: calc(8px + (18 - 8) * ((100vw - 320px) / (1920 - 320)));
 }
@@ -104,10 +110,14 @@ body {
   background-size: cover;
 }
 
+
 .home-banner {
-  /* background: linear-gradient(225deg, #of5d2a3 0%, white 50%); */
-  background: linear-gradient(225deg, #b5892bab 0%, white 50%);
+  background: linear-gradient(225deg, #b5892bab, #fff 80%);
   min-height: 100vh;
+}
+
+.home-banner .container {
+  min-height: 75vh;
 }
 
 .home-banner-bg {
@@ -236,8 +246,14 @@ body {
   height: 80%;
 }
 
+.membership .para-m {
+  color: var(--primary);
+}
+
 .membership {
-  background: linear-gradient(180deg, #b5892bab 0%, white 70%);
+  /* background: linear-gradient(180deg, #b5892bab 0%, white 70%); */
+  background: linear-gradient(180deg, #b5892bab, #fff 80%);
+
   padding-top: calc(40px + (50 - 40) * ((100vw - 320px) / (1920 - 320)));
 }
 
@@ -252,7 +268,8 @@ body {
 
 
 .m-modal {
-  background: linear-gradient(180deg, #b5892bab 0%, white 70%);
+  /* background: linear-gradient(180deg, #b5892bab 0%, white 70%); */
+  background: linear-gradient(180deg, #b5892bab, #fff 80%);
 }
 
 .m-modal .inp,
@@ -525,7 +542,7 @@ body {
   right: 2%;
   position: relative;
   padding-inline: 5%;
-  padding-block:  30px;
+  padding-block: 30px;
 }
 
 .inp,
@@ -544,7 +561,7 @@ body {
 .footer {
   background: url("/assets/images/banner/Rectangle 82.png");
   /* background-color: rgba(239, 152, 31, 0.694); */
-  background-color: #b5892b;
+  background-color: #ffae0080;
   padding-block: calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320)));
 }
 
@@ -588,6 +605,7 @@ body {
 .min-vh-30 {
   min-height: 30vh;
 }
+
 /* .vendors-tab .swiper-slide {
   width: auto !important;
 } */
@@ -736,12 +754,27 @@ body {
       var(--secondary) 0%) !important;
   transition: 0.3s;
 }
+
 /* #card .sq-card-wrapper:nth-child(1){
   display: none;
 } */
 
 @media (max-width: 992px) {
   .offcanva-nav {
-    background: linear-gradient(180deg, #b5892bab 0%, white 70%);
+    /* background: linear-gradient(180deg, #b5892bab 0%, white 70%) !important; */
+    background: linear-gradient(180deg, #b5892bab, #fff 80%) !important;
+    background-color: white !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-banner {
+    min-height: auto;
+    background: linear-gradient(220deg, #b5892bab , #fff 100%);
+  }
+
+  .home-banner .container {
+    min-height: auto;
+    padding-block: 50px;
   }
 }

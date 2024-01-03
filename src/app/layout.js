@@ -22,14 +22,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body className={inter.className}>
-      <NextTopLoader
+      {/* <NextTopLoader
       color="#ed962e"
       showSpinner={false}
-      crawlSpeed={1} />
+      crawlSpeed={3} />
         <Toaster
           position="top-right"
-          reverseOrder={false}
-        />
+          reverseOrder={true}
+        /> */}
         {children}
         <Footer />
 

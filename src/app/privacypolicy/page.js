@@ -1,16 +1,307 @@
 import Banner from '@/components/Banner'
 import Header from '@/components/layout/Header'
+import Link from 'next/link'
 import React from 'react'
 
 const page = () => {
     return (
         <>
-            <Banner heading={'Privacy Policy'}/>
+            <Banner heading={'Privacy Policy'} />
             <section>
-                <div className="container">
-                    <p className="para py-5">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam porro ipsa recusandae, accusamus aspernatur ratione sunt omnis. Quasi, optio vero nemo nostrum atque illo molestias sed laboriosam quisquam labore recusandae, vitae rem natus laborum cumque deserunt debitis mollitia dicta id asperiores! Pariatur, ex. Aperiam quae consequuntur provident rerum, accusantium assumenda illum corporis itaque nesciunt pariatur magnam odit sequi hic esse sit laboriosam fugit? Asperiores dolorem dolore in provident enim officia aut neque voluptatibus at pariatur deserunt natus repellat deleniti quasi nobis, placeat itaque, fuga consequatur ea quia quos, accusantium ipsum! Assumenda, quidem cumque! Dolor possimus minus, maxime voluptate consequatur in earum, unde perferendis optio placeat pariatur adipisci deleniti incidunt magni odio distinctio natus repudiandae. Error odit quae officia ullam quod voluptatum ipsum ducimus delectus obcaecati unde modi aspernatur voluptate, cupiditate fugit deserunt dolorem animi praesentium a, vero nihil eum. Distinctio cumque eveniet cum sed deserunt voluptatem totam, eius repellendus voluptas iste ab excepturi, sint accusantium reprehenderit corporis! Fugit ratione reprehenderit ipsum, praesentium delectus velit. Ex placeat quas tenetur cupiditate veritatis praesentium amet alias, minima, incidunt culpa a eveniet aspernatur. Nemo provident temporibus eos qui illo, natus ea laudantium accusamus. Commodi nostrum aperiam assumenda eius sint officia velit aut eos deleniti deserunt fuga, esse iste autem magni vel, non quo nulla facilis. Fugit odio maxime amet repudiandae, sit qui iusto laudantium sequi quod repellat molestiae? Atque cum consectetur fugiat tenetur ipsum sit unde officia voluptate repellat, soluta fugit laborum eligendi facilis obcaecati nisi recusandae, aut, corrupti magni quia! Magni debitis maxime quia eligendi! Laboriosam, similique! Cum aliquam dolore consequuntur. Ducimus voluptatum odio voluptas. Cum corporis aliquid expedita possimus eaque voluptates ratione quasi, porro omnis placeat fuga praesentium illo quisquam unde! Hic mollitia in doloremque deleniti cum veritatis dolor eligendi. Aliquid perspiciatis assumenda nihil, laborum, magnam vitae debitis et voluptate, recusandae quo eius porro earum fugiat. Dolores ullam eligendi est quidem deleniti fuga modi quos rem nobis accusamus illum, soluta aliquam voluptas nisi dignissimos architecto assumenda eius ipsum quod voluptate iusto ratione. Maiores ipsum quis iste dolore dolorum, eveniet quibusdam illo quod vel, similique excepturi tempore rem perferendis inventore blanditiis! Tenetur numquam libero dicta aperiam iste ullam labore autem porro iure esse non voluptas perferendis, quo harum sapiente ab repellendus sed quasi sit. Necessitatibus impedit, ad doloribus deleniti quae provident animi omnis eligendi obcaecati perspiciatis temporibus aperiam, eveniet, delectus eos! Vitae et commodi magni, deleniti eos soluta velit ratione vel iure ea unde dolorem dolores perferendis placeat. Blanditiis tempore mollitia cupiditate consequatur! Excepturi suscipit vitae nobis odio doloribus nesciunt ad nihil beatae dolores voluptatum aliquam, amet voluptatibus tempore minus placeat itaque ducimus eveniet quibusdam obcaecati nam incidunt sint consequatur. Porro commodi repellat fuga officiis cumque eos odio cupiditate repudiandae molestias modi corrupti saepe fugit quidem doloremque aspernatur, aliquam optio veritatis. Aliquid, vitae saepe excepturi ex velit dolores inventore quaerat nisi. Natus tempora autem itaque odit pariatur. Sed non nemo obcaecati ducimus provident nulla laudantium amet sint ratione? Repellendus ab voluptatem sapiente molestiae a, deleniti itaque nostrum blanditiis alias esse consequatur nihil dolorem voluptates! Numquam, assumenda odio dolorem fugit culpa dolorum iure atque corrupti quo possimus voluptate unde quisquam animi consequatur libero laboriosam, suscipit vitae voluptas harum tempora fugiat quod dolores sapiente mollitia? Molestias repellendus soluta tempora totam earum velit et neque ut itaque accusantium quisquam eaque corrupti eligendi ipsam, aliquam quo magni maxime dicta! Eveniet quaerat sint nemo in pariatur tenetur excepturi incidunt deserunt, ex possimus iure exercitationem cumque fuga aliquid dolorem corporis laudantium enim repellat aliquam quasi! Earum voluptatibus eius sit architecto eveniet consequuntur cupiditate quaerat nihil nulla quod, quo corrupti ullam a maiores deleniti sunt possimus minima quas recusandae alias! Rerum libero, iste officiis pariatur ducimus, sapiente enim non nemo soluta assumenda necessitatibus labore provident tempore accusamus ab est exercitationem cum quae quos similique? Neque velit quibusdam nihil necessitatibus maiores quod ut dolor quaerat, deserunt numquam eveniet illum nisi fugiat cum laboriosam reiciendis? Veniam minima delectus expedita maxime officiis? Quas ducimus, commodi adipisci quae repudiandae accusamus nostrum? Nihil error earum libero adipisci optio inventore fugit. Totam, laboriosam? Nostrum libero perspiciatis ea debitis corporis odit quidem exercitationem vero voluptatum error, tempore veniam deserunt ex facilis voluptates, cum natus dolorum esse pariatur temporibus consequuntur unde harum dignissimos quaerat! Quibusdam, corrupti fugit culpa vero, eveniet, quis eaque laborum commodi at alias accusamus magnam? Voluptatem ab deserunt ad vitae nobis cupiditate rerum minima libero praesentium, sequi, facere odit consequatur, dolor earum error asperiores ipsam architecto fuga veniam quibusdam beatae iste laboriosam assumenda. Ea ipsa illum dolores, sunt assumenda voluptas quos distinctio soluta nemo suscipit alias corrupti. Ducimus distinctio laboriosam earum placeat, ipsa, esse architecto consequatur maxime doloremque asperiores perspiciatis facilis a eligendi nam optio, in deleniti possimus officiis et ipsam accusamus dicta excepturi dolore aut? Nostrum numquam ea at dolores eos voluptate dolorum. Deleniti, minus doloremque? Facilis at id fuga repellendus nesciunt exercitationem. Amet saepe recusandae illo doloribus voluptas esse. Quam eos magnam quisquam architecto repudiandae a soluta consequatur sint necessitatibus recusandae veritatis aliquam qui quo reprehenderit ipsa quidem vel maxime libero, nam eaque ad debitis. Illo eius impedit ratione incidunt harum recusandae consectetur eveniet mollitia illum nemo officiis repellat molestias dolor ipsum dolorem omnis facilis doloremque maxime quod soluta, maiores repellendus ipsam quaerat. Veniam, autem a optio accusantium velit libero distinctio sapiente sit nesciunt ea? Ex dolore optio, velit hic ad quisquam provident cupiditate atque unde eum consectetur esse accusantium quidem maiores consequuntur, quibusdam sequi earum fugiat. Eaque officia ut eveniet blanditiis sunt cupiditate dolor voluptate asperiores aliquam quibusdam saepe non placeat nobis quasi amet mollitia neque accusantium molestias corporis atque, rem quidem nesciunt animi. Illo consectetur id asperiores adipisci ad hic cupiditate ut quis obcaecati, ipsa nemo debitis, doloremque ex ipsum aliquid dicta facilis nesciunt veniam amet ducimus dolorum? Natus obcaecati dolores minima iusto eos. Itaque cupiditate commodi nobis possimus et qui odit, iure obcaecati dolorem? Fugiat pariatur iure, soluta ducimus quisquam culpa. Modi inventore accusamus magnam odit culpa molestias explicabo dicta eum. Facilis perspiciatis impedit, asperiores temporibus id vitae laboriosam, nihil corrupti a nesciunt nisi blanditiis at fuga deleniti eos numquam.
+                <div className="container py-5">
+                    <p className="para ">
+                        We respect your privacy and are committed to protecting it through our compliance with this privacy policy (“Policy”). This Policy describes the types of information we may collect from you or that you may provide (“Personal Information”) on the Eobusinessclub.com website (“Website” or “Service”) and any of its related products and services (collectively, “Services”), and our practices for collecting, using, maintaining, protecting, and disclosing that Personal Information. It also describes the choices available to you regarding our use of your Personal Information and how you can access and update it.
+                        This Policy is a legally binding agreement between you (“User”, “you” or “your”) and EO Business Club (“EO Business Club”, “we”, “us” or “our”). If you are entering into this Policy on behalf of a business or other legal entity, you represent that you have the authority to bind such entity to this Policy, in which case the terms “User”, “you” or “your” shall refer to such entity. If you do not have such authority, or if you do not agree with the terms of this Policy, you must not accept this Policy and may not access and use the Website and Services. By accessing and using the Website and Services, you acknowledge that you have read, understood, and agree to be bound by the terms of this Policy. This Policy does not apply to the practices of companies that we do not own or control, or to individuals that we do not employ or manage.
                     </p>
+                    <p className="heading">Table of contents</p>
+                    <ol>
+                        <li>
+                            <Link className='para' href={'#automaticcollectionofinformation'}>Automatic collection of information</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#collectionofpersonalinformation'}>Collection of personal information</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#privacyofchildren'}>Privacy of children</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#useandprocessingofcollectedinformation'}>Use and processing of collected information</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#paymentprocessing'}>Payment processing</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#managinginformation'}>Managing information</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#disclosureofinformation'}>Disclosure of information</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#retentionofinformation'}>Retention of information</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#cookies'}>Cookies</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#dataanalytics'}>Data analytics</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#donottracksignals'}>Do Not Track signals</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#advertisements'}>Advertisements</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#emailmarketing'}>Email marketing</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#pushnotifications'}>Push notifications</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#linkstootherresources'}>Links to other resources</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#informationsecurity'}>Information security</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#databreach'}>Data breach</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#changesandamendments'}>Changes and amendments</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#acceptanceofthispolicy'}>Acceptance of this policy</Link>
+                        </li>
+                        <li>
+                            <Link className='para' href={'#contactingus'}>Contacting us</Link>
+                        </li>
+                    </ol>
+                    <div id='automaticcollectionofinformation'>
+                        <p className="heading">
+                            Automatic collection of information
+                        </p>
+                        <p className="para">
+                            When you open the Website, our servers automatically record information that your browser sends. This data may include information such as your device’s IP address, browser type, and version, operating system type and version, language preferences or the webpage you were visiting before you came to the Website and Services, pages of the Website and Services that you visit, the time spent on those pages, information you search for on the Website, access times and dates, and other statistics. <br /><br />
+                            Information collected automatically is used only to identify potential cases of abuse and establish statistical information regarding the usage and traffic of the Website and Services. This statistical information is not otherwise aggregated in such a way that would identify any particular User of the system.
+
+                        </p>
+                    </div>
+                    <div id='collectionofpersonalinformation'>
+                        <p className="heading">
+                            Collection of personal information
+                        </p>
+                        <div className="para mb-3">
+                            You can access and use the Website and Services without telling us who you are or revealing any information by which someone could identify you as a specific, identifiable individual. If, however, you wish to use some of the features offered on the Website, you may be asked to provide certain Personal Information (for example, your name and e-mail address). <br /> <br />
+                            We receive and store any information you knowingly provide to us when you create an account, make a purchase, or fill any forms on the Website. When required, this information may include the following:
+                            <ul className='py-4'>
+                                <li>Account details (such as user name, unique user ID, password, etc)</li>
+                                <li>Contact information (such as email address, phone number, etc)</li>
+                                <li>Basic personal information (such as name, country of residence, etc)</li>
+                                <li>Geolocation data of your device (such as latitude and longitude)</li>
+                                <li>Information about other individuals (such as your family members, friends, etc)</li>
+                                <li>Any other materials you willingly submit to us (such as articles, images, feedback, etc)</li>
+                            </ul>
+                            Some of the information we collect is directly from you via the Website and Services. However, we may also collect Personal Information about you from other sources such as social media platforms, public databases, third-party data providers, and our joint partners. Personal Information we collect from other sources may include demographic information, such as age and gender, device information, such as IP addresses, location, such as city and state, and online behavioral data, such as information about your use of social media websites, page view information and search results and links.
+                            <br /><br />
+                            You can choose not to provide us with your Personal Information, but then you may not be able to take advantage of some of the features on the Website. Users who are uncertain about what information is mandatory are welcome to contact us.
+
+                        </div>
+                    </div>
+                    <div id='privacyofchildren'>
+                        <p className="heading">
+                            Privacy of children
+                        </p>
+                        <p className="para">
+                            We do not knowingly collect any Personal Information from children under the age of 13. If you are under the age of 13, please do not submit any Personal Information through the Website and Services. If you have reason to believe that a child under the age of 13 has provided Personal Information to us through the Website and Services, please contact us to request that we delete that child’s Personal Information from our Services. <br /><br />
+                            We encourage parents and legal guardians to monitor their children’s Internet usage and to help enforce this Policy by instructing their children never to provide Personal Information through the Website and Services without their permission. We also ask that all parents and legal guardians overseeing the care of children take the necessary precautions to ensure that their children are instructed to never give out Personal Information when online without their permission.
+                        </p>
+                    </div>
+                    <div id='useandprocessingofcollectedinformation'>
+                        <p className="heading">
+                            Use and processing of collected information
+                        </p>
+                        <div className="para mb-3">
+                            We act as a data controller and a data processor when handling Personal Information, unless we have entered into a data processing agreement with you in which case you would be the data controller and we would be the data processor. <br /><br />
+                            Our role may also differ depending on the specific situation involving Personal Information. We act in the capacity of a data controller when we ask you to submit your Personal Information that is necessary to ensure your access and use of the Website and Services. In such instances, we are a data controller because we determine the purposes and means of the processing of Personal Information.<br /><br />
+                            We act in the capacity of a data processor in situations when you submit Personal Information through the Website and Services. We do not own, control, or make decisions about the submitted Personal Information, and such Personal Information is processed only in accordance with your instructions. In such instances, the User providing Personal Information acts as a data controller.<br /><br />
+                            In order to make the Website and Services available to you, or to meet a legal obligation, we may need to collect and use certain Personal Information. If you do not provide the information that we request, we may not be able to provide you with the requested products or services. Any of the information we collect from you may be used for the following purposes:
+                            <ul className="py-4">
+                                <li>Create and manage user accounts</li>
+                                <li>Fulfill and manage orders</li>
+                                <li>Deliver products or services</li>
+                                <li>Improve products and services</li>
+                                <li>Send administrative information</li>
+                                <li>Send marketing and promotional communications</li>
+                                <li>Send product and service updates</li>
+                                <li>Respond to inquiries and offer support</li>
+                                <li>Request user feedback</li>
+                                <li>Improve user experience</li>
+                                <li>Post customer testimonials</li>
+                                <li>Deliver targeted advertising</li>
+                                <li>Administer prize draws and competitions</li>
+                                <li>Enforce terms and conditions and policies</li>
+                                <li>Protect from abuse and malicious users</li>
+                                <li>Respond to legal requests and prevent harm</li>
+                                <li>Run and operate the Website and Services</li>
+                            </ul>
+                            Processing your Personal Information depends on how you interact with the Website and Services, where you are located in the world and if one of the following applies: (i) you have given your consent for one or more specific purposes; (ii) provision of information is necessary for the performance of this Policy with you and/or for any pre-contractual obligations thereof; (iii) processing is necessary for compliance with a legal obligation to which you are subject; (iv) processing is related to a task that is carried out in the public interest or in the exercise of official authority vested in us; (v) processing is necessary for the purposes of the legitimate interests pursued by us or by a third party. We may also combine or aggregate some of your Personal Information in order to better serve you and to improve and update our Website and Services. <br /><br />
+                            Note that under some legislations we may be allowed to process information until you object to such processing by opting out, without having to rely on consent or any other of the legal bases. In any case, we will be happy to clarify the specific legal basis that applies to the processing, and in particular whether the provision of Personal Information is a statutory or contractual requirement, or a requirement necessary to enter into a contract.
+
+                        </div>
+                    </div>
+                    <div id='paymentprocessing'>
+                        <p className="heading">
+                            Payment processing
+                        </p>
+                        <p className="para">
+                            In case of Services requiring payment, you may need to provide your credit card details or other payment account information, which will be used solely for processing payments. We use third-party payment processors (“Payment Processors”) to assist us in processing your payment information securely. <br /><br />
+                            Payment Processors adhere to the latest security standards as managed by the PCI Security Standards Council, which is a joint effort of brands like Visa, MasterCard, American Express and Discover. Sensitive and private data exchange happens over a SSL secured communication channel and is encrypted and protected with digital signatures, and the Website and Services are also in compliance with strict vulnerability standards in order to create as secure of an environment as possible for Users. We will share payment data with the Payment Processors only to the extent necessary for the purposes of processing your payments, refunding such payments, and dealing with complaints and queries related to such payments and refunds. <br /><br />
+                            Please note that the Payment Processors may collect some Personal Information from you, which allows them to process your payments (e.g., your email address, address, credit card details, and bank account number) and handle all the steps in the payment process through their systems, including data collection and data processing. The Payment Processors’ use of your Personal Information is governed by their respective privacy policies which may or may not contain privacy protections as protective as this Policy. We suggest that you review their respective privacy policies.
+
+                        </p>
+                    </div>
+                    <div id='managinginformation'>
+                        <p className="heading">
+                            Managing information
+                        </p>
+                        <p className="para">
+                            You are able to delete certain Personal Information we have about you. The Personal Information you can delete may change as the Website and Services change. When you delete Personal Information, however, we may maintain a copy of the unrevised Personal Information in our records for the duration necessary to comply with our obligations to our affiliates and partners, and for the purposes described below.
+
+                        </p>
+                    </div>
+                    <div id='disclosureofinformation'>
+                        <p className="heading">
+                            Disclosure of information
+                        </p>
+                        <p className="para">
+                            Depending on the requested Services or as necessary to complete any transaction or provide any Service you have requested, we may share your information with our contracted companies, and service providers (collectively, “Service Providers”) we rely upon to assist in the operation of the Website and Services available to you and whose privacy policies are consistent with ours or who agree to abide by our policies with respect to Personal Information. We will not share any personally identifiable information with third parties and will not share any information with unaffiliated third parties. <br /><br />
+                            Service Providers are not authorized to use or disclose your information except as necessary to perform services on our behalf or comply with legal requirements. Service Providers are given the information they need only in order to perform their designated functions, and we do not authorize them to use or disclose any of the provided information for their own marketing or other purposes. <br /><br />
+                            We may also disclose any Personal Information we collect, use or receive if required or permitted by law, such as to comply with a subpoena or similar legal process, and when we believe in good faith that disclosure is necessary to protect our rights, protect your safety or the safety of others, investigate fraud, or respond to a government request.
+                        </p>
+                    </div>
+                    <div id='retentionofinformation'>
+                        <p className="heading">
+                            Retention of information
+                        </p>
+                        <p className="para">
+                            We will retain and use your Personal Information for the period necessary to comply with our legal obligations, as long as your user account remains active, until the purchase order or Services are fulfilled, until our and our affiliates and partners obligations are fulfilled, to enforce our Policy, resolve disputes, and unless a longer retention period is required or permitted by law. <br /><br />
+                            We may use any aggregated data derived from or incorporating your Personal Information after you update or delete it, but not in a manner that would identify you personally. Once the retention period expires, Personal Information shall be deleted. Therefore, the right to access, the right to erasure, the right to rectification, and the right to data portability cannot be enforced after the expiration of the retention period.
+
+                        </p>
+                    </div>
+                    <div id='cookies'>
+                        <p className="heading">
+                            Cookies
+                        </p>
+                        <p className="para">
+                            Our Website and Services use “cookies” to help personalize your online experience. A cookie is a text file that is placed on your hard disk by a web page server. Cookies cannot be used to run programs or deliver viruses to your computer. Cookies are uniquely assigned to you, and can only be read by a web server in the domain that issued the cookie to you. <br /><br />
+                            We may use cookies to collect, store, and track information for security and personalization, and for statistical purposes. Please note that you have the ability to accept or decline cookies. Most web browsers automatically accept cookies by default, but you can modify your browser settings to decline cookies if you prefer.
+
+
+                        </p>
+                    </div>
+                    <div id='dataanalytics'>
+                        <p className="heading">
+                            Data analytics
+                        </p>
+                        <p className="para">
+                            Our Website and Services may use third-party analytics tools that use cookies, web beacons, or other similar information-gathering technologies to collect standard internet activity and usage information. The information gathered is used to compile statistical reports on User activity such as how often Users visit our Website and Services, what pages they visit and for how long, etc. We use the information obtained from these analytics tools to monitor the performance and improve our Website and Services.
+                        </p>
+                    </div>
+                    <div id='donottracksignals'>
+                        <p className="heading">
+                            Do Not Track signals
+                        </p>
+                        <p className="para">
+                            Some browsers incorporate a Do Not Track feature that signals to websites you visit that you do not want to have your online activity tracked. Tracking is not the same as using or collecting information in connection with a website. For these purposes, tracking refers to collecting personally identifiable information from consumers who use or visit a website or online service as they move across different websites over time. How browsers communicate the Do Not Track signal is not yet uniform. As a result, the Website and Services are not yet set up to interpret or respond to Do Not Track signals communicated by your browser. Even so, as described in more detail throughout this Policy, we limit our use and collection of your Personal Information. For a description of Do Not Track protocols for browsers and mobile devices or to learn more about the choices available to you, visit <Link href={'https://www.internetcookies.com/'} about='_blank'>internetcookies.com</Link>
+                        </p>
+                    </div>
+                    <div id='advertisements'>
+                        <p className="heading">
+                            Advertisements
+                        </p>
+                        <p className="para ">
+                            We may display online advertisements and we may share aggregated and non-identifying information about our customers that we or our advertisers collect through your use of the Website and Services. We do not share personally identifiable information about individual customers with advertisers. In some instances, we may use this aggregated and non-identifying information to deliver tailored advertisements to the intended audience. <br /><br />
+                            We may also permit certain third-party companies to help us tailor advertising that we think may be of interest to Users and to collect and use other data about User activities on the Website. These companies may deliver ads that might place cookies and otherwise track User behavior.
+                        </p>
+                    </div>
+                    <div id='emailmarketing'>
+                        <p className="heading">
+                            Email marketing
+                        </p>
+                        <p className="para ">
+                            We offer electronic newsletters to which you may voluntarily subscribe at any time. We are committed to keeping your e-mail address confidential and will not disclose your email address to any third parties except as allowed in the information use and processing section or for the purposes of utilizing a third-party provider to send such emails. We will maintain the information sent via e-mail in accordance with applicable laws and regulations. <br /><br />
+                            In compliance with the CAN-SPAM Act, all e-mails sent from us will clearly state who the e-mail is from and provide clear information on how to contact the sender. You may choose to stop receiving our newsletter or marketing emails by following the unsubscribe instructions included in these emails or by contacting us. However, you will continue to receive essential transactional emails.
+
+                        </p>
+                    </div>
+                    <div id='pushnotifications'>
+                        <p className="heading">
+                            Push notifications
+                        </p>
+                        <p className="para ">
+                            We offer push notifications to which you may also voluntarily subscribe at any time. To make sure push notifications reach the correct devices, we use a third-party push notifications provider who relies on a device token unique to your device which is issued by the operating system of your device. While it is possible to access a list of device tokens, they will not reveal your identity, your unique device ID, or your contact information to us or our third-party push notifications provider. We will maintain the information sent via e-mail in accordance with applicable laws and regulations. If, at any time, you wish to stop receiving push notifications, simply adjust your device settings accordingly.
+
+                        </p>
+                    </div>
+                    <div id='linkstootherresources'>
+                        <p className="heading">
+                            Links to other resources
+                        </p>
+                        <p className="para ">
+                            The Website and Services contain links to other resources that are not owned or controlled by us. Please be aware that we are not responsible for the privacy practices of such other resources or third parties. We encourage you to be aware when you leave the Website and Services and to read the privacy statements of each and every resource that may collect Personal Information.
+                        </p>
+                    </div>
+                    <div id='informationsecurity'>
+                        <p className="heading">
+                            Information security
+                        </p>
+                        <p className="para ">
+                            We secure information you provide on computer servers in a controlled, secure environment, protected from unauthorized access, use, or disclosure. We maintain reasonable administrative, technical, and physical safeguards in an effort to protect against unauthorized access, use, modification, and disclosure of Personal Information in our control and custody. However, no data transmission over the Internet or wireless network can be guaranteed. <br /><br />
+                            Therefore, while we strive to protect your Personal Information, you acknowledge that (i) there are security and privacy limitations of the Internet which are beyond our control; (ii) the security, integrity, and privacy of any and all information and data exchanged between you and the Website and Services cannot be guaranteed; and (iii) any such information and data may be viewed or tampered with in transit by a third party, despite best efforts.<br /><br />
+                            As the security of Personal Information depends in part on the security of the device you use to communicate with us and the security you use to protect your credentials, please take appropriate measures to protect this information.
+
+                        </p>
+                    </div>
+                    <div id='databreach'>
+                        <p className="heading">
+                            Data breach
+                        </p>
+                        <p className="para ">
+                            In the event we become aware that the security of the Website and Services has been compromised or Users’ Personal Information has been disclosed to unrelated third parties as a result of external activity, including, but not limited to, security attacks or fraud, we reserve the right to take reasonably appropriate measures, including, but not limited to, investigation and reporting, as well as notification to and cooperation with law enforcement authorities. In the event of a data breach, we will make reasonable efforts to notify affected individuals if we believe that there is a reasonable risk of harm to the User as a result of the breach or if notice is otherwise required by law. When we do, we will post a notice on the Website, send you an email, get in touch with you over the phone, mail you a letter
+                        </p>
+                    </div>
+                    <div id='changesandamendments'>
+                        <p className="heading">
+                            Changes and amendments
+                        </p>
+                        <p className="para ">
+                            We reserve the right to modify this Policy or its terms related to the Website and Services at any time at our discretion. When we do, we will revise the updated date at the bottom of this page, post a notification on the main page of the Website, send you an email to notify you. We may also provide notice to you in other ways at our discretion, such as through the contact information you have provided. <br /><br />
+                            An updated version of this Policy will be effective immediately upon the posting of the revised Policy unless otherwise specified. Your continued use of the Website and Services after the effective date of the revised Policy (or such other act specified at that time) will constitute your consent to those changes. However, we will not, without your consent, use your Personal Information in a manner materially different than what was stated at the time your Personal Information was collected.
+
+                        </p>
+
+                    </div>
+                    <div id='acceptanceofthispolicy'>
+                        <p className="heading">
+                            Acceptance of this policy
+                        </p>
+                        <p className="para ">
+                            You acknowledge that you have read this Policy and agree to all its terms and conditions. By accessing and using the Website and Services and submitting your information you agree to be bound by this Policy. If you do not agree to abide by the terms of this Policy, you are not authorized to access or use the Website and Services.
+
+                        </p>
+                    </div>
+                    <div id='contactingus'>
+                        <p className="heading">
+                            Contacting us
+                        </p>
+                        <p className="para ">
+                            If you have any questions, concerns, or complaints regarding this Policy, the information we hold about you, or if you wish to exercise your rights, we encourage you to contact us using the details below: <br /><br />
+                            <Link href={'https://Eobusinessclub.com/contactus'}>https://Eobusinessclub.com/contactus</Link> <br />
+                            <Link href={'mailto:contact@Eobusinessclub.com'}>contact@Eobusinessclub.com</Link> <br /><br />
+                            We will attempt to resolve complaints and disputes and make every reasonable effort to honor your wish to exercise your rights as quickly as possible and in any event, within the timescales provided by applicable data protection laws.
+                        </p>
+                    </div>
                 </div>
             </section>
         </>

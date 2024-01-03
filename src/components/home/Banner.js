@@ -9,7 +9,7 @@ const Banner = () => {
         <>
             <section className='home-banner'>
                 <Header />
-                <div className="container  min-vh-75 d-flex align-items-center">
+                <div className="container   d-flex align-items-center">
                     <div className="row">
                         <div className="col-lg-6">
                             <p className="heading ">Unlock opportunities, Elevate your network, and join the 

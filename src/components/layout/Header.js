@@ -30,7 +30,7 @@ const Header = () => {
                                 aria-label="Close"></button>
                         </div>
                         <div className="offcanvas-body d-lg-flex justify-content-between">
-                            <ul className="navbar-nav justify-content-start flex-grow-1 pe-5 align-items-center justify-content-end custome-nav">
+                            <ul className="navbar-nav justify-content-start flex-grow-1 pe-lg-5 align-items-center justify-content-end custome-nav">
                                 <li className="nav-item">
                                     <Link className={`nav-link ${pathname === '/' ? 'active-nav' : ''} `} aria-current="page" href="/">Home</Link>
                                 </li>
