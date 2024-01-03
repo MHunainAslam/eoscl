@@ -45,7 +45,7 @@ const MemberShip = () => {
                 <div className="container text-center">
                     <p className='heading'>The Membership Card Option</p>
                     <p className='para-m px-md-5'>Join our Business Club Partner program by paying an annual fee and enjoy a steady stream of customers using your services.</p>
-                    <div className="row mb-5" >
+                    <div className="row " >
                         {data?.data?.slice(0, 3).map((item, i) => (
                             <div className="col-lg-4 col-md-6 " style={{ marginTop: '150px' }} key={i}>
                                 <div className="card h-100 m-card-2 ">
