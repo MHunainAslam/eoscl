@@ -41,13 +41,13 @@ const Vendors = () => {
 
                             <div className="col-lg-3 col-md-4 col-6 mt-3">
                                 <div className="card h-100">
-                                    <div className="card-body px-2 py-1">
+                                    <Link href={{pathname: `/businessclubpartners/${item.id}`, query: {state : JSON.stringify(item.image)}}} className="card-body px-2 py-1">
                                         {item.image === null ?
                                             <Image src={'/assets/images/download.png'} className='w-100 object-fit-contain' width={300} height={120} alt=''></Image>
                                             :
                                             <Image loader={imgurl} src={item.image?.url} className='w-100 object-fit-contain' width={300} height={120} alt=''></Image>
                                         }
-                                    </div>
+                                        </Link>
                                 </div>
                             </div>
                         ))}
