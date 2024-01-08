@@ -11,7 +11,7 @@ const Vendors = () => {
     const [data, setdata] = useState([])
     const [isLoading, setisLoading] = useState(true)
     useEffect(() => {
-        axios.get(`${app_url}/api/partners?status=active`, {
+        axios.get(`${app_url}/api/categories?status=active`, {
         })
             .then(response => {
                 // Handle successful response here
@@ -41,12 +41,13 @@ const Vendors = () => {
 
                             <div className="col-lg-3 col-md-4 col-6 mt-3">
                                 <div className="card h-100">
-                                    <Link href={{pathname: `/businessclubpartners/${item.id}`, query: {state : JSON.stringify(item.image)}}} className="card-body px-2 py-1">
-                                        {item.image === null ?
+                                    <Link href={{pathname: `/businessclubpartners`, query: {state : JSON.stringify(item.slug)}}} className="card-body text-decoration-none px-2 py-1">
+                                        {/* {item.image === null ?
                                             <Image src={'/assets/images/download.png'} className='w-100 object-fit-contain' width={300} height={120} alt=''></Image>
                                             :
                                             <Image loader={imgurl} src={item.image?.url} className='w-100 object-fit-contain' width={300} height={120} alt=''></Image>
-                                        }
+                                        } */}
+                                        <p className="heading-sm mb-0 text-center py-2 text-capitalize">{item.name}</p>
                                         </Link>
                                 </div>
                             </div>

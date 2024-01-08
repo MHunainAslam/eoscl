@@ -143,7 +143,7 @@ const VendorsTab = () => {
                     <div className="row">
                         {data?.data?.map((item, i) => (
                             <div className="col-md-3 mt-3">
-                                <li class={`nav-item nav-link text-capitalize activetab${i} ${i === 0 ? 'active' : ''}`} data-bs-toggle="tab" value={item.id} onClick={(e) => { activetab(e), setLogo(item) }} data-bs-target={`#a${item.id}`} type="button" role="tab" aria-controls="NaanGuys" aria-selected="false" tabIndex="-1">
+                                <li class={`nav-item nav-link text-capitalize activetab${i} ${i === 0 ? 'active' : ''} `} data-bs-toggle="tab" value={item.id} onClick={(e) => { activetab(e), setLogo(item) }} data-bs-target={`#a${item.id}`} type="button" role="tab" aria-controls="NaanGuys" aria-selected="false" tabIndex="-1">
                                     {item.name}
                                 </li>
                             </div>
