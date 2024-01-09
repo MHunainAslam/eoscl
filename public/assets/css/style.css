@@ -270,6 +270,7 @@ body {
 .m-modal {
   /* background: linear-gradient(180deg, #b5892bab 0%, white 70%); */
   background: linear-gradient(180deg, #b5892bab, #fff 80%);
+  background-color: white !important;
 }
 
 .m-modal .inp,

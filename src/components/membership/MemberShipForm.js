@@ -54,7 +54,7 @@ const MemberShipForm = () => {
                         <div className="modal-body">
                             <form action="" onSubmit={sendmembershipreq}>
                                 <p className="heading-m text-center text-p">
-                                    Membership
+                                    Membership Form
                                 </p>
 
                                 <div className="col-md-12 mt-2">

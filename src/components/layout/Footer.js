@@ -56,7 +56,7 @@ const Footer = () => {
                         </div>
                         <div className="col-lg col-md-6 mt-3 text-lg-start text-center">
                             <p className="heading-sm">
-                                Contact Us
+                                Follow Us
                             </p>
                             <ul className='p-0'>
                                 {/* <li className='list-unstyled my-3'>
