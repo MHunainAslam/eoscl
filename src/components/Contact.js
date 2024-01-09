@@ -49,7 +49,7 @@ const Contact = () => {
                         <div className="card">
                             <div className="card-header">
                                 <p className="heading text-center text-white">Contact Us </p>
-                                <p className='para text-center text-white'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, magnam impedit doloremque nisi placeat quis accusamus illum sint eaque obcaecati blanditiis aspernatur velit eos. Eveniet doloremque culpa doloribus deserunt assumenda!</p>
+                                {/* <p className='para text-center text-white'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, magnam impedit doloremque nisi placeat quis accusamus illum sint eaque obcaecati blanditiis aspernatur velit eos. Eveniet doloremque culpa doloribus deserunt assumenda!</p> */}
                             </div>
                             <div className="card-body ">
                                 <div className="row py-1">

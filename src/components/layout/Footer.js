@@ -63,10 +63,10 @@ const Footer = () => {
                                     <i className="bi bi-geo-alt-fill me-4 text-black"></i>
                                     <Link href={'#'} className='link-hov text-black para'>Lorem ipsum</Link>
                                 </li> */}
-                                <li className='list-unstyled my-3'>
+                                {/* <li className='list-unstyled my-3'>
                                     <i className="bi bi-envelope-fill me-4 text-black"></i>
                                     <Link href={'mailto:eventontario@gmail.com'} className='link-hov text-black para'>Eventontario@gmail.com</Link>
-                                </li>
+                                </li> */}
                                 {/* <li className='list-unstyled my-3'>
                                     <i className="bi bi-telephone-fill me-4 text-black"></i>
                                     <Link href={'#'} className='link-hov text-black para'>123 456 789</Link>

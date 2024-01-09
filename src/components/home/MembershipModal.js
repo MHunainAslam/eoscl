@@ -82,11 +82,11 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
 
     };
     const MoveStep4 = () => {
-        handleComponentChange('step4');
+        handleComponentChange('step3');
         setPaymentMethod('paypal')
     };
     const MoveStep5 = () => {
-        handleComponentChange('step4');
+        handleComponentChange('step3');
         setPaymentMethod('square')
     };
     useEffect(() => {
@@ -166,6 +166,14 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                             <input type="text" value={UserName} onChange={(e) => setUserName(e.target.value)} className='form-control inp px-0' name="" id="" />
                                         </div>
                                         <div className="col-md-12 mt-2">
+                                            <label htmlFor="" className='para mt-3 text-p'>Package Name:</label>
+                                            <input type="text" className='form-control inp px-0' value={PkgName} readOnly name="" id="" />
+                                        </div>
+                                        {/* <div className="col-md-12 mt-2">
+                                            <label htmlFor="" className='para mt-3 text-p'>Package Price:</label>
+                                            <input type="text" className='form-control inp px-0' value={`${PkgPrice}`} readOnly name="" id="" />
+                                        </div> */}
+                                        <div className="col-md-12 mt-2">
                                             <label htmlFor="" className='para mt-3 text-p'>Email:</label>
                                             <input type="email" value={Email} onChange={(e) => setEmail(e.target.value)} className='form-control inp px-0' name="" id="" />
                                         </div>
@@ -183,21 +191,6 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                     </>
                                     }
                                     {activeComponent === 'step2' && <>
-                                        <div className="col-md-12 mt-2">
-                                            <label htmlFor="" className='para mt-3 text-p'>Package Name:</label>
-                                            <input type="text" className='form-control inp px-0' value={PkgName} readOnly name="" id="" />
-                                        </div>
-                                        <div className="col-md-12 mt-2">
-                                            <label htmlFor="" className='para mt-3 text-p'>Package Price:</label>
-                                            <input type="text" className='form-control inp px-0' value={`${PkgPrice}`} readOnly name="" id="" />
-                                        </div>
-                                        <div className="modal-footer mt-4 border-0 justify-content-end">
-                                            <button type="button" className="btn primary-btn" onClick={MoveStep1} >Previous</button>
-                                            <button type="button" className="btn primary-btn" onClick={MoveStep3}>Next</button>
-                                        </div>
-                                    </>
-                                    }
-                                    {activeComponent === 'step3' && <>
                                         <div className="col-md-6 mt-2">
                                             <button className='btn primary-btn w-100' onClick={MoveStep4}>Paypal</button>
                                         </div>
@@ -209,12 +202,12 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                         </div> */}
 
                                         <div className="modal-footer mt-4 border-0 justify-content-end">
-                                            <button type="button" className="btn primary-btn" onClick={backStep2} >Previous</button>
+                                            <button type="button" className="btn primary-btn" onClick={MoveStep1} >Previous</button>
                                             {/* <button type="button" className="btn primary-btn" onClick={formSubmit}>Next</button> */}
                                         </div>
                                     </>
                                     }
-                                    {activeComponent === 'step4' && <>
+                                    {activeComponent === 'step3' && <>
                                         {PaymentMethod === 'paypal' ?
                                             <PyamentModal settransaction_id={settransaction_id} PkgPrice={PkgPrice} />
                                             : 'square' ?
@@ -224,16 +217,20 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                                 <SquareModal settransaction_id={settransaction_id} PkgPrice={PkgPrice} />
                                                 : ''}
                                         <div className="modal-footer mt-4 border-0 justify-content-end">
-                                            <button type="button" className="btn primary-btn" onClick={MoveStep3} >Previous</button>
+                                            <button type="button" className="btn primary-btn" onClick={MoveStep2} >Previous</button>
                                             <button type="submit" className="btn primary-btn" >Submit</button>
                                         </div>
+                                    </>
+                                    }
+                                    {activeComponent === 'step4' && <>
+
                                     </>
                                     }
                                     <div className="d-flex justify-content-center">
                                         <div className={`steps ${step1 ? 'complete' : ''}`}></div>
                                         <div className={`steps ${step2 ? 'complete' : ''}`}></div>
                                         <div className={`steps ${step3 ? 'complete' : ''}`}></div>
-                                        <div className={`steps ${step4 ? 'complete' : ''}`}></div>
+                                        {/* <div className={`steps ${step4 ? 'complete' : ''}`}></div> */}
                                     </div>
                                 </div>
                             </form>
