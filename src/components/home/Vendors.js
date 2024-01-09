@@ -37,11 +37,11 @@ const Vendors = () => {
                     </p>
                     <p className="para text-center px-md-5">The success of our Business Club is strengthened by our esteemed partners, who play a pivotal role in shaping the community ecosystem. We are proud to align with industry leaders, innovators, and influencers who share our commitment to excellence. Most of these business club partners are part of other Event Ontario Initiatives, such as Cricket league, Entrepreneur program, etc.</p>
                     <div className="row mt-5 vendors-card">
-                        {data?.data?.slice(0, 12).map((item, i) => (
+                        {data?.data?.slice(0, 4).map((item, i) => (
 
                             <div className="col-lg-3 col-md-4 col-6 mt-3">
                                 <div className="card h-100">
-                                    <Link href={{pathname: `/businessclubpartners`, query: {state : JSON.stringify(item.slug)}}} className="card-body text-decoration-none px-2 py-1">
+                                    <Link href={{pathname: `/businessclubpartners`, query: {state : item.slug}}} className="card-body text-decoration-none px-2 py-1">
                                         {/* {item.image === null ?
                                             <Image src={'/assets/images/download.png'} className='w-100 object-fit-contain' width={300} height={120} alt=''></Image>
                                             :

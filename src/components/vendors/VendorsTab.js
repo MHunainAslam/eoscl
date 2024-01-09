@@ -25,6 +25,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import CategpryTab from './VendorsTabData/CategpryTab';
+import { useRouter, useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 const VendorsTab = () => {
     const nextSlide = () => {
         document.querySelector('.swiper-button-next').click()
@@ -54,7 +56,13 @@ const VendorsTab = () => {
                 setisLoading(false)
                 setdata(response.data)
                 setTimeout(() => {
-                    document.querySelector('.activetab0').click()
+                    if (param) {
+
+                        document.querySelector(`.${param}`).click()
+                    } else {
+                        document.querySelector(`.activetab0`).click()
+
+                    }
                 }, 1000);
             })
             .catch(error => {
@@ -73,6 +81,7 @@ const VendorsTab = () => {
                 console.log(response.data, 'cat');
                 setisLoading(false)
                 settabdata(response.data)
+                // ac()
 
             })
             .catch(error => {
@@ -82,7 +91,30 @@ const VendorsTab = () => {
                 setisLoading(false)
             });
     }
+    const router = useRouter()
+    const searchParams = useSearchParams()
+    const param = searchParams.get('state')
+    const [TabState, setTabState] = useState('')
+    const [test, settest] = useState('')
+    useEffect(() => {
+        if (param === null) {
+            setTabState('')
+        } else {
+            setTabState(param)
+        }
+    }, [param, TabState])
 
+
+
+
+    // const [TabState, setTabState] = useState('food')
+    // useEffect(() => {
+    //     if (param === null) {
+    //         setTabState('profiledetail')
+    //     } else {
+    //         setTabState(param)
+    //     }
+    // }, [param, TabState])
     return (
         <section>
             <div className="container mt-4">
@@ -143,7 +175,7 @@ const VendorsTab = () => {
                     <div className="row">
                         {data?.data?.map((item, i) => (
                             <div className="col-md-3 mt-3">
-                                <li class={`nav-item nav-link text-capitalize activetab${i} ${i === 0 ? 'active' : ''} `} data-bs-toggle="tab" value={item.id} onClick={(e) => { activetab(e), setLogo(item) }} data-bs-target={`#a${item.id}`} type="button" role="tab" aria-controls="NaanGuys" aria-selected="false" tabIndex="-1">
+                                <li  class={`nav-item nav-link text-capitalize  activetab${i} ${TabState ? TabState === item.slug : i === 0 ? 'active' : ''} ${item.slug}`} data-bs-toggle="tab" value={item.id} onClick={(e) => { activetab(e), setLogo(item), router.replace('/businessclubpartners') }} data-bs-target={`#a${item.id}`} type="button" role="tab" aria-controls="NaanGuys" aria-selected="false" id={item.slug} tabIndex="-1">
                                     {item.name}
                                 </li>
                             </div>
@@ -153,7 +185,7 @@ const VendorsTab = () => {
                 <div className=" mt-5">
                     <div className="tab-content ">
                         {data?.data?.map((item, i) => (
-                            <div class={`tab-pane fade ${i === 0 ? 'show active' : ''}`} id={`a${item.id}`} role="tabpanel" aria-labelledby={i}>
+                            <div class={`tab-pane fade ${TabState ? TabState === item.slug : i === 0 ? 'show active' : ''}`} id={`a${item.id}`} role="tabpanel" aria-labelledby={i}>
                                 <CategpryTab tabdata={tabdata} logo={Logo} />
                             </div>
                         ))}
