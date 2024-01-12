@@ -54,6 +54,8 @@ const Allmembershipcards = () => {
                                             <br /> <span className='heading-line'></span>
                                         </p>
                                         <p className="heading-sm text-p">${item.price}</p>
+                                        <p className='para' >{item.duration == 30 || item.duration == 31 ? 'Monthly' : item.duration == 91 || item.duration == 92 ? 'Quarterly' : item.duration == 182 || item.duration == 183 ? 'Half Yearly' : item.duration == 365 || item.duration == 366 ? 'Yearly' : item.duration + ' Days'}</p>
+                                        
                                         <p className='para' dangerouslySetInnerHTML={{ __html: item.description }}></p>
                                         <button className='btn primary-btn m-card-btn' data-bs-toggle="modal" data-bs-target="#VendorModal" onClick={() => BeginnerModal(item.title, item.price, item.id)}>Get Started</button>
                                     </div>

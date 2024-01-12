@@ -275,13 +275,13 @@ body {
 
 .m-modal .inp,
 .m-modal .tarea {
-  background: transparent;
+  background-color: transparent;
   border-color: var(--primary) !important;
 }
 
 .m-modal .inp:focus,
 .m-modal .tarea:focus {
-  background: transparent;
+  background-color: transparent;
 }
 
 .m-modal label {
