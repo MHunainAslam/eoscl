@@ -54,7 +54,7 @@ const Allmembershipcards = () => {
                                             <br /> <span className='heading-line'></span>
                                         </p>
                                         <p className="heading-sm text-p">${item.price}</p>
-                                        <p className='para'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit repudiandae maxime quaerat est id laudantium minus quibusdam architecto molestias culpa.!</p>
+                                        <p className='para' dangerouslySetInnerHTML={{ __html: item.description }}></p>
                                         <button className='btn primary-btn m-card-btn' data-bs-toggle="modal" data-bs-target="#VendorModal" onClick={() => BeginnerModal(item.title, item.price, item.id)}>Get Started</button>
                                     </div>
                                 </div>
