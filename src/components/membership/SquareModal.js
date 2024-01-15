@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import * as Square from '@square/web-sdk';
 import toast from 'react-hot-toast';
 const SquareModal = ({ settransaction_id }) => {
-    const applicationId = 'sandbox-sq0idb-lybe_WkfKNAbb3WklswmwA';
-    const locationId = 'LKYXSPGPXK05M';
+    const applicationId = 'sandbox-sq0idb-8ngIOJuiCX7twSR1K3qwrw';
+    const locationId = 'L5JECG1CPDXKW';
 
     useEffect(() => {
         async function startSquarePayment() {
@@ -16,8 +16,8 @@ const SquareModal = ({ settransaction_id }) => {
                 document.querySelector('#pay').addEventListener('click', async () => {
                     try {
                         const result = await card.tokenize();
-                        console.log('Tokenized payment result:', result);
-                        settransaction_id(result?.details?.token)
+                        console.log('Tokenized payment result:', result ,result?.token );
+                        settransaction_id(result?.token)
                         toast.success('Payment Successfull')
                         // TODO: Send result.token to your backend for payment processing
                     } catch (ex) {

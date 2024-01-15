@@ -121,7 +121,7 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
             toast.error('All Fields Are Required')
         } else {
             setisLoading(true)
-            axios.post(`${app_url}/api/memberships-submission`, { name: Name, username: UserName, email: Email, phone_number: Phone, message: Message, membership_id: Pkgid, payment_type: PaymentMethod, transaction_id: transaction_id }, {
+            axios.post(`${app_url}/api/memberships-submission`, { name: Name, username: UserName, email: Email, phone_number: Phone, message: Message, membership_id: Pkgid, payment_type: PaymentMethod, transaction_id: transaction_id, payment: Number(PkgPrice) }, {
                 headers: {
                     'Content-Type': 'application/json', // Specify the content type if needed.
                 }
