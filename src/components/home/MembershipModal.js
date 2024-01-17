@@ -115,13 +115,13 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
     const stripePromise = loadStripe('pk_test_51O7lG8G7P2PzfPo57bZpXzvFZf85D04PLUXKts0HyXZVasYXlBlBMjs95tUFz4Y34dodcvAQJazbEvZ4djz6flK8000nnH1lHv');
 
     const purchasemembership = (e) => {
-        e.preventDefault()
+        // e.preventDefault()
 
         if (Name === '' || !Email || Phone === '' || Message === '' || UserName === '') {
             toast.error('All Fields Are Required')
         } else {
             setisLoading(true)
-            axios.post(`${app_url}/api/memberships-submission`, { name: Name, username: UserName, email: Email, phone_number: Phone, message: Message, membership_id: Pkgid, payment_type: PaymentMethod, transaction_id: transaction_id, payment: Number(PkgPrice) }, {
+            axios.post(`${app_url}/api/memberships-submission`, { name: Name, username: UserName, email: Email, phone_number: Phone, message: Message, membership_id: Pkgid, payment_type: PaymentMethod, transaction_id: e, payment: Number(PkgPrice) }, {
                 headers: {
                     'Content-Type': 'application/json', // Specify the content type if needed.
                 }
@@ -131,6 +131,7 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                     console.log('formsubmit', response.data);
                     toast.success(response?.data?.message)
                     setisLoading(false)
+                    document.getElementById('close-mem-modal').click()
 
                 })
                 .catch(error => {
@@ -148,10 +149,10 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                 <div className="modal-dialog  modal-dialog-centered">
                     <div className="modal-content m-modal ">
                         <div className="modal-header border-0">
-                            <button type="button" className="btn-close modal-close" data-bs-dismiss="modal" aria-label="Close" onClick={MoveStep1}></button>
+                            <button type="button" className="btn-close modal-close" data-bs-dismiss="modal" aria-label="Close" id='close-mem-modal' onClick={MoveStep1}></button>
                         </div>
                         <div className="modal-body pb-4">
-                            <form action="" onSubmit={purchasemembership}>
+                            <form action="">
                                 <div className="row">
                                     <p className="heading-sm text-center text-p">
                                         {PkgName} Membership Form
@@ -216,16 +217,24 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                     }
                                     {activeComponent === 'step4' && <>
                                         {PaymentMethod === 'paypal' ?
-                                            <PyamentModal settransaction_id={settransaction_id} PkgPrice={PkgPrice} />
+                                            <PyamentModal settransaction_id={settransaction_id} PkgPrice={PkgPrice} purchasemembership={purchasemembership}/>
                                             : 'square' ?
                                                 // <Elements stripe={stripePromise}>
                                                 //     <StripeModal settransaction_id={settransaction_id} PkgPrice={PkgPrice} />
                                                 // </Elements>
-                                                <SquareModal settransaction_id={settransaction_id} PkgPrice={PkgPrice} />
+                                                <SquareModal settransaction_id={settransaction_id} PkgPrice={PkgPrice} setisLoading={setisLoading} purchasemembership={purchasemembership} />
                                                 : ''}
                                         <div className="modal-footer mt-4 border-0 justify-content-end">
                                             <button type="button" className="btn primary-btn" onClick={MoveStep3} >Previous</button>
-                                            <button type="submit" className="btn primary-btn" >Submit</button>
+                                            {PaymentMethod === 'paypal' ?
+                                                // <button type="submit" className="btn  primary-btn" >Submit</button>
+                                                <></>
+                                                :
+                                                <>
+                                                    <button type="button" className="btn  primary-btn" id="pay" onClick={() => setisLoading(true)}>Pay Now {isLoading ? <span className="spinner-border spinner-border-sm" aria-hidden="true"></span> : ''}</button>
+                                                    <button type="submit" className="btn  primary-btn d-none" id="submit-membership" >submit {isLoading ? <span className="spinner-border spinner-border-sm" aria-hidden="true"></span> : ''}</button>
+                                                </>
+                                            }
                                         </div>
                                     </>
                                     }
