@@ -19,7 +19,7 @@ const MemberShipForm = () => {
             toast.error('All Fields Are Required')
         } else {
             setisLoading(true)
-            axios.post(`${app_url}/api/membership-requests`, { name: Name, email: Email, phone_number: Phone, message: Message, type: Type, membership_card: Number(membership_crad) }, {
+            axios.post(`${app_url}/api/membership-requests`, { name: Name, email: Email, phone_number: Phone, message: Message, type: Type, membership_id: Number(membership_crad) }, {
                 headers: {
                     'Content-Type': 'application/json', // Specify the content type if needed.
                 }
