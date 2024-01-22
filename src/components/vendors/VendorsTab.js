@@ -172,7 +172,7 @@ const VendorsTab = () => {
                     </div>
                 </div> */}
                 <ul role="tablist" className="nav vendors-tab d-block nav-tabs border-0 justify-content-center ">
-                    <div className="row">
+                    <div className="row ">
                         {data?.data?.map((item, i) => (
                             <div className="col-md-3 mt-3">
                                 <li  class={`nav-item nav-link text-capitalize  activetab${i} ${TabState ? TabState === item.slug : i === 0 ? 'active' : ''} ${item.slug}`} data-bs-toggle="tab" value={item.id} onClick={(e) => { activetab(e), setLogo(item), router.replace('/businessclubpartners') }} data-bs-target={`#a${item.id}`} type="button" role="tab" aria-controls="NaanGuys" aria-selected="false" id={item.slug} tabIndex="-1">

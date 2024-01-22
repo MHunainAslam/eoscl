@@ -41,7 +41,7 @@ const Allmembershipcards = () => {
             <section className='membership pt-0 pb-5'>
                 <div className="container text-center">
 
-                    <div className="row ">
+                    <div className="row justify-content-center">
                         {data?.data?.map((item, i) => (
                             <div className="col-lg-4 col-md-6">
                                 <div className="card m-card ">
