@@ -1,11 +1,13 @@
 import { PayPalButtons, PayPalScriptProvider } from '@paypal/react-paypal-js';
 import React from 'react'
+import toast from 'react-hot-toast';
 
 const PyamentModal = ({ PkgPrice, settransaction_id, purchasemembership }) => {
     console.log(PkgPrice)
     const handleApprove = async (data, actions) => {
         const order = await actions.order.capture();
         console.log('done', actions.order.capture())
+        toast.success('Payment Successful')
         if (order) {
             setTimeout(() => {
                 
@@ -52,12 +54,14 @@ const PyamentModal = ({ PkgPrice, settransaction_id, purchasemembership }) => {
     const handleError = (err) => {
         console.log('Payment error:', err);
     };
+    console.log(process.env.NEXT_PUBLIC_square_locationId, process.env.NEXT_PUBLIC_square_application, process.env.NEXT_PUBLIC_pay_pal)
+
     return (
         <>
 
 
 
-            <PayPalScriptProvider options={{ "client-id": 'AY_Wql-Q_GmPwBxin8-cg-EhrH3dxYH5XbfBou9RwfZVCdJiOCBtaOIUPjJOi72lTDR4WEdPi2GegIcT' }}>
+            <PayPalScriptProvider options={{ "client-id": `${process.env.NEXT_PUBLIC_pay_pal}` }}>
                 <PayPalButtons
                     createOrder={(data, actions) => {
                         // Define the order creation logic here

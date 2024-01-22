@@ -46,6 +46,7 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
         console.log(isValidEmail, ';;;')
         if (Name === '' || Email === '' || !isValidEmail || Phone === '' || Message === '') {
             toast.error('All Fields Are Required')
+            console.log('first')
         } else {
             setisLoading(true)
             axios.post(`${app_url}/api/check-username-exists`, { email: Email, username: UserName }, {

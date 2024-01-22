@@ -15,11 +15,11 @@ const MemberShipForm = () => {
     const [Type, setType] = useState('membership')
     const sendmembershipreq = (e) => {
         e.preventDefault()
-        if (Name === '' || Email === '' || Phone === '' || Message === '') {
+        if (Name === '' || Email === '' || Phone === '' || Message === '', membership_crad === '') {
             toast.error('All Fields Are Required')
         } else {
             setisLoading(true)
-            axios.post(`${app_url}/api/membership-requests`, { name: Name, email: Email, phone_number: Phone, message: Message, type: Type, membership_crad: membership_crad }, {
+            axios.post(`${app_url}/api/membership-requests`, { name: Name, email: Email, phone_number: Phone, message: Message, type: Type, membership_card: Number(membership_crad) }, {
                 headers: {
                     'Content-Type': 'application/json', // Specify the content type if needed.
                 }
@@ -87,6 +87,7 @@ const MemberShipForm = () => {
                                 <div className="col-md-12 mt-2">
                                     <label htmlFor="" className='para mt-3 text-p'>Select Card:</label>
                                     <select name="" className='form-select inp bg-transparent' id="" value={membership_crad} onChange={(e) => setmembership_crad(e.target.value)}>
+                                        <option value=''>Select Card</option>
                                         {data?.data?.map((item, i) => (
                                             <>
                                                 <option value={item.id}>{item.title}</option>

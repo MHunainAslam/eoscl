@@ -25,11 +25,11 @@ export default function RootLayout({ children }) {
       {/* <NextTopLoader
       color="#ed962e"
       showSpinner={false}
-      crawlSpeed={3} />
+      crawlSpeed={3} /> */}
         <Toaster
           position="top-right"
           reverseOrder={true}
-        /> */}
+        />
         {children}
         <Footer />
 
