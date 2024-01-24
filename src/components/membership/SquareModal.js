@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 const SquareModal = ({ settransaction_id, setisLoading, purchasemembership }) => {
     const applicationId = `${process.env.NEXT_PUBLIC_square_application}`;
     const locationId = `${process.env.NEXT_PUBLIC_square_locationId}`;
-
+    console.log('object', locationId, applicationId);
     useEffect(() => {
         async function startSquarePayment() {
             try {
