@@ -24,7 +24,6 @@ const Allmembershipcards = () => {
         })
             .then(response => {
                 // Handle successful response here
-                console.log(response.data);
                 setisLoading(false)
                 setdata(response.data)
 
@@ -43,7 +42,7 @@ const Allmembershipcards = () => {
 
                     <div className="row justify-content-center">
                         {data?.data?.map((item, i) => (
-                            <div className="col-lg-4 col-md-6">
+                            <div className="col-lg-4 col-md-6" key={i}>
                                 <div className="card m-card ">
                                     <div className="card-body pb-5 text-center">
                                         {item.image === null ?

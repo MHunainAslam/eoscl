@@ -15,7 +15,7 @@ const Vendors = () => {
         })
             .then(response => {
                 // Handle successful response here
-                console.log(response.data);
+         
                 setisLoading(false)
                 setdata(response.data)
 
@@ -39,7 +39,7 @@ const Vendors = () => {
                     <div className="row mt-5 vendors-card">
                         {data?.data?.slice(0, 4).map((item, i) => (
 
-                            <div className="col-lg-3 col-md-4 col-6 mt-3">
+                            <div className="col-lg-3 col-md-4 col-6 mt-3" key={i}>
                                 <div className="card h-100">
                                     <Link href={{pathname: `/businessclubpartners`, query: {state : item.slug}}} className="card-body text-decoration-none px-2 py-1">
                                         {/* {item.image === null ?

@@ -8,8 +8,7 @@ import NaanGuys from './NaanGuys';
 import Link from 'next/link';
 
 const CategpryTab = ({ tabdata, logo }) => {
-    // const matchedItem = logo?.find(item => item.id).id === Number(tabdata?.data?.[0]?.partner_id);
-    // console.log(matchedItem)
+
  
     return (
         <div>
@@ -21,8 +20,8 @@ const CategpryTab = ({ tabdata, logo }) => {
                         <ul className="nav row nav-tabs border-0  " role="tablist">
                             {tabdata?.data?.map((item, i) => (
 
-                                // <Link href={`/partner/${item.id}`} class={`col-lg-4 col-md-6 col-12 mx-0 mt-3 nav-item nav-link text-capitalize border-0 activecattab${i} ${i === 0 ? 'active' : ''}`} onClick={(e) => { activepartnertab(item.id), setLogo(item) }} id={item.id} data-bs-toggle="tab" data-bs-target={`#b${item.id}`} type="button" role="tab" aria-controls="NaanGuyss" aria-selected="false" tabIndex="-1">
-                                <Link href={{pathname: `/businessclubpartners/${item.id}`, query: {state : JSON.stringify(item.image)}}}   class={`col-lg-4 col-md-6 col-12 mx-0 mt-3 nav-item nav-link text-capitalize border-0`} >
+                                // <Link href={`/partner/${item.id}`} className={`col-lg-4 col-md-6 col-12 mx-0 mt-3 nav-item nav-link text-capitalize border-0 activecattab${i} ${i === 0 ? 'active' : ''}`} onClick={(e) => { activepartnertab(item.id), setLogo(item) }} id={item.id} data-bs-toggle="tab" data-bs-target={`#b${item.id}`} type="button" role="tab" aria-controls="NaanGuyss" aria-selected="false" tabIndex="-1">
+                                <Link href={{pathname: `/businessclubpartners/${item.id}`, query: {state : JSON.stringify(item.image)}}} key={i}  className={`col-lg-4 col-md-6 col-12 mx-0 mt-3 nav-item nav-link text-capitalize border-0`} >
                                     
                                     <div className="card vendor-card h-100">
                                         <div className="card-header justify-content-center">
@@ -50,20 +49,7 @@ const CategpryTab = ({ tabdata, logo }) => {
                     </>
                 }
             </div>
-            {/* <div className="tab-content ">
-                {partnertabdata?.data?.length === 0 ?
-                    <p className="heading-sm text-center">No Discount Found!</p>
-                    :
-                    <>
-                        {partnertabdata?.data?.map((item, i) => (
-                            <div class={`tab-pane fade ${i === 0 ? 'show active' : ''}`} id={`b${item.id}`} role="tabpanel" aria-labelledby={i}>
-                                <NaanGuys tabdata={partnertabdata} logo={Logo} />
-                            </div>
-                        ))}
-                    </>}
-            </div> */}
-
-
+          
         </div>
     )
 }

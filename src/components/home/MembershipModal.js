@@ -2,9 +2,6 @@
 
 import React, { useEffect, useState } from 'react'
 import PyamentModal from '../membership/PyamentModal';
-import StripeModal from '../membership/StripeModal';
-import { Elements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
 import toast from 'react-hot-toast';
 import axios from 'axios';
 import { app_url } from '@/config';
@@ -43,10 +40,9 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
     const MoveStep2 = () => {
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const isValidEmail = emailPattern.test(Email);
-        console.log(isValidEmail, ';;;')
         if (Name === '' || Email === '' || !isValidEmail || Phone === '' || Message === '') {
             toast.error('All Fields Are Required')
-            console.log('first')
+      
         } else {
             setisLoading(true)
             axios.post(`${app_url}/api/check-username-exists`, { email: Email, username: UserName }, {
@@ -56,7 +52,7 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
             })
                 .then(response => {
                     // Handle successful response here
-                    console.log(response);
+              
 
                     setisLoading(false)
                     toast.error(response?.data?.message)
@@ -64,7 +60,7 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                 })
                 .catch(error => {
                     // Handle error here
-                    console.error(error);
+                    // console.error(error);
                     setisLoading(false)
                     handleComponentChange('step2');
                 });
@@ -113,8 +109,7 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
     const formSubmit = () => {
         document.querySelector('.modal-close').click();
     };
-    const stripePromise = loadStripe('pk_test_51O7lG8G7P2PzfPo57bZpXzvFZf85D04PLUXKts0HyXZVasYXlBlBMjs95tUFz4Y34dodcvAQJazbEvZ4djz6flK8000nnH1lHv');
-
+  
     const purchasemembership = (e) => {
         // e.preventDefault()
 
@@ -129,7 +124,6 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
             })
                 .then(response => {
                     // Handle successful response here
-                    console.log('formsubmit', response.data);
                     toast.success(response?.data?.message)
                     setisLoading(false)
                     document.getElementById('close-mem-modal').click()
@@ -180,7 +174,7 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                             <textarea name="" value={Message} onChange={(e) => setMessage(e.target.value)} className='form-control tarea px-0' id="" cols="30" rows="5"></textarea>
                                         </div>
                                         <div className="modal-footer mt-4 border-0 justify-content-end">
-                                            <button type="button" className="btn primary-btn" onClick={MoveStep2}>Next {isLoading ? <span class="spinner-border spinner-border-sm" aria-hidden="true"></span> : ''}</button>
+                                            <button type="button" className="btn primary-btn" onClick={MoveStep2}>Next {isLoading ? <span className="spinner-border spinner-border-sm" aria-hidden="true"></span> : ''}</button>
                                         </div>
                                     </>
                                     }
@@ -220,9 +214,7 @@ const MembershipModal = ({ PkgName, PkgPrice, Pkgid }) => {
                                         {PaymentMethod === 'paypal' ?
                                             <PyamentModal settransaction_id={settransaction_id} PkgPrice={PkgPrice} purchasemembership={purchasemembership}/>
                                             : 'square' ?
-                                                // <Elements stripe={stripePromise}>
-                                                //     <StripeModal settransaction_id={settransaction_id} PkgPrice={PkgPrice} />
-                                                // </Elements>
+                                              
                                                 <SquareModal settransaction_id={settransaction_id} PkgPrice={PkgPrice} setisLoading={setisLoading} purchasemembership={purchasemembership} />
                                                 : ''}
                                         <div className="modal-footer mt-4 border-0 justify-content-end">

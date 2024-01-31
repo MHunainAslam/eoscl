@@ -4,7 +4,6 @@ import toast from 'react-hot-toast';
 const SquareModal = ({ settransaction_id, setisLoading, purchasemembership }) => {
     const applicationId = `${process.env.NEXT_PUBLIC_square_application}`;
     const locationId = `${process.env.NEXT_PUBLIC_square_locationId}`;
-    console.log('object', locationId, applicationId);
     useEffect(() => {
         async function startSquarePayment() {
             try {
@@ -18,7 +17,6 @@ const SquareModal = ({ settransaction_id, setisLoading, purchasemembership }) =>
                     try {
                         setisLoading(false)
                         const result = await card.tokenize();
-                        console.log('Tokenized payment result:', result, result?.token);
                         settransaction_id(result?.token)
                         purchasemembership(result.token)
                         // TODO: Send result.token to your backend for payment processing

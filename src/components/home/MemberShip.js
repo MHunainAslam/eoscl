@@ -27,7 +27,6 @@ const MemberShip = () => {
         })
             .then(response => {
                 // Handle successful response here
-                console.log(response.data);
                 setisLoading(false)
                 setdata(response.data)
 

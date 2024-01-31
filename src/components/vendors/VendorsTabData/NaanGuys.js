@@ -8,18 +8,15 @@ import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast';
 
 const NaanGuys = ({ tabdata }) => {
-    // const matchedItem = logo?.find(item => item.id).id === Number(tabdata?.data?.[0]?.partner_id);
-    // console.log(matchedItem)
+
     const [partnertabdata, setpartnertabdata] = useState([])
     const [isLoading, setisLoading] = useState(true)
     const { slug } = useParams()
-    console.log(slug, 'aaas');
     useEffect(() => {
         axios.get(`${app_url}/api/partner-details/${slug}/parent?status=active`, {
         })
             .then(response => {
                 // Handle successful response here
-                console.log(response.data, 'lklk');
                 setisLoading(false)
                 setpartnertabdata(response.data)
 
@@ -34,7 +31,7 @@ const NaanGuys = ({ tabdata }) => {
     const searchParams = useSearchParams()
 
     const logo = JSON.parse(searchParams.get('state'))
-    console.log(logo?.url);
+
 
 
 
@@ -52,7 +49,7 @@ const NaanGuys = ({ tabdata }) => {
                             :
                             <>
                                 {partnertabdata?.data?.map((item, i) => (
-                                    <div className=" col-lg-4 col-md-6 mt-3 ">
+                                    <div className=" col-lg-4 col-md-6 mt-3 " key={i}>
                                         <div className="card vendor-card h-100">
                                             <div className="card-header">
                                                 {logo === null ?

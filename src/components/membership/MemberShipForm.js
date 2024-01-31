@@ -26,7 +26,6 @@ const MemberShipForm = () => {
             })
                 .then(response => {
                     // Handle successful response here
-                    console.log(response.data);
                     toast.success(response?.data?.message)
                     setisLoading(false)
                     setName('')
@@ -47,7 +46,7 @@ const MemberShipForm = () => {
         })
             .then(response => {
                 // Handle successful response here
-                console.log(response.data, 'mem');
+              
                 setisLoading(false)
                 setdata(response.data)
 
@@ -89,9 +88,9 @@ const MemberShipForm = () => {
                                     <select name="" className='form-select inp bg-transparent' id="" value={membership_crad} onChange={(e) => setmembership_crad(e.target.value)}>
                                         <option value=''>Select Card</option>
                                         {data?.data?.map((item, i) => (
-                                            <>
-                                                <option value={item.id}>{item.title}</option>
-                                            </>
+                                            
+                                                <option value={item.id} key={i}>{item.title}</option>
+                                        
                                         ))}
                                     </select>
                                 </div>

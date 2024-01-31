@@ -25,7 +25,6 @@ const Contact = () => {
             })
                 .then(response => {
                     // Handle successful response here
-                    console.log(response.data);
                     toast.success(response?.data?.message)
                     setisLoading(false)
                     setName('')
