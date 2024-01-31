@@ -53,7 +53,7 @@ const NaanGuys = ({ tabdata }) => {
                                         <div className="card vendor-card h-100">
                                             <div className="card-header">
                                                 {logo === null ?
-                                                    <Image src={'/assets/images/download.png'} className='pt-2' width={1000} height={1000} alt=''></Image> :
+                                                    <img src={'/assets/images/download.png'} className='pt-2' width={1000} height={1000} alt=''></img> :
                                                     <Image loader={imgurl} src={logo?.url} className='pt-2' width={1000} height={1000} alt=''></Image>
                                                 }
                                                 <div className="discount p-3">

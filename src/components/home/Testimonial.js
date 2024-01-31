@@ -56,7 +56,7 @@ const Testimonial = () => {
                                     <div className="testimonial-card-q"></div>
                                     <div className="card-body">
                                         <div className="testimonial-card-img">
-                                            <Image src={'/assets/images/user/Rectangle.png'} alt="" width={500} height={500}></Image>
+                                            <img src={'/assets/images/user/Rectangle.png'} alt="" width={500} height={500}></img>
                                         </div>
                                         <div className="d-flex justify-content-between heading-sm text-center mt-4">
                                             <i className="bi bi-quote text-p"></i>
@@ -81,7 +81,7 @@ const Testimonial = () => {
                                     <div className="testimonial-card-q"></div>
                                     <div className="card-body">
                                         <div className="testimonial-card-img">
-                                            <Image src={'/assets/images/user/Rectangle 2.png'} alt="" width={500} height={500}></Image>
+                                            <img src={'/assets/images/user/Rectangle 2.png'} alt="" width={500} height={500}></img>
                                         </div>
                                         <div className="d-flex justify-content-between heading-sm text-center mt-4">
                                             <i className="bi bi-quote text-p"></i>
@@ -106,7 +106,7 @@ const Testimonial = () => {
                                     <div className="testimonial-card-q"></div>
                                     <div className="card-body">
                                         <div className="testimonial-card-img">
-                                            <Image src={'/assets/images/user/Rectangle 77.png'} alt="" width={500} height={500}></Image>
+                                            <img src={'/assets/images/user/Rectangle 77.png'} alt="" width={500} height={500}></img>
                                         </div>
                                         <div className="d-flex justify-content-between heading-sm text-center mt-4">
                                             <i className="bi bi-quote text-p"></i>

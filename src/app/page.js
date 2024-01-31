@@ -19,7 +19,7 @@ export default function Home() {
       <MemberShip />
       <MembershipBanner reverse={false} />
       {/* <ShopHome /> */}
-      <Testimonial />
+      {/* <Testimonial /> */}
       <Contact />
     </>
   )

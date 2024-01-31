@@ -67,7 +67,7 @@ const Contact = () => {
                                         </form>
                                     </div>
                                     <div className="col-lg-5 col-md-6 mt-md-0 mt-4">
-                                        <Image src={'/assets/images/card/Group 1412.png'} className='w-100 h-100 object-fit-contain' alt="" width={500} height={500}></Image>
+                                        <img src={'/assets/images/card/Group 1412.png'} className='w-100 h-100 object-fit-contain' alt="" width={500} height={500}></img>
 
                                     </div>
                                 </div>

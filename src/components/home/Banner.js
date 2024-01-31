@@ -23,13 +23,13 @@ const Banner = () => {
                             {/* <div className="d-flex flex-wrap pt-4 align-items-center">
                                 <ul className='banner-rating px-0 m-0'>
                                     <li>
-                                        <Link href={'#'}><Image src={'/assets/images/user/Ellipse 1.png'} width={100} height={100} alt='' /></Link>
+                                        <Link href={'#'}><img src={'/assets/images/user/Ellipse 1.png'} width={100} height={100} alt='' /></Link>
                                     </li>
                                     <li>
-                                        <Link href={'#'}><Image src={'/assets/images/user/Ellipse 2.png'} width={100} height={100} alt='' /></Link>
+                                        <Link href={'#'}><img src={'/assets/images/user/Ellipse 2.png'} width={100} height={100} alt='' /></Link>
                                     </li>
                                     <li>
-                                        <Link href={'#'}><Image src={'/assets/images/user/Ellipse 3.png'} width={100} height={100} alt='' /></Link>
+                                        <Link href={'#'}><img src={'/assets/images/user/Ellipse 3.png'} width={100} height={100} alt='' /></Link>
                                     </li>
                                 </ul>
                                 <div className='ms-4'>

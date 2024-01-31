@@ -30,7 +30,7 @@ const Vendors = () => {
     return (
         <>
             <section className='vendors position-relative overflow-x-hidden '>
-                <Image src={'/assets/images/card/Ellipse 4.png'} className='vendors-bg pt-5' width={100} height={100} alt=''></Image>
+                <img src={'/assets/images/card/Ellipse 4.png'} className='vendors-bg pt-5' width={100} height={100} alt=''></img>
                 <div className="container mt-5">
                     <p className="heading text-center">
                         Business Club Partners
@@ -43,9 +43,9 @@ const Vendors = () => {
                                 <div className="card h-100">
                                     <Link href={{pathname: `/businessclubpartners`, query: {state : item.slug}}} className="card-body text-decoration-none px-2 py-1">
                                         {/* {item.image === null ?
-                                            <Image src={'/assets/images/download.png'} className='w-100 object-fit-contain' width={300} height={120} alt=''></Image>
+                                            <img src={'/assets/images/download.png'} className='w-100 object-fit-contain' width={300} height={120} alt=''></img>
                                             :
-                                            <Image loader={imgurl} src={item.image?.url} className='w-100 object-fit-contain' width={300} height={120} alt=''></Image>
+                                            <img loader={imgurl} src={item.image?.url} className='w-100 object-fit-contain' width={300} height={120} alt=''></img>
                                         } */}
                                         <p className="heading-sm mb-0 text-center py-2 text-capitalize">{item.name}</p>
                                         </Link>

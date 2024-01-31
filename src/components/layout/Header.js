@@ -18,7 +18,7 @@ const Header = () => {
             <nav className="navbar navbar-expand-lg custome-nav " aria-label="Offcanvas navbar large">
                 <div className="container-xl container-fluid">
                     <Link className="navbar-brand " href="/">
-                        <Image src="/assets/images/logo/logo.png" width={500} height={500} alt="" className="header-logo" /></Link>
+                        <img src="/assets/images/logo/logo.png" width={500} height={500} alt="" className="header-logo" /></Link>
                     <button className="navbar-toggler offcanva-btn border-0" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
                         <i className="bi bi-list fs-1 text-black"></i>
