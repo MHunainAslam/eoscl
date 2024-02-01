@@ -46,7 +46,7 @@ const Allmembershipcards = () => {
                                 <div className="card m-card ">
                                     <div className="card-body pb-5 text-center">
                                         {item.image === null ?
-                                            <Image src={'/assets/images/download.png'} className='m-card-img' alt="" width={500} height={500}></Image> :
+                                            <img src={'/assets/images/download.png'} className='m-card-img' alt="" width={500} height={500}></img> :
                                             <Image loader={imgurl} src={item.image?.url} className='m-card-img' alt="" width={500} height={500}></Image>
                                         }
                                         <p className="heading-m w-fit-content mt-3 mx-auto">{item.title}

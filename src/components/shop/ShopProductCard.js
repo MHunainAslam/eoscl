@@ -6,7 +6,7 @@ const ShopProductCard = () => {
         <>
             <div className="card c-card shop-card position-relative">
                 <div className="card-body h-100">
-                    <Image src={'/assets/images/product/Path 4.png'} className='object-fit-contain w-100 h-100' alt='' width={500} height={500}></Image>
+                    <img src={'/assets/images/product/Path 4.png'} className='object-fit-contain w-100 h-100' alt='' width={500} height={500}></img>
                 </div>
                 <button className='shop-btn primary-btn btn'><i className="bi bi-cart-fill"></i></button>
             </div>

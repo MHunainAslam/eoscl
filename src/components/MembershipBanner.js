@@ -22,7 +22,7 @@ const MembershipBanner = ({ reverse }) => {
                         <button className='btn primary-btn' data-bs-toggle="modal" data-bs-target="#MembershipForm">Get Your Card</button>
                     </div>
                     <div className="col-lg-7 col-md-6 mt-md-0 mt-4">
-                        <Image src={'/assets/images/card/Image 18.png'} className='w-100 object-fit-contain h-100' width={1000} height={1000} alt=''></Image>
+                        <img src={'/assets/images/card/Image 18.png'} className='w-100 object-fit-contain h-100' width={1000} height={1000} alt=''></img>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-4  mt-3 text-lg-start text-center ">
-                            <Image src={'/assets/images/logo/logo.png'} className='footer-logo' alt="" width={500} height={500}></Image>
+                            <img src={'/assets/images/logo/logo.png'} className='footer-logo' alt="" width={500} height={500}></img>
                             <p className="para-m mt-3 text-black">Welcome to our exclusive Membership Program, where opportunities abound and connections flourish. Immerse yourself in a dynamic community of like-minded business enthusiasts and entrepreneurs dedicated to fostering success.</p>
                         </div>
                         <div className="col-lg col-md-6 mt-3 text-lg-start text-center" >
@@ -74,13 +74,13 @@ const Footer = () => {
 
                             </ul>
                             <div className="footer-icon justify-content-lg-start justify-content-center">
-                                <Link href={'#'} target='_blank'>
+                                <Link href={'http://www.facebook.com/eosclperks'} target='_blank'>
                                     <i className="bi bi-facebook"></i>
                                 </Link>
-                                <Link href={'#'} target='_blank'>
+                                <Link href={'http://www.instagram.com/eventontario'} target='_blank'>
                                     <i className="bi bi-instagram"></i>
                                 </Link>
-                                <Link href={'#'} target='_blank'>
+                                <Link href={'http://Twitter.com/event_ontario'} target='_blank'>
                                     <i className="bi bi-twitter"></i>
                                 </Link>
                             </div>

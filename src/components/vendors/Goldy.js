@@ -7,7 +7,7 @@ const Goldy = () => {
             <div className="col-lg-4 col-md-6 mt-3">
                 <div className="card vendor-card h-100">
                     <div className="card-header">
-                        <Image src={'/assets/images/vendors/Rectangle 24.png'} className='pt-2' width={1000} height={1000} alt=''></Image>
+                        <img src={'/assets/images/vendors/Rectangle 24.png'} className='pt-2' width={1000} height={1000} alt=''></img>
                         <div className="discount p-3">
                             <div className="heading-m text-white text-center">10</div>
                             <div className="heading-m text-white text-center">% Off</div>
@@ -22,7 +22,7 @@ const Goldy = () => {
             <div className="col-lg-4 col-md-6 mt-3">
                 <div className="card vendor-card h-100">
                     <div className="card-header">
-                        <Image src={'/assets/images/vendors/Rectangle 24.png'} className='pt-2' width={1000} height={1000} alt=''></Image>
+                        <img src={'/assets/images/vendors/Rectangle 24.png'} className='pt-2' width={1000} height={1000} alt=''></img>
                         <div className="discount p-3">
                             <div className="heading-m text-white text-center">10</div>
                             <div className="heading-m text-white text-center">% Off</div>
@@ -37,7 +37,7 @@ const Goldy = () => {
             <div className="col-lg-4 col-md-6 mt-3">
                 <div className="card vendor-card h-100">
                     <div className="card-header">
-                        <Image src={'/assets/images/vendors/Rectangle 24.png'} className='pt-2' width={1000} height={1000} alt=''></Image>
+                        <img src={'/assets/images/vendors/Rectangle 24.png'} className='pt-2' width={1000} height={1000} alt=''></img>
                         <div className="discount p-3">
                             <div className="heading-m text-white text-center">10</div>
                             <div className="heading-m text-white text-center">% Off</div>
@@ -52,7 +52,7 @@ const Goldy = () => {
             <div className="col-lg-4 col-md-6 mt-3">
                 <div className="card vendor-card h-100">
                     <div className="card-header">
-                        <Image src={'/assets/images/vendors/Rectangle 24.png'} className='pt-2' width={1000} height={1000} alt=''></Image>
+                        <img src={'/assets/images/vendors/Rectangle 24.png'} className='pt-2' width={1000} height={1000} alt=''></img>
                         <div className="discount p-3">
                             <div className="heading-m text-white text-center">10</div>
                             <div className="heading-m text-white text-center">% Off</div>
@@ -67,7 +67,7 @@ const Goldy = () => {
             <div className="col-lg-4 col-md-6 mt-3">
                 <div className="card vendor-card h-100">
                     <div className="card-header">
-                        <Image src={'/assets/images/vendors/Rectangle 24.png'} className='pt-2' width={1000} height={1000} alt=''></Image>
+                        <img src={'/assets/images/vendors/Rectangle 24.png'} className='pt-2' width={1000} height={1000} alt=''></img>
                         <div className="discount p-3">
                             <div className="heading-m text-white text-center">10</div>
                             <div className="heading-m text-white text-center">% Off</div>
@@ -82,7 +82,7 @@ const Goldy = () => {
             <div className="col-lg-4 col-md-6 mt-3">
                 <div className="card vendor-card h-100">
                     <div className="card-header">
-                        <Image src={'/assets/images/vendors/Rectangle 24.png'} className='pt-2' width={1000} height={1000} alt=''></Image>
+                        <img src={'/assets/images/vendors/Rectangle 24.png'} className='pt-2' width={1000} height={1000} alt=''></img>
                         <div className="discount p-3">
                             <div className="heading-m text-white text-center">10</div>
                             <div className="heading-m text-white text-center">% Off</div>

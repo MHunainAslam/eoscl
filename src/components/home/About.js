@@ -9,7 +9,7 @@ const About = () => {
                 <div className="container py-4">
                     <div className="row">
                         <div className="col-md-5 my-auto about-img">
-                            <Image src={'/assets/images/banner/banner.png'} alt="" width={500} height={500}></Image>
+                            <img src={'/assets/images/banner/banner.png'} alt="" width={500} height={500}></img>
                         </div>
                         <div className="col-md-7 my-auto">
                             <p className="heading">About Us </p>
