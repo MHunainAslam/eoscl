@@ -41,7 +41,7 @@ const Vendors = () => {
 
                             <div className="col-lg-3 col-md-4 col-6 mt-3" key={i}>
                                 <div className="card h-100">
-                                    <Link href={{pathname: `/businessclubpartners`, query: {state : item.slug}}} className="card-body text-decoration-none px-2 py-1">
+                                    <Link href={{pathname: `/businessclubpartners`, query: {grouptab : item.id}}} className="card-body text-decoration-none px-2 py-1">
                                         {/* {item.image === null ?
                                             <img src={'/assets/images/download.png'} className='w-100 object-fit-contain' width={300} height={120} alt=''></img>
                                             :

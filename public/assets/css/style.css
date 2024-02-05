@@ -52,10 +52,12 @@ body {
   transition: 0.3s;
   position: relative;
 }
+
 .custome-nav .active-nav {
   color: var(--primary);
   font-weight: 700;
 }
+
 .custome-nav .active-nav.nav-link::after {
   width: 100%;
 }
@@ -89,10 +91,12 @@ body {
   color: var(--dark);
   font-weight: 500;
 }
-.custome-nav li a:hover{
+
+.custome-nav li a:hover {
   color: var(--primary) !important;
   /* font-weight: 700; */
 }
+
 .custome-nav li {
   margin-inline: calc(8px + (18 - 8) * ((100vw - 320px) / (1920 - 320)));
 }
@@ -756,6 +760,20 @@ body {
   transition: 0.3s;
 }
 
+.bussinessclubtab.active  {
+  color: white;
+  background-color: var(--primary);
+}
+
+.bussinessclubtab  {
+  color: var(--primary);
+  text-align: center;
+}
+.bussinessclubtab:hover  {
+  color: white;
+  background-color: var(--primary) !important;
+}
+
 /* #card .sq-card-wrapper:nth-child(1){
   display: none;
 } */
@@ -771,7 +789,7 @@ body {
 @media (max-width: 768px) {
   .home-banner {
     min-height: auto;
-    background: linear-gradient(220deg, #b5892bab , #fff 100%);
+    background: linear-gradient(220deg, #b5892bab, #fff 100%);
   }
 
   .home-banner .container {
