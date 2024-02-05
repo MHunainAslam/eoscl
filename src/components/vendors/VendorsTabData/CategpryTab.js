@@ -8,7 +8,7 @@ import NaanGuys from './NaanGuys';
 import Link from 'next/link';
 
 const CategpryTab = ({ tabdata, logo }) => {
-    console.log(tabdata)
+   
 
     return (
         <div>
