@@ -77,13 +77,12 @@ const VendorsTab = () => {
     const [TabState, setTabState] = useState('')
     const [test, settest] = useState('')
     useEffect(() => {
-        console.log(data?.data?.[0]?.id)
         if (param === null) {
             setTabState(data?.data?.[0]?.id)
-            console.log(param)
+         
         } else {
             setTabState(param)
-            console.log(param)
+          
         }
     }, [param, TabState])
     const pathname = usePathname()
@@ -99,7 +98,6 @@ const VendorsTab = () => {
                 // Handle successful response here
                 setisLoading(false)
                 settabdata(response.data)
-                console.log(response, 'kok')
                 // ac()
 
             })
@@ -112,7 +110,6 @@ const VendorsTab = () => {
     }
     useEffect(() => {
         activetab()
-        console.log(Idparam, param, data?.data[0]?.id, 'llolo')
     }, [param, router, data])
 
     return (
