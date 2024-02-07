@@ -92,7 +92,7 @@ const VendorsTab = () => {
 
     const activetab = (e) => {
         setisLoading(true)
-        axios.get(`${app_url}/api/partners?category_id=${param ? param : data?.data[0]?.id}`, {
+        axios.get(`${app_url}/api/partners?category_id=${param ? param : data?.data[0]?.id}&status=active`, {
         })
             .then(response => {
                 // Handle successful response here
