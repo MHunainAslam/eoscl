@@ -13,8 +13,8 @@ import NextTopLoader from 'nextjs-toploader';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'EOSCL',
-  description: 'Event Ontario Softball Cricket League',
+  title: 'Event Ontario Business Club',
+  description: 'Event Ontario Business Club',
 }
 
 export default function RootLayout({ children }) {
