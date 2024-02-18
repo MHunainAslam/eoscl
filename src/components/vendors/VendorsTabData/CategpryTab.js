@@ -8,7 +8,7 @@ import NaanGuys from './NaanGuys';
 import Link from 'next/link';
 
 const CategpryTab = ({ tabdata, logo }) => {
-   
+   console.log(tabdata);
 
     return (
         <div>
@@ -21,7 +21,7 @@ const CategpryTab = ({ tabdata, logo }) => {
                             {tabdata?.data?.map((item, i) => (
 
                                 // <Link href={`/partner/${item.id}`} className={`col-lg-4 col-md-6 col-12 mx-0 mt-3 nav-item nav-link text-capitalize border-0 activecattab${i} ${i === 0 ? 'active' : ''}`} onClick={(e) => { activepartnertab(item.id), setLogo(item) }} id={item.id} data-bs-toggle="tab" data-bs-target={`#b${item.id}`} type="button" role="tab" aria-controls="NaanGuyss" aria-selected="false" tabIndex="-1">
-                                <Link href={{ pathname: `/businessclubpartners/${item.id}`, query: { state: JSON.stringify(item.image) } }} key={i} className={`col-lg-4 col-md-6 col-12 mx-0 mt-3 nav-item nav-link text-capitalize border-0`} >
+                                <Link href={{ pathname: `/businessclubpartners/${item.id}`, query: { state: JSON.stringify(item.image) , cat: JSON.stringify(item?.categories?.name) } }} key={i} className={`col-lg-4 col-md-6 col-12 mx-0 mt-3 nav-item nav-link text-capitalize border-0`} >
 
                                     <div className="card vendor-card h-100">
                                         <div className="card-header justify-content-center">

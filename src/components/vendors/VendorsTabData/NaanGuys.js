@@ -31,9 +31,7 @@ const NaanGuys = ({ tabdata }) => {
     const searchParams = useSearchParams()
 
     const logo = JSON.parse(searchParams.get('state'))
-
-
-
+    
 
 
     return (
@@ -41,6 +39,7 @@ const NaanGuys = ({ tabdata }) => {
         <>
 
             {/* {parsedState && <p>{parsedState}ddd</p>} */}
+            
             <section className='py-4'>
                 <div className="container">
                     <div className="row">
