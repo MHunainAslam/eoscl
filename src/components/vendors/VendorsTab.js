@@ -52,6 +52,7 @@ const VendorsTab = () => {
 
                 setisLoading(false)
                 setdata(response.data)
+
                 // setTimeout(() => {
                 //     if (param) {
 

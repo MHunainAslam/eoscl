@@ -19,6 +19,7 @@ const NaanGuys = ({ tabdata }) => {
                 // Handle successful response here
                 setisLoading(false)
                 setpartnertabdata(response.data)
+                
 
             })
             .catch(error => {
@@ -63,6 +64,7 @@ const NaanGuys = ({ tabdata }) => {
 
                                             </div>
                                             <div className="card-body">
+                                                <p className="heading-sm">{item.membership.title} </p>
                                                 <p className="para">{item.description} </p>
                                             </div>
                                         </div>
