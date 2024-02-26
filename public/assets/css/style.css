@@ -778,6 +778,15 @@ body {
   display: none;
 } */
 
+.card-cat{
+  background-color: var(--primary);
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0 10px;
+  border-radius: 5px 0 0 0 ;
+}
 @media (max-width: 992px) {
   .offcanva-nav {
     /* background: linear-gradient(180deg, #b5892bab 0%, white 70%) !important; */
