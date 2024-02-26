@@ -64,7 +64,7 @@ const NaanGuys = ({ tabdata }) => {
 
                                             </div>
                                             <div className="card-body">
-                                                <p className="heading-sm card-cat">{item.membership.title} </p>
+                                                <p className="heading-sm card-cat">Card Type - {item.membership.title} </p>
                                                 <p className="para">{item.description} </p>
                                             </div>
                                         </div>
